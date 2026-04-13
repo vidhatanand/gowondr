@@ -205,54 +205,52 @@ export default function ForParentsPage() {
           goWondr takes the hard parts off your plate so you can focus on the relationship.
         </p>
 
-        <div className="mt-10 max-w-[500px] mx-auto">
-          <div className="rounded-2xl border border-sand bg-paper p-6 md:p-8">
-            <div className="flex justify-center">
-              <svg viewBox="0 0 320 320" className="w-full max-w-[320px] h-auto">
-                {/* Outer ring */}
-                <circle cx="160" cy="160" r="115" fill="none" stroke="#EFE6D8" strokeWidth="2" />
-
-                {/* goWondr node — top */}
-                <circle cx="160" cy="48" r="40" fill="#EAF3F2" stroke="#235A5F" strokeWidth="2.5" />
-                <text x="160" y="53" textAnchor="middle" fill="#235A5F" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">goWondr</text>
-
-                {/* Parent node — bottom right */}
-                <circle cx="252" cy="212" r="40" fill="#F7ECE4" stroke="#A4582E" strokeWidth="2.5" />
-                <text x="252" y="207" textAnchor="middle" fill="#A4582E" fontSize="13" fontWeight="700" fontFamily="var(--font-body)">You,</text>
-                <text x="252" y="222" textAnchor="middle" fill="#A4582E" fontSize="13" fontWeight="700" fontFamily="var(--font-body)">the parent</text>
-
-                {/* Child node — bottom left */}
-                <circle cx="68" cy="212" r="40" fill="#EAF3EC" stroke="#4B7A5B" strokeWidth="2.5" />
-                <text x="68" y="207" textAnchor="middle" fill="#4B7A5B" fontSize="13" fontWeight="700" fontFamily="var(--font-body)">Your</text>
-                <text x="68" y="222" textAnchor="middle" fill="#4B7A5B" fontSize="13" fontWeight="700" fontFamily="var(--font-body)">child</text>
-
-                {/* Center label */}
-                <text x="160" y="155" textAnchor="middle" fill="#1E2A34" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">Deep</text>
-                <text x="160" y="173" textAnchor="middle" fill="#1E2A34" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">learning</text>
-              </svg>
-            </div>
-
-            {/* Three roles explained */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center mt-6">
-              <div>
-                <div className="w-3 h-3 rounded-full bg-teal mx-auto mb-2" />
-                <p className="font-body font-semibold text-[14px] text-teal">goWondr carries</p>
-                <p className="text-[13px] text-slate mt-1">Structure, sequence, coaching language, review</p>
+        <div className="mt-10 max-w-[600px] mx-auto">
+          <div className="rounded-2xl border border-sand bg-paper p-5 md:p-8">
+            {/* SVG concentric circles — labels positioned outside */}
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              {/* The circles */}
+              <div className="shrink-0">
+                <svg viewBox="0 0 240 240" className="w-[200px] h-[200px] md:w-[240px] md:h-[240px]">
+                  {/* Outer — goWondr */}
+                  <circle cx="120" cy="120" r="115" fill="#EAF3F2" stroke="#235A5F" strokeWidth="2" />
+                  {/* Middle — Parent */}
+                  <circle cx="120" cy="120" r="78" fill="#F7ECE4" stroke="#A4582E" strokeWidth="2" />
+                  {/* Inner — Child */}
+                  <circle cx="120" cy="120" r="42" fill="#EAF3EC" stroke="#4B7A5B" strokeWidth="2.5" />
+                  {/* Center star */}
+                  <text x="120" y="124" textAnchor="middle" fill="#4B7A5B" fontSize="22">&#10029;</text>
+                </svg>
               </div>
-              <div>
-                <div className="w-3 h-3 rounded-full bg-terracotta mx-auto mb-2" />
-                <p className="font-body font-semibold text-[14px] text-terracotta">You carry</p>
-                <p className="text-[13px] text-slate mt-1">Warmth, attention, conversation, encouragement</p>
-              </div>
-              <div>
-                <div className="w-3 h-3 rounded-full bg-strong-ink mx-auto mb-2" />
-                <p className="font-body font-semibold text-[14px] text-strong-ink">Your child gains</p>
-                <p className="text-[13px] text-slate mt-1">Understanding, confidence, curiosity, capability</p>
+
+              {/* Labels — clean readable text beside the SVG */}
+              <div className="space-y-5 text-center md:text-left">
+                <div className="flex items-start gap-3">
+                  <div className="w-4 h-4 rounded-full bg-teal-soft border-2 border-teal shrink-0 mt-1" />
+                  <div>
+                    <p className="font-body font-bold text-[15px] text-teal">goWondr</p>
+                    <p className="text-[13px] text-slate">Structure, sequence, coaching language, review timing</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-4 h-4 rounded-full bg-terracotta-soft border-2 border-terracotta shrink-0 mt-1" />
+                  <div>
+                    <p className="font-body font-bold text-[15px] text-terracotta">You, the parent</p>
+                    <p className="text-[13px] text-slate">Warmth, attention, conversation, encouragement</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-4 h-4 rounded-full bg-strong-soft border-2 border-strong-ink shrink-0 mt-1" />
+                  <div>
+                    <p className="font-body font-bold text-[15px] text-strong-ink">Your child</p>
+                    <p className="text-[13px] text-slate">Understanding, confidence, curiosity, capability</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <p className="text-center mt-4 text-[13px] text-slate">
-            The cycle reinforces itself — structure enables warmth, warmth nurtures growth, and growth informs the next step.
+          <p className="text-center mt-4 text-[13px] text-slate max-w-[440px] mx-auto">
+            goWondr wraps around with structure. You wrap around with warmth. Your child grows at the heart of both.
           </p>
         </div>
       </SectionShell>

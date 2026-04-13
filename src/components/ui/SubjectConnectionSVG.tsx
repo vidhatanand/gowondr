@@ -3,14 +3,14 @@ interface SubjectConnectionSVGProps {
 }
 
 const subjects = [
-  { label: "Reading", short: "R", color: "#6A4E73", bg: "#EDE8E9", x: 190, y: 48 },
-  { label: "Math", short: "M", color: "#2A6E73", bg: "#E5ECE9", x: 298, y: 100 },
-  { label: "Science", short: "S", color: "#4B744F", bg: "#EAEDE5", x: 325, y: 200 },
-  { label: "World", short: "W", color: "#886328", bg: "#F4EDE1", x: 285, y: 295 },
-  { label: "Personal", short: "P", color: "#94536C", bg: "#F4EAEA", x: 190, y: 330 },
-  { label: "Arts", short: "A", color: "#7A5AA6", bg: "#EFE9EF", x: 95, y: 295 },
-  { label: "Digital", short: "D", color: "#4966A8", bg: "#E9EBEF", x: 55, y: 200 },
-  { label: "Inquiry", short: "I", color: "#9E563C", bg: "#F6EAE3", x: 82, y: 100 },
+  { label: "Reading", short: "R", color: "#6A4E73", bg: "#EDE8E9", x: 200, y: 55 },
+  { label: "Math", short: "M", color: "#2A6E73", bg: "#E5ECE9", x: 305, y: 110 },
+  { label: "Science", short: "S", color: "#4B744F", bg: "#EAEDE5", x: 330, y: 210 },
+  { label: "World", short: "W", color: "#886328", bg: "#F4EDE1", x: 290, y: 305 },
+  { label: "Personal", short: "P", color: "#94536C", bg: "#F4EAEA", x: 200, y: 345 },
+  { label: "Arts", short: "A", color: "#7A5AA6", bg: "#EFE9EF", x: 105, y: 305 },
+  { label: "Digital", short: "D", color: "#4966A8", bg: "#E9EBEF", x: 70, y: 210 },
+  { label: "Inquiry", short: "I", color: "#9E563C", bg: "#F6EAE3", x: 95, y: 110 },
 ];
 
 // Connections between subjects (index pairs)
@@ -38,9 +38,9 @@ export function SubjectConnectionSVG({ className = "" }: SubjectConnectionSVGPro
       </figcaption>
 
       <div className="rounded-2xl border border-sand bg-paper-alt p-4 md:p-6">
-        <svg viewBox="0 0 380 380" className="w-full h-auto">
+        <svg viewBox="0 0 400 400" className="w-full h-auto">
           {/* Outer circle path */}
-          <circle cx="190" cy="190" r="140" fill="none" stroke="#EFE6D8" strokeWidth="1.5" />
+          <circle cx="200" cy="200" r="145" fill="none" stroke="#EFE6D8" strokeWidth="1.5" />
 
           {/* Cross connections (drawn first, behind nodes) */}
           {connections.filter((_, i) => i >= 8).map(([a, b], i) => (
