@@ -6,7 +6,6 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
-import { FlowComparison } from "@/components/ui/FlowDiagram";
 
 export const metadata: Metadata = {
   title: "Why breadth matters in an AI world | Research",
@@ -86,29 +85,135 @@ export default function BreadthFutureReadyPage() {
 
       {/* Diagram */}
       <SectionShell bg="paper">
-        <FlowComparison
-          title="NARROW VS BROAD FOUNDATIONS"
-          caption="In an AI world, children who can only compute or decode are not enough. They need breadth — world understanding, creative expression, digital judgment, and inquiry habits."
-          left={{
-            label: "Narrow Approach",
-            variant: "warning",
-            steps: [
-              { label: "Only reading & math", description: "Important but insufficient alone" },
-              { label: "Content completion focus", description: "Finish the worksheet, move on" },
-            ],
-            outcome: { label: "Gaps in critical areas", description: "Reasoning, judgment, creativity, collaboration underdeveloped" },
-          }}
-          right={{
-            label: "Breadth Approach",
-            variant: "success",
-            steps: [
-              { label: "Strong foundations", description: "Reading, math, science at the core" },
-              { label: "World understanding & creativity", description: "Culture, expression, ethics, communication" },
-              { label: "Digital judgment & inquiry", description: "Logic, safety, questioning, adaptability" },
-            ],
-            outcome: { label: "Future-ready learner", description: "Can adapt to AI, constant change, and new tools" },
-          }}
-        />
+        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-2">
+          NARROW VS BROAD FOUNDATIONS
+        </h3>
+        <div className="rounded-2xl border border-sand bg-paper p-4 md:p-6">
+          <svg viewBox="0 0 600 280" className="w-full h-auto" role="img" aria-label="Two bridges: a narrow plank that cannot span the river versus a wide sturdy bridge with eight colored sections spanning safely to the far shore">
+            <defs>
+              <linearGradient id="bridgeSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#FFFDF9" />
+                <stop offset="60%" stopColor="#F8F4ED" />
+              </linearGradient>
+              <linearGradient id="riverGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#235A5F" stopOpacity="0.12" />
+                <stop offset="100%" stopColor="#235A5F" stopOpacity="0.06" />
+              </linearGradient>
+            </defs>
+            <rect width="600" height="280" fill="url(#bridgeSky)" />
+
+            {/* Divider */}
+            <line x1="300" y1="30" x2="300" y2="250" stroke="#EFE6D8" strokeWidth="1.5" strokeDasharray="4 4" opacity="0.8" />
+
+            {/* === LEFT: Narrow Bridge === */}
+            {/* River */}
+            <rect x="60" y="165" width="180" height="45" rx="4" fill="url(#riverGrad)" />
+            {/* Water ripples */}
+            <path d="M80 180 Q100 176 120 180 Q140 184 160 180" fill="none" stroke="#235A5F" strokeWidth="0.5" opacity="0.12" />
+            <path d="M90 192 Q110 188 130 192 Q150 196 170 192 Q190 188 210 192" fill="none" stroke="#235A5F" strokeWidth="0.5" opacity="0.1" />
+
+            {/* Near bank (left) */}
+            <rect x="20" y="155" width="50" height="20" rx="3" fill="#A4582E" opacity="0.12" />
+            <path d="M20 155 Q45 152 70 155" fill="none" stroke="#A4582E" strokeWidth="0.8" opacity="0.2" />
+
+            {/* Far bank (right) - with gap */}
+            <rect x="230" y="155" width="50" height="20" rx="3" fill="#A4582E" opacity="0.12" />
+            <path d="M230 155 Q255 152 280 155" fill="none" stroke="#A4582E" strokeWidth="0.8" opacity="0.2" />
+
+            {/* Narrow plank bridge - doesn't reach */}
+            <rect x="65" y="158" width="100" height="4" rx="1" fill="#A4582E" opacity="0.25" />
+            {/* Gap visible */}
+            <path d="M165 160 L230 160" fill="none" stroke="#52616D" strokeWidth="0.5" opacity="0.15" strokeDasharray="3 4" />
+
+            {/* Bridge support (single, weak) */}
+            <line x1="115" y1="162" x2="115" y2="175" stroke="#A4582E" strokeWidth="1" opacity="0.15" />
+
+            {/* Figure hesitating on narrow bridge */}
+            <circle cx="145" cy="142" r="6" fill="none" stroke="#1E2A34" strokeWidth="1.5" opacity="0.4" />
+            <line x1="145" y1="148" x2="145" y2="163" stroke="#1E2A34" strokeWidth="1.5" opacity="0.4" />
+            <line x1="145" y1="154" x2="138" y2="161" stroke="#1E2A34" strokeWidth="1.5" opacity="0.4" />
+            <line x1="145" y1="154" x2="152" y2="159" stroke="#1E2A34" strokeWidth="1.5" opacity="0.4" />
+            {/* Arms raised slightly (uncertainty) */}
+            <line x1="145" y1="163" x2="140" y2="172" stroke="#1E2A34" strokeWidth="1.5" opacity="0.4" />
+            <line x1="145" y1="163" x2="150" y2="172" stroke="#1E2A34" strokeWidth="1.5" opacity="0.4" />
+
+            {/* Question mark above figure */}
+            <text x="145" y="132" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.25" textAnchor="middle">?</text>
+
+            {/* Narrow bridge labels */}
+            <text x="115" y="145" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#52616D" opacity="0.35" textAnchor="middle">Math + Reading</text>
+
+            {/* === RIGHT: Broad Bridge === */}
+            {/* River */}
+            <rect x="360" y="165" width="180" height="45" rx="4" fill="url(#riverGrad)" />
+            {/* Water ripples */}
+            <path d="M380 180 Q400 176 420 180 Q440 184 460 180" fill="none" stroke="#235A5F" strokeWidth="0.5" opacity="0.12" />
+            <path d="M390 192 Q410 188 430 192 Q450 196 470 192 Q490 188 510 192" fill="none" stroke="#235A5F" strokeWidth="0.5" opacity="0.1" />
+
+            {/* Near bank */}
+            <rect x="320" y="155" width="50" height="20" rx="3" fill="#A4582E" opacity="0.12" />
+            <path d="M320 155 Q345 152 370 155" fill="none" stroke="#A4582E" strokeWidth="0.8" opacity="0.2" />
+
+            {/* Far bank */}
+            <rect x="530" y="155" width="50" height="20" rx="3" fill="#A4582E" opacity="0.12" />
+            <path d="M530 155 Q555 152 580 155" fill="none" stroke="#A4582E" strokeWidth="0.8" opacity="0.2" />
+
+            {/* Wide sturdy bridge with 8 colored sections */}
+            {/* Bridge deck */}
+            <rect x="365" y="152" width="170" height="12" rx="2" fill="#EFE6D8" opacity="0.4" />
+            {/* 8 subject color sections */}
+            <rect x="365" y="152" width="21" height="12" rx="1" fill="#235A5F" opacity="0.2" />
+            <rect x="386" y="152" width="21" height="12" fill="#A4582E" opacity="0.2" />
+            <rect x="407" y="152" width="22" height="12" fill="#4B7A5B" opacity="0.2" />
+            <rect x="429" y="152" width="21" height="12" fill="#235A5F" opacity="0.15" />
+            <rect x="450" y="152" width="21" height="12" fill="#52616D" opacity="0.15" />
+            <rect x="471" y="152" width="22" height="12" fill="#A4582E" opacity="0.15" />
+            <rect x="493" y="152" width="21" height="12" fill="#4B7A5B" opacity="0.15" />
+            <rect x="514" y="152" width="21" height="12" rx="1" fill="#235A5F" opacity="0.18" />
+
+            {/* Bridge supports (sturdy) */}
+            <line x1="400" y1="164" x2="400" y2="180" stroke="#A4582E" strokeWidth="1.5" opacity="0.2" />
+            <line x1="450" y1="164" x2="450" y2="180" stroke="#A4582E" strokeWidth="1.5" opacity="0.2" />
+            <line x1="500" y1="164" x2="500" y2="180" stroke="#A4582E" strokeWidth="1.5" opacity="0.2" />
+
+            {/* Bridge railing */}
+            <line x1="365" y1="150" x2="535" y2="150" stroke="#A4582E" strokeWidth="0.8" opacity="0.15" />
+            {[380,400,420,440,460,480,500,520].map((x, i) => (
+              <line key={`rl${i}`} x1={x} y1="150" x2={x} y2="153" stroke="#A4582E" strokeWidth="0.5" opacity="0.12" />
+            ))}
+
+            {/* Figure walking confidently across */}
+            <circle cx="470" cy="136" r="6" fill="none" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="470" y1="142" x2="470" y2="157" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="470" y1="148" x2="463" y2="155" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="470" y1="148" x2="477" y2="155" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            {/* Walking legs */}
+            <line x1="470" y1="157" x2="465" y2="166" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="470" y1="157" x2="476" y2="166" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+
+            {/* Labels */}
+            <text x="150" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.55" textAnchor="middle">Narrow approach</text>
+            <text x="150" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.35" textAnchor="middle">Only two subjects, can&apos;t bridge the gap</text>
+
+            <text x="450" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">Broad foundations</text>
+            <text x="450" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.45" textAnchor="middle">Eight subjects span the full river</text>
+
+            {/* River label */}
+            <text x="150" y="198" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#235A5F" opacity="0.3" textAnchor="middle">Future challenges</text>
+            <text x="450" y="198" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#235A5F" opacity="0.3" textAnchor="middle">Future challenges</text>
+
+            {/* Far shore labels */}
+            <text x="255" y="150" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#52616D" opacity="0.3" textAnchor="middle">Readiness</text>
+            <text x="555" y="148" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#4B7A5B" opacity="0.45" textAnchor="middle">Readiness</text>
+
+            {/* Outcome labels */}
+            <text x="150" y="240" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#52616D" opacity="0.4" textAnchor="middle">Gaps in critical areas</text>
+            <text x="450" y="240" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#4B7A5B" opacity="0.55" textAnchor="middle">Future-ready learner</text>
+          </svg>
+        </div>
+        <p className="mt-3 text-[14px] leading-[22px] text-slate/70 text-center">
+          In an AI world, children who can only compute or decode are not enough. They need breadth — world understanding, creative expression, digital judgment, and inquiry habits.
+        </p>
       </SectionShell>
 
       {/* Parent summary */}

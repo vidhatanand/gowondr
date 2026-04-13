@@ -6,7 +6,6 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
 
 export const metadata: Metadata = {
   title: "Why parent-child connection matters for learning | Research",
@@ -84,29 +83,127 @@ export default function ParentChildConnectionPage() {
 
       {/* Diagram */}
       <SectionShell bg="paper">
-        <FlowDiagram
-          title="FROM RESPONSIVE INTERACTION TO LEARNING"
-          caption="Serve-and-return interaction — noticing, responding, talking — builds the language, safety, and confidence that make learning possible."
-          direction="vertical"
-          nodes={[
-            { id: "interaction", label: "Responsive interaction", description: "Notice, respond, talk back and forth", variant: "teal" },
-            { id: "language", label: "Language growth", description: "Vocabulary, expression, understanding" },
-            { id: "safety", label: "Emotional safety", description: "Trust, self-regulation, confidence" },
-            { id: "attention", label: "Attention & confidence", description: "Focus, willingness to try" },
-            { id: "learning", label: "Stronger learning", description: "Academic and social outcomes", variant: "success" },
-          ]}
-          connections={[
-            { from: "interaction", to: "language", label: "builds" },
-            { from: "interaction", to: "safety", label: "creates" },
-            { from: "interaction", to: "attention", label: "strengthens" },
-            { from: "language", to: "learning" },
-            { from: "safety", to: "learning" },
-            { from: "attention", to: "learning" },
-          ]}
-          groups={[
-            { label: "What Develops", nodeIds: ["language", "safety", "attention"] },
-          ]}
-        />
+        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-2">
+          FROM RESPONSIVE INTERACTION TO LEARNING
+        </h3>
+        <div className="rounded-2xl border border-sand bg-paper p-4 md:p-6 max-w-md mx-auto">
+          <svg viewBox="0 0 400 520" className="w-full h-auto" role="img" aria-label="A seed growing into a tree, showing how responsive interaction grows into learning outcomes through language, safety, and attention">
+            <defs>
+              <linearGradient id="soilGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#A4582E" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="#A4582E" stopOpacity="0.12" />
+              </linearGradient>
+              <linearGradient id="trunkGrad" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stopColor="#A4582E" stopOpacity="0.6" />
+                <stop offset="100%" stopColor="#A4582E" stopOpacity="0.35" />
+              </linearGradient>
+              <radialGradient id="canopyGrad" cx="0.5" cy="0.6" r="0.5">
+                <stop offset="0%" stopColor="#4B7A5B" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#4B7A5B" stopOpacity="0.08" />
+              </radialGradient>
+            </defs>
+
+            {/* Background warmth */}
+            <rect width="400" height="520" fill="#FFFDF9" />
+
+            {/* Soil layer */}
+            <path d="M0 420 Q50 415 100 418 Q200 412 300 416 Q350 414 400 420 L400 520 L0 520Z" fill="url(#soilGrad)" />
+            {/* Soil texture dots */}
+            {[30,70,120,165,210,260,305,340,375].map((x, i) => (
+              <circle key={`s${i}`} cx={x} cy={440 + (i % 4) * 12} r="1" fill="#A4582E" opacity="0.12" />
+            ))}
+            {[50,95,140,185,230,275,320,365].map((x, i) => (
+              <circle key={`s2${i}`} cx={x} cy={455 + (i % 3) * 10} r="0.7" fill="#A4582E" opacity="0.08" />
+            ))}
+
+            {/* Seed at the base */}
+            <ellipse cx="200" cy="430" rx="12" ry="8" fill="#A4582E" opacity="0.35" />
+            <ellipse cx="200" cy="430" rx="8" ry="5" fill="#A4582E" opacity="0.2" />
+
+            {/* Roots spreading down */}
+            <path d="M200 435 Q195 450 180 465 Q170 475 155 485" fill="none" stroke="#A4582E" strokeWidth="1.5" strokeLinecap="round" opacity="0.25" />
+            <path d="M200 435 Q205 448 215 460 Q225 470 240 478" fill="none" stroke="#A4582E" strokeWidth="1.5" strokeLinecap="round" opacity="0.25" />
+            <path d="M200 435 Q198 455 195 470 Q192 480 188 495" fill="none" stroke="#A4582E" strokeWidth="1.2" strokeLinecap="round" opacity="0.2" />
+            <path d="M200 435 Q202 452 208 468 Q212 478 218 490" fill="none" stroke="#A4582E" strokeWidth="1.2" strokeLinecap="round" opacity="0.2" />
+
+            {/* Trunk growing up */}
+            <path d="M200 420 Q198 380 200 340 Q202 300 200 260 Q198 230 200 200" fill="none" stroke="#A4582E" strokeWidth="3" strokeLinecap="round" opacity="0.45" />
+            {/* Trunk width variation */}
+            <path d="M196 420 Q194 380 196 340 Q197 300 196 260" fill="none" stroke="#A4582E" strokeWidth="1" strokeLinecap="round" opacity="0.15" />
+            <path d="M204 420 Q206 380 204 340 Q203 300 204 260" fill="none" stroke="#A4582E" strokeWidth="1" strokeLinecap="round" opacity="0.15" />
+
+            {/* Three main branches from trunk */}
+            {/* Branch 1: Language (left) */}
+            <path d="M200 310 Q180 290 155 270 Q135 255 120 240 Q110 230 105 218" fill="none" stroke="#A4582E" strokeWidth="2" strokeLinecap="round" opacity="0.35" />
+            <path d="M120 240 Q110 225 105 218" fill="none" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
+            {/* Sub-branches */}
+            <path d="M155 270 Q140 260 130 252" fill="none" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.25" />
+            <path d="M135 255 Q120 248 112 240" fill="none" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
+
+            {/* Branch 2: Safety (center-up) */}
+            <path d="M200 280 Q200 250 200 220 Q200 190 200 165" fill="none" stroke="#A4582E" strokeWidth="2" strokeLinecap="round" opacity="0.35" />
+            <path d="M200 220 Q200 195 200 165" fill="none" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
+            {/* Sub-branches */}
+            <path d="M200 230 Q188 218 178 210" fill="none" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
+            <path d="M200 230 Q212 218 222 210" fill="none" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
+
+            {/* Branch 3: Attention (right) */}
+            <path d="M200 310 Q220 290 245 270 Q265 255 280 240 Q290 230 295 218" fill="none" stroke="#A4582E" strokeWidth="2" strokeLinecap="round" opacity="0.35" />
+            <path d="M280 240 Q290 225 295 218" fill="none" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
+            {/* Sub-branches */}
+            <path d="M245 270 Q260 260 270 252" fill="none" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.25" />
+            <path d="M265 255 Q278 248 288 240" fill="none" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
+
+            {/* Leaf clusters on branches */}
+            {/* Language branch leaves */}
+            <circle cx="105" cy="215" r="14" fill="#4B7A5B" opacity="0.15" />
+            <circle cx="115" cy="225" r="10" fill="#4B7A5B" opacity="0.12" />
+            <circle cx="128" cy="248" r="8" fill="#4B7A5B" opacity="0.1" />
+
+            {/* Safety branch leaves (center) */}
+            <circle cx="200" cy="158" r="16" fill="#4B7A5B" opacity="0.15" />
+            <circle cx="180" cy="205" r="10" fill="#4B7A5B" opacity="0.1" />
+            <circle cx="220" cy="205" r="10" fill="#4B7A5B" opacity="0.1" />
+
+            {/* Attention branch leaves */}
+            <circle cx="295" cy="215" r="14" fill="#4B7A5B" opacity="0.15" />
+            <circle cx="285" cy="225" r="10" fill="#4B7A5B" opacity="0.12" />
+            <circle cx="272" cy="248" r="8" fill="#4B7A5B" opacity="0.1" />
+
+            {/* Full canopy arc */}
+            <ellipse cx="200" cy="195" rx="120" ry="70" fill="url(#canopyGrad)" />
+
+            {/* Small detail leaves scattered in canopy */}
+            {[130,155,180,210,235,260].map((x, i) => (
+              <path key={`lf${i}`} d={`M${x} ${170 + (i % 3) * 15} q4 -6 8 0 q-4 6 -8 0`} fill="#4B7A5B" opacity={0.15 + (i % 2) * 0.05} />
+            ))}
+
+            {/* Labels */}
+            {/* Seed label */}
+            <text x="200" y="460" fontFamily="var(--font-body)" fontSize="11" fontWeight="700" fill="#A4582E" opacity="0.7" textAnchor="middle">Responsive interaction</text>
+            <text x="200" y="474" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.45" textAnchor="middle">Notice, respond, talk</text>
+
+            {/* Branch labels along the branches */}
+            {/* Language */}
+            <text x="110" y="295" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#235A5F" opacity="0.6" textAnchor="middle" transform="rotate(-35, 110, 295)">Language</text>
+
+            {/* Safety */}
+            <text x="225" y="255" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#235A5F" opacity="0.6" textAnchor="start" transform="rotate(-90, 225, 255)">Safety</text>
+
+            {/* Attention */}
+            <text x="290" y="295" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#235A5F" opacity="0.6" textAnchor="middle" transform="rotate(35, 290, 295)">Attention</text>
+
+            {/* Canopy / outcome label */}
+            <text x="200" y="145" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#4B7A5B" opacity="0.7" textAnchor="middle">Stronger learning outcomes</text>
+            <text x="200" y="159" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4B7A5B" opacity="0.45" textAnchor="middle">Willingness to try, ability to explain</text>
+
+            {/* Soil label */}
+            <text x="200" y="505" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.35" textAnchor="middle">Good soil: trust, warmth, presence</text>
+          </svg>
+        </div>
+        <p className="mt-3 text-[14px] leading-[22px] text-slate/70 text-center max-w-lg mx-auto">
+          Serve-and-return interaction — noticing, responding, talking — builds the language, safety, and confidence that make learning possible.
+        </p>
       </SectionShell>
 
       {/* Parent summary */}

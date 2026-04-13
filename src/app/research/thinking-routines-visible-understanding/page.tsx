@@ -6,7 +6,6 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
 
 export const metadata: Metadata = {
   title:
@@ -88,27 +87,103 @@ export default function ThinkingRoutinesPage() {
 
       {/* Diagram */}
       <SectionShell bg="paper">
-        <FlowDiagram
-          title="HOW THINKING ROUTINES WORK"
-          caption="Thinking routines give children a structured way to show what they understand — and give parents a window into real learning."
-          direction="vertical"
-          nodes={[
-            { id: "question", label: "Structured question", description: "'What do you notice?' 'What changed?'", variant: "teal" },
-            { id: "visible", label: "Thinking made visible", description: "Child draws, explains, maps, represents" },
-            { id: "parent", label: "Parent sees understanding", description: "Where it is strong or shaky" },
-            { id: "evidence", label: "Better evidence", description: "For the adaptive planner" },
-            { id: "meta", label: "Child develops metacognition", description: "Thinking about thinking" },
-            { id: "support", label: "More targeted support", description: "Revisit and guidance improve", variant: "success" },
-          ]}
-          connections={[
-            { from: "question", to: "visible", label: "child responds" },
-            { from: "visible", to: "parent" },
-            { from: "visible", to: "evidence" },
-            { from: "visible", to: "meta" },
-            { from: "parent", to: "support", label: "informs" },
-            { from: "evidence", to: "support" },
-          ]}
-        />
+        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-2">
+          HOW THINKING ROUTINES WORK
+        </h3>
+        <div className="rounded-2xl border border-sand bg-paper p-4 md:p-6">
+          <svg viewBox="0 0 500 300" className="w-full h-auto" role="img" aria-label="A magnifying glass revealing colorful thinking inside a child's thought cloud, while a parent watches and sees the revealed patterns">
+            <rect width="500" height="300" fill="#FFFDF9" />
+
+            {/* === Child figure (left) === */}
+            <circle cx="100" cy="155" r="8" fill="none" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="100" y1="163" x2="100" y2="190" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="100" y1="172" x2="91" y2="181" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="100" y1="172" x2="109" y2="181" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="100" y1="190" x2="94" y2="208" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="100" y1="190" x2="106" y2="208" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+
+            {/* Thought cloud above child (opaque/grey) */}
+            <ellipse cx="135" cy="105" rx="45" ry="32" fill="#52616D" opacity="0.08" />
+            <ellipse cx="130" cy="100" rx="38" ry="26" fill="#52616D" opacity="0.06" />
+            {/* Cloud bumps */}
+            <circle cx="105" cy="95" r="14" fill="#52616D" opacity="0.06" />
+            <circle cx="155" cy="90" r="16" fill="#52616D" opacity="0.06" />
+            <circle cx="130" cy="80" r="13" fill="#52616D" opacity="0.07" />
+            {/* Thought bubble trail from head */}
+            <circle cx="108" cy="140" r="3" fill="#52616D" opacity="0.1" />
+            <circle cx="115" cy="128" r="4" fill="#52616D" opacity="0.08" />
+
+            {/* Question mark inside cloud (opaque thinking) */}
+            <text x="130" y="108" fontFamily="var(--font-body)" fontSize="22" fontWeight="700" fill="#52616D" opacity="0.12" textAnchor="middle">?</text>
+
+            {/* === Magnifying glass (center) === */}
+            {/* Glass circle */}
+            <circle cx="250" cy="120" r="55" fill="none" stroke="#235A5F" strokeWidth="2.5" opacity="0.45" />
+            <circle cx="250" cy="120" r="53" fill="#FFFDF9" opacity="0.5" />
+            {/* Handle */}
+            <line x1="290" y1="158" x2="330" y2="198" stroke="#235A5F" strokeWidth="3" strokeLinecap="round" opacity="0.4" />
+            <line x1="328" y1="196" x2="335" y2="203" stroke="#A4582E" strokeWidth="4" strokeLinecap="round" opacity="0.3" />
+
+            {/* Inside the magnifying glass: revealed colorful thinking patterns */}
+            {/* Colored shapes/connections visible through the glass */}
+            <circle cx="230" cy="100" r="8" fill="#235A5F" opacity="0.15" />
+            <circle cx="260" cy="90" r="6" fill="#A4582E" opacity="0.15" />
+            <circle cx="270" cy="115" r="7" fill="#4B7A5B" opacity="0.15" />
+            <circle cx="235" cy="130" r="5" fill="#235A5F" opacity="0.12" />
+            <circle cx="258" cy="140" r="6" fill="#A4582E" opacity="0.12" />
+
+            {/* Connections between revealed thoughts */}
+            <line x1="235" y1="103" x2="256" y2="92" stroke="#235A5F" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
+            <line x1="262" y1="95" x2="268" y2="110" stroke="#A4582E" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
+            <line x1="265" y1="118" x2="258" y2="135" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
+            <line x1="238" y1="128" x2="253" y2="137" stroke="#235A5F" strokeWidth="1" strokeLinecap="round" opacity="0.15" />
+            <line x1="233" y1="106" x2="235" y2="126" stroke="#52616D" strokeWidth="0.8" strokeLinecap="round" opacity="0.12" />
+
+            {/* Small stars/sparkles showing revelation */}
+            <path d="M215 85 l2 -4 l2 4 l-4 0Z" fill="#A4582E" opacity="0.2" />
+            <path d="M282 95 l1.5 -3 l1.5 3 l-3 0Z" fill="#235A5F" opacity="0.18" />
+            <path d="M245 145 l1.5 -3 l1.5 3 l-3 0Z" fill="#4B7A5B" opacity="0.18" />
+
+            {/* Glass lens sheen */}
+            <path d="M218 90 Q228 78 245 80" fill="none" stroke="#FFFDF9" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
+
+            {/* === Parent figure (right) === */}
+            <circle cx="400" cy="150" r="8" fill="none" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="400" y1="158" x2="400" y2="188" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="400" y1="167" x2="391" y2="177" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="400" y1="167" x2="409" y2="177" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="400" y1="188" x2="394" y2="208" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+            <line x1="400" y1="188" x2="406" y2="208" stroke="#1E2A34" strokeWidth="1.5" opacity="0.5" />
+
+            {/* Parent's "seeing" lines - looking at the magnifying glass */}
+            <path d="M392 152 Q360 140 310 125" fill="none" stroke="#235A5F" strokeWidth="0.8" strokeLinecap="round" opacity="0.15" strokeDasharray="3 3" />
+            <path d="M392 155 Q360 148 310 140" fill="none" stroke="#235A5F" strokeWidth="0.6" strokeLinecap="round" opacity="0.12" strokeDasharray="3 3" />
+
+            {/* Labels */}
+            <text x="100" y="230" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#1E2A34" opacity="0.45" textAnchor="middle">Child</text>
+            <text x="100" y="243" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.35" textAnchor="middle">Thinking is hidden</text>
+
+            <text x="250" y="200" fontFamily="var(--font-body)" fontSize="11" fontWeight="700" fill="#235A5F" opacity="0.6" textAnchor="middle">Thinking routine</text>
+            <text x="250" y="214" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.4" textAnchor="middle">makes thinking visible</text>
+
+            <text x="400" y="230" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#1E2A34" opacity="0.45" textAnchor="middle">Parent</text>
+            <text x="400" y="243" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4B7A5B" opacity="0.45" textAnchor="middle">Can now see and support</text>
+
+            {/* Bottom process labels */}
+            <text x="130" y="275" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.35" textAnchor="middle">&quot;What do you notice?&quot;</text>
+            <text x="250" y="275" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.4" textAnchor="middle">Draw, explain, connect</text>
+            <text x="380" y="275" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4B7A5B" opacity="0.4" textAnchor="middle">Better evidence, better support</text>
+
+            {/* Flow arrows at bottom */}
+            <path d="M185 272 L210 272" fill="none" stroke="#52616D" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" markerEnd="none" />
+            <path d="M210 272 l-3 -2 l0 4Z" fill="#52616D" opacity="0.25" />
+            <path d="M305 272 L335 272" fill="none" stroke="#52616D" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" />
+            <path d="M335 272 l-3 -2 l0 4Z" fill="#52616D" opacity="0.25" />
+          </svg>
+        </div>
+        <p className="mt-3 text-[14px] leading-[22px] text-slate/70 text-center">
+          Thinking routines give children a structured way to show what they understand — and give parents a window into real learning.
+        </p>
       </SectionShell>
 
       {/* Parent summary */}
