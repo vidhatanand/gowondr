@@ -6,6 +6,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
+import { ThinkingRoutines } from "@/components/ui/ThinkingRoutines";
 
 export const metadata: Metadata = {
   title:
@@ -255,8 +256,15 @@ export default function ThinkingRoutinesPage() {
         </div>
       </SectionShell>
 
+      {/* The 10 thinking routines */}
+      <SectionShell bg="linen" id="routines">
+        <div className="max-w-[700px] mx-auto">
+          <ThinkingRoutines variant="full" context="thinking-routines" />
+        </div>
+      </SectionShell>
+
       {/* How routines help children */}
-      <SectionShell bg="linen" narrow={true} id="for-children">
+      <SectionShell bg="paper" narrow={true} id="for-children">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
           How routines help children
         </h2>

@@ -6,6 +6,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
+import { ThinkingRoutines } from "@/components/ui/ThinkingRoutines";
 
 export const metadata: Metadata = {
   title: "Why breadth matters in an AI world | Research",
@@ -384,6 +385,13 @@ export default function BreadthFutureReadyPage() {
             <p className="text-[14px] text-slate mb-3">Why concept-based structure creates stronger understanding than disconnected activities.</p>
             <InternalLink href="/research/concept-first-coverage">Read more &rarr;</InternalLink>
           </Card>
+        </div>
+      </SectionShell>
+
+      {/* Thinking routines for breadth */}
+      <SectionShell bg="linen">
+        <div className="max-w-[700px] mx-auto">
+          <ThinkingRoutines variant="compact" context="breadth" />
         </div>
       </SectionShell>
 

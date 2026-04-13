@@ -8,6 +8,7 @@ import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { StatStrip } from "@/components/ui/StatStrip";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
+import { ThinkingRoutines } from "@/components/ui/ThinkingRoutines";
 import { FlowDiagram } from "@/components/ui/FlowDiagram";
 import { Brain, MessageSquare, Link2, HelpCircle, Lightbulb, Monitor, Compass } from "lucide-react";
 
@@ -264,6 +265,13 @@ export default function FutureReadyLearningPage() {
             they know will adapt to whatever comes. That foundation starts now,
             at home, with you.
           </p>
+        </div>
+      </SectionShell>
+
+      {/* Thinking routines for future-readiness */}
+      <SectionShell bg="linen">
+        <div className="max-w-[700px] mx-auto">
+          <ThinkingRoutines variant="compact" context="future-ready" />
         </div>
       </SectionShell>
 
