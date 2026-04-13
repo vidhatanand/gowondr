@@ -328,8 +328,7 @@ export default function DigitalLiteracyPage() {
           everyday activities — sorting, sequencing, giving instructions,
           debugging. You can discuss online safety during a family
           conversation. You can explore how technology works by taking
-          things apart, asking questions, and wondering together. The
-          Learning Guide's{" "}
+          things apart, asking questions, and wondering together. goWondr's{" "}
           <InternalLink href="/subjects/digital-literacy-computational-thinking">
             digital literacy curriculum
           </InternalLink>{" "}

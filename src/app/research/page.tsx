@@ -6,6 +6,9 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
+import {
+  Heart, Layers, Leaf, Brain, RefreshCw, Globe, Shield,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Parent-led learning research and evidence",
@@ -25,46 +28,60 @@ export const metadata: Metadata = {
 
 const researchCards = [
   {
-    title: "Parent-child connection and learning",
-    summary:
-      "Why responsive parent-child interaction supports language, confidence, attention, and deeper learning outcomes.",
+    title: "Parent-Child Connection",
+    summary: "Why responsive parent-child interaction supports language, confidence, and deeper learning.",
     href: "/research/parent-child-connection-learning",
+    icon: Heart,
+    softClass: "bg-terracotta-soft",
+    inkClass: "text-terracotta",
   },
   {
-    title: "Concept-first curriculum coverage",
-    summary:
-      "Why concept-based curriculum structure, developmental sequencing, and revisit cycles create stronger understanding than disconnected activities.",
+    title: "Concept-First Coverage",
+    summary: "Why concept-based structure and revisit cycles create stronger understanding than random activities.",
     href: "/research/concept-first-coverage",
+    icon: Layers,
+    softClass: "bg-teal-soft",
+    inkClass: "text-teal",
   },
   {
-    title: "Playful, screen-light learning",
-    summary:
-      "Evidence for guided, multi-modal learning that uses conversation, movement, and real materials instead of passive screen time.",
+    title: "Playful, Screen-Light Learning",
+    summary: "Evidence for guided, multi-modal learning using conversation, movement, and real materials.",
     href: "/research/playful-screen-light-learning",
+    icon: Leaf,
+    softClass: "bg-science-soft",
+    inkClass: "text-science-ink",
   },
   {
-    title: "Thinking routines and visible understanding",
-    summary:
-      "How thinking routines, representation, and concept mapping deepen children's understanding and make learning visible to parents.",
+    title: "Thinking Routines",
+    summary: "How thinking routines and concept mapping make understanding visible to both child and parent.",
     href: "/research/thinking-routines-visible-understanding",
+    icon: Brain,
+    softClass: "bg-arts-soft",
+    inkClass: "text-arts-ink",
   },
   {
-    title: "Adaptive planning and spaced revisit",
-    summary:
-      "Evidence for spaced repetition, adaptive sequencing, and review timing in building durable understanding.",
+    title: "Adaptive Planning & Revisit",
+    summary: "Evidence for spaced repetition, adaptive sequencing, and review timing in building durable knowledge.",
     href: "/research/adaptive-planning-spaced-revisit",
+    icon: RefreshCw,
+    softClass: "bg-info-soft",
+    inkClass: "text-info-ink",
   },
   {
-    title: "Breadth in an AI world",
-    summary:
-      "Why broad foundations across subjects matter more in a future shaped by AI, automation, and rapid change.",
+    title: "Breadth in an AI World",
+    summary: "Why broad foundations across subjects matter more in a future shaped by AI and rapid change.",
     href: "/research/breadth-future-ready-ai-world",
+    icon: Globe,
+    softClass: "bg-world-soft",
+    inkClass: "text-world-ink",
   },
   {
-    title: "Digital literacy with judgment",
-    summary:
-      "Why children need digital understanding, safety, and agency — not just device skills — and how screen-light digital literacy builds real judgment.",
+    title: "Digital Literacy with Judgment",
+    summary: "Why children need understanding, safety, and agency — not just device fluency.",
     href: "/research/digital-literacy-with-judgment",
+    icon: Shield,
+    softClass: "bg-digital-soft",
+    inkClass: "text-digital-ink",
   },
 ];
 
@@ -374,35 +391,36 @@ export default function ResearchHubPage() {
         </ol>
       </SectionShell>
 
-      {/* Research grid */}
-      <SectionShell bg="paper">
-        <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight text-center">
+      {/* Research grid — matches subjects page card style */}
+      <SectionShell bg="linen">
+        <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight mb-10">
           Explore the evidence
         </h2>
-        <p className="mt-4 text-[17px] leading-[28px] text-slate text-center max-w-2xl mx-auto">
-          Each page explains what the research says, what it means for
-          families, and how it shapes{" "}
-          <InternalLink href="/how-it-works">
-            how the product works
-          </InternalLink>
-          .
-        </p>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {researchCards.map((card) => (
-            <Card key={card.href} variant="elevated" hover>
-              <h3 className="font-display text-[24px] leading-[30px] text-ink">
-                {card.title}
-              </h3>
-              <p className="mt-3 text-[15px] leading-[24px] text-slate">
-                {card.summary}
-              </p>
-              <div className="mt-5">
-                <Button variant="ghost" href={card.href}>
-                  Read the research
-                </Button>
-              </div>
-            </Card>
-          ))}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {researchCards.map((card) => {
+            const Icon = card.icon;
+            return (
+              <Card
+                key={card.href}
+                variant="subject"
+                subjectSoftClass={card.softClass}
+                subjectInkClass={card.inkClass}
+                hover
+                className="flex flex-col"
+              >
+                <Icon className="h-7 w-7 mb-3" />
+                <h3 className="font-display text-[24px] leading-[30px] text-ink mb-2">
+                  {card.title}
+                </h3>
+                <p className="text-[17px] leading-[28px] text-slate mb-4 flex-1">
+                  {card.summary}
+                </p>
+                <InternalLink href={card.href}>
+                  Read the research &rarr;
+                </InternalLink>
+              </Card>
+            );
+          })}
         </div>
       </SectionShell>
 

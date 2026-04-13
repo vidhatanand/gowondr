@@ -62,8 +62,7 @@ export default function ForParentsPage() {
         </h1>
         <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
           You already bring what matters most: attention, warmth, trust,
-          context, continuity, and love. No textbook can replace that. The
-          Learning Guide simply gives you a clear{" "}
+          context, continuity, and love. No textbook can replace that. goWondr simply gives you a clear{" "}
           <InternalLink href="/how-it-works">daily learning guide</InternalLink>{" "}
           so you always know what to do next.
         </p>
@@ -417,8 +416,7 @@ export default function ForParentsPage() {
             You are already your child's best teacher
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-slate">
-            Not because you know everything, but because you care the most. The
-            Learning Guide does not replace you. It supports you. It gives you
+            Not because you know everything, but because you care the most. goWondr does not replace you. It supports you. It gives you
             the structure so you can focus on the relationship. And that
             relationship is where real learning lives.
           </p>

@@ -181,8 +181,7 @@ export default function CurriculumCoveragePage() {
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-slate">
             Without structure, home learning can feel random: a worksheet here,
-            a video there, and no way to know whether it all adds up. With The
-            Learning Guide, every session connects to a concept, every concept
+            a video there, and no way to know whether it all adds up. With goWondr, every session connects to a concept, every concept
             belongs to a strand, and every strand serves a subject. You can
             always see the bigger picture, and so can your child.
           </p>

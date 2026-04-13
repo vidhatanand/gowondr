@@ -337,8 +337,7 @@ export default function ParentChildConnectionPage() {
           What this means for the product
         </h2>
         <p className="mt-4 text-[17px] leading-[28px] text-slate">
-          Because parent-child interaction is the engine of learning, The
-          Learning Guide is designed to support the parent, not replace them.
+          Because parent-child interaction is the engine of learning, goWondr is designed to support the parent, not replace them.
           Every activity is meant to be done together. The guide provides
           structure, sequencing, and prompts — but the parent brings the
           warmth, the context, and the responsiveness that no technology can
