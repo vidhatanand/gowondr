@@ -42,7 +42,7 @@ export function StrandMapSVG({
 
       <div className="rounded-2xl border border-sand bg-paper-alt p-4 md:p-6">
         <svg
-          viewBox={`-20 0 380 ${svgHeight}`}
+          viewBox={`-80 0 480 ${svgHeight}`}
           className="w-full h-auto"
         >
           {/* Subject root node */}
