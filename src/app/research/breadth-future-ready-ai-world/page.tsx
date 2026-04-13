@@ -67,7 +67,7 @@ export default function BreadthFutureReadyPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper" narrow={true}>
+      <SectionShell bg="paper">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -75,10 +75,10 @@ export default function BreadthFutureReadyPage() {
             { label: "Breadth in an AI World" },
           ]}
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight">
+        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
           Why breadth matters in an AI world
         </h1>
-        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display">
+        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
           The future will not reward narrow specialization alone. It will
           reward people who can connect ideas across domains.
         </p>

@@ -65,7 +65,7 @@ export default function ConceptFirstCoveragePage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper" narrow={true}>
+      <SectionShell bg="paper">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -73,10 +73,10 @@ export default function ConceptFirstCoveragePage() {
             { label: "Concept-First Coverage" },
           ]}
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight">
+        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
           Why concept-first coverage beats random activity bundles
         </h1>
-        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display">
+        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
           Children do not need more disconnected content. They need connected
           understanding.
         </p>
@@ -225,38 +225,73 @@ export default function ConceptFirstCoveragePage() {
       </SectionShell>
 
       {/* Structure diagram */}
-      <SectionShell bg="linen" narrow={true} id="structure">
-        <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
-          How concept-first structure works
-        </h2>
-        <p className="mt-4 text-[17px] leading-[28px] text-slate">
-          The curriculum is organized in layers, from broad to specific,
-          so every activity connects back to a meaningful idea.
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          {["Subject", "Strand", "Concept", "Evidence", "Revisit"].map(
-            (step, i) => (
-              <div key={step} className="flex items-center gap-3">
-                <Card variant="default" className="text-center px-5 py-4">
-                  <p className="font-body text-[15px] font-semibold text-ink">
-                    {step}
-                  </p>
-                </Card>
-                {i < 4 && (
-                  <span className="text-clay text-[20px] select-none">
-                    &rarr;
-                  </span>
-                )}
-              </div>
-            )
-          )}
+      <SectionShell bg="linen" id="structure">
+        <div className="max-w-[700px] mx-auto">
+          <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
+            How concept-first structure works
+          </h2>
+          <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
+            The curriculum is organized in layers, from broad to specific,
+            so every activity connects back to a meaningful idea.
+          </p>
+          <div className="mt-8 rounded-2xl border border-sand bg-paper overflow-hidden">
+            <svg viewBox="0 0 500 420" className="w-full h-auto" preserveAspectRatio="xMidYMid meet">
+              {/* 5 layers stacked vertically like geological strata */}
+
+              {/* Layer 1: Subjects (widest, bottom) */}
+              <rect x="40" y="340" width="420" height="55" rx="12" fill="#EAF3F2" stroke="#235A5F" strokeWidth="1.5" />
+              <text x="250" y="362" textAnchor="middle" fill="#235A5F" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">8 Subjects</text>
+              <text x="250" y="380" textAnchor="middle" fill="#235A5F" fontSize="10" fontFamily="var(--font-body)" opacity="0.7">Reading, Math, Science, World, Personal, Arts, Digital, Inquiry</text>
+
+              {/* Layer 2: Strands */}
+              <rect x="65" y="270" width="370" height="50" rx="12" fill="#F7ECE4" stroke="#A4582E" strokeWidth="1.5" />
+              <text x="250" y="292" textAnchor="middle" fill="#A4582E" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">Strands</text>
+              <text x="250" y="308" textAnchor="middle" fill="#A4582E" fontSize="10" fontFamily="var(--font-body)" opacity="0.7">Major learning threads within each subject</text>
+
+              {/* Connecting lines */}
+              <line x1="250" y1="320" x2="250" y2="340" stroke="#E6D5C3" strokeWidth="1.5" strokeDasharray="4 3" />
+
+              {/* Layer 3: Concepts (core) */}
+              <rect x="90" y="195" width="320" height="55" rx="12" fill="#EAF3EC" stroke="#4B7A5B" strokeWidth="2" />
+              <text x="250" y="218" textAnchor="middle" fill="#4B7A5B" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">Concepts</text>
+              <text x="250" y="236" textAnchor="middle" fill="#4B7A5B" fontSize="10" fontFamily="var(--font-body)" opacity="0.7">The real units of learning — sequenced and connected</text>
+
+              <line x1="250" y1="250" x2="250" y2="270" stroke="#E6D5C3" strokeWidth="1.5" strokeDasharray="4 3" />
+
+              {/* Layer 4: Evidence */}
+              <rect x="115" y="125" width="270" height="50" rx="12" fill="#EAF0FB" stroke="#214D9C" strokeWidth="1.5" />
+              <text x="250" y="147" textAnchor="middle" fill="#214D9C" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">Evidence</text>
+              <text x="250" y="163" textAnchor="middle" fill="#214D9C" fontSize="10" fontFamily="var(--font-body)" opacity="0.7">Can the child notice, explain, and use it?</text>
+
+              <line x1="250" y1="175" x2="250" y2="195" stroke="#E6D5C3" strokeWidth="1.5" strokeDasharray="4 3" />
+
+              {/* Layer 5: Revisit (top, narrowest) */}
+              <rect x="145" y="55" width="210" height="50" rx="12" fill="#F6EAE3" stroke="#9E563C" strokeWidth="1.5" />
+              <text x="250" y="77" textAnchor="middle" fill="#9E563C" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">Revisit</text>
+              <text x="250" y="93" textAnchor="middle" fill="#9E563C" fontSize="10" fontFamily="var(--font-body)" opacity="0.7">Spaced return to deepen understanding</text>
+
+              <line x1="250" y1="105" x2="250" y2="125" stroke="#E6D5C3" strokeWidth="1.5" strokeDasharray="4 3" />
+
+              {/* Revisit feedback loop — curved arrow back to Concepts */}
+              <path d="M 145 80 Q 60 80 60 195 Q 60 225 90 225" fill="none" stroke="#9E563C" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.3" />
+              <text x="45" y="160" textAnchor="middle" fill="#9E563C" fontSize="9" fontFamily="var(--font-body)" opacity="0.4" transform="rotate(-90, 45, 160)">deepens</text>
+
+              {/* Top label */}
+              <text x="250" y="35" textAnchor="middle" fill="#52616D" fontSize="10" fontWeight="600" fontFamily="var(--font-body)" opacity="0.5">narrower and deeper ↑</text>
+              {/* Bottom label */}
+              <text x="250" y="415" textAnchor="middle" fill="#52616D" fontSize="10" fontWeight="600" fontFamily="var(--font-body)" opacity="0.5">↓ broader foundation</text>
+            </svg>
+          </div>
+          <p className="mt-4 text-[13px] text-slate text-center">
+            Each layer narrows in scope but deepens in understanding. Revisit loops back to strengthen concepts over time.
+          </p>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate">
+            Each subject is divided into strands. Each strand contains
+            concepts. Each concept is taught through a developmental
+            progression, assessed through observable evidence, and revisited
+            at spaced intervals so understanding deepens over time.
+          </p>
         </div>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate">
-          Each subject is divided into strands. Each strand contains
-          concepts. Each concept is taught through a developmental
-          progression, assessed through observable evidence, and revisited
-          at spaced intervals so understanding deepens over time.
-        </p>
       </SectionShell>
 
       {/* Why this matters */}

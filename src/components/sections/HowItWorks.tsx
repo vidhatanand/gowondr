@@ -6,6 +6,7 @@ import {
   Sparkles,
   ClipboardCheck,
   RefreshCw,
+  MonitorOff,
 } from "lucide-react";
 
 const steps = [
@@ -106,7 +107,26 @@ export function HowItWorks() {
         </div>
       </div>
 
-      <div className="mt-10 text-center">
+      {/* Screen-light callout */}
+      <div className="mt-10 max-w-[700px] mx-auto">
+        <div className="flex items-start gap-4 rounded-2xl border border-teal/15 bg-teal-soft p-5 md:p-6">
+          <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-teal shrink-0">
+            <MonitorOff className="h-6 w-6 text-paper" />
+          </div>
+          <div>
+            <p className="font-body font-bold text-[15px] text-teal">
+              Every activity happens off-screen
+            </p>
+            <p className="text-[14px] text-slate leading-relaxed mt-1">
+              The parent reads a short prompt, then puts the device down.
+              Activities involve talking, drawing, sorting, building, moving,
+              and exploring the real world. The screen is a guide, not a babysitter.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-8 text-center">
         <Button variant="ghost" href="/how-it-works">
           See how it works in detail &rarr;
         </Button>

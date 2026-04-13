@@ -69,7 +69,7 @@ export default function ThinkingRoutinesPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper" narrow={true}>
+      <SectionShell bg="paper">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -77,10 +77,10 @@ export default function ThinkingRoutinesPage() {
             { label: "Thinking Routines" },
           ]}
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight">
+        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
           Why thinking routines and visible understanding matter
         </h1>
-        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display">
+        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
           Understanding is invisible until a child finds a way to show it.
           Thinking routines give them that way.
         </p>

@@ -68,7 +68,7 @@ export default function DigitalLiteracyPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper" narrow={true}>
+      <SectionShell bg="paper">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -76,11 +76,11 @@ export default function DigitalLiteracyPage() {
             { label: "Digital Literacy with Judgment" },
           ]}
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight">
+        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
           Why digital literacy should be taught with judgment, not just
           devices
         </h1>
-        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display">
+        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
           Knowing how to use a device is not the same as understanding the
           digital world. Children need both — and judgment comes first.
         </p>

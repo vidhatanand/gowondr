@@ -64,7 +64,7 @@ export default function ParentChildConnectionPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper" narrow={true}>
+      <SectionShell bg="paper">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -72,10 +72,10 @@ export default function ParentChildConnectionPage() {
             { label: "Parent-Child Connection" },
           ]}
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight">
+        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
           Why parent-child connection matters for learning
         </h1>
-        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display">
+        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
           The strongest learning tool in early childhood is still a caring
           adult.
         </p>
@@ -351,16 +351,32 @@ export default function ParentChildConnectionPage() {
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
           What we do not claim
         </h2>
-        <p className="mt-4 text-[17px] leading-[28px] text-slate">
-          We do not claim that parent-led learning is superior to all other
-          forms of education. We do not claim that professional teachers are
-          unnecessary. We do not claim that every parent has the time,
-          circumstances, or support to make this work without help. What we do
-          claim is that when parents are able to engage in responsive
-          interaction with their children, the evidence consistently shows
-          positive effects on learning — and that a well-designed tool can
-          make that engagement easier and more effective.
-        </p>
+        <div className="mt-6 space-y-4">
+          {/* NOT claims */}
+          {[
+            "That parent-led learning is superior to all other forms of education",
+            "That professional teachers are unnecessary",
+            "That every parent has the time or circumstances to do this without help",
+          ].map((claim) => (
+            <div key={claim} className="flex items-start gap-3 rounded-xl border border-refresh-ink/15 bg-refresh-soft p-4">
+              <span className="text-refresh-ink text-[16px] font-bold shrink-0 mt-0.5">✕</span>
+              <p className="text-[15px] text-ink/80 leading-relaxed">{claim}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 space-y-4">
+          {/* DO claims */}
+          {[
+            "When parents engage in responsive interaction, the evidence consistently shows positive effects on learning",
+            "A well-designed tool can make that engagement easier, clearer, and more effective",
+            "The relationship between parent and child is one of the most powerful forces in early learning",
+          ].map((claim) => (
+            <div key={claim} className="flex items-start gap-3 rounded-xl border border-strong-ink/15 bg-strong-soft p-4">
+              <span className="text-strong-ink text-[16px] font-bold shrink-0 mt-0.5">✓</span>
+              <p className="text-[15px] text-ink/80 leading-relaxed">{claim}</p>
+            </div>
+          ))}
+        </div>
       </SectionShell>
 
       {/* Close */}
