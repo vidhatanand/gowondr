@@ -7,7 +7,7 @@ import { EntityGraph } from "@/components/ui/EntityGraph";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { Accordion } from "@/components/ui/Accordion";
 import { breadcrumbJsonLd } from "@/lib/seo";
-import { StatStrip } from "@/components/ui/StatStrip";
+
 
 export const metadata: Metadata = {
   title: "Pricing for goWondr | Parent-led home learning",
@@ -125,16 +125,6 @@ export default function PricingPage() {
           adaptive planning, progress tracking, and daily sessions.
         </p>
       </SectionShell>
-
-      {/* Stats */}
-      <StatStrip
-        stats={[
-          { value: "\u20B91,000", label: "per month" },
-          { value: "\u20B910,000", label: "per year" },
-          { value: "\u20B92,000", label: "Saved" },
-          { value: "15", label: "Day Trial" },
-        ]}
-      />
 
       {/* Pricing cards */}
       <SectionShell bg="paper-alt">
