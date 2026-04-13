@@ -5,7 +5,6 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
-import { StepFlow } from "@/components/ui/StepFlow";
 import { LearningArcVisual } from "@/components/ui/LearningArcVisual";
 import { SubjectExamples } from "@/components/ui/SubjectExamples";
 import {
@@ -26,7 +25,59 @@ import {
   Palette,
   Blocks,
   Compass,
+  UserCircle,
+  CalendarDays,
+  Sparkles,
+  ClipboardCheck,
 } from "lucide-react";
+
+const fiveSteps = [
+  {
+    number: 1,
+    icon: <UserCircle className="h-6 w-6" />,
+    title: "Start with your child",
+    description:
+      "Tell us your child's age, stage, and what they already know. The planner finds the right starting point across all subjects.",
+    color: "#235A5F",
+    bg: "#EAF3F2",
+  },
+  {
+    number: 2,
+    icon: <CalendarDays className="h-6 w-6" />,
+    title: "Open your daily session",
+    description:
+      "Each day, the guide prepares a short session with activities drawn from your child's current concepts, designed for screen-light learning.",
+    color: "#A4582E",
+    bg: "#F7ECE4",
+  },
+  {
+    number: 3,
+    icon: <Sparkles className="h-6 w-6" />,
+    title: "Follow the learning arc",
+    description:
+      "Every concept follows a natural progression — notice, explore, talk, represent, connect, practice, explain, use, and revisit.",
+    color: "#4B7A5B",
+    bg: "#EAF3EC",
+  },
+  {
+    number: 4,
+    icon: <ClipboardCheck className="h-6 w-6" />,
+    title: "Log what you observe",
+    description:
+      "After each session, note what happened. Quick observations replace tests and grades with something more honest and useful.",
+    color: "#214D9C",
+    bg: "#EAF0FB",
+  },
+  {
+    number: 5,
+    icon: <RefreshCw className="h-6 w-6" />,
+    title: "The planner adapts",
+    description:
+      "Based on your observations, the adaptive plan adjusts what comes next. Review is spaced automatically.",
+    color: "#6A4E73",
+    bg: "#EDE8E9",
+  },
+];
 
 export const metadata: Metadata = {
   title: "How parent-led home learning works",
@@ -99,41 +150,35 @@ export default function HowItWorksPage() {
         <p className="mt-4 text-[17px] leading-[28px] text-slate text-center max-w-[600px] mx-auto">
           No complicated setup. Each step flows naturally into the next.
         </p>
-        <div className="mt-10 max-w-[700px] mx-auto">
-          <StepFlow
-            steps={[
-              {
-                number: 1,
-                title: "Start with your child",
-                description:
-                  "Tell us your child's age, stage, and what they already know. The planner finds the right starting point across all subjects.",
-              },
-              {
-                number: 2,
-                title: "Open your daily session",
-                description:
-                  "Each day, the guide prepares a short session with activities drawn from your child's current concepts, designed for screen-light learning.",
-              },
-              {
-                number: 3,
-                title: "Follow the learning arc",
-                description:
-                  "Every concept follows a natural progression — notice, explore, talk, represent, connect, practice, explain, use, and revisit.",
-              },
-              {
-                number: 4,
-                title: "Log what you observe",
-                description:
-                  "After each session, note what happened. Quick observations replace tests and grades with something more honest and useful.",
-              },
-              {
-                number: 5,
-                title: "The planner adapts",
-                description:
-                  "Based on your observations, the adaptive plan adjusts what comes next. Review is spaced automatically.",
-              },
-            ]}
-          />
+        <div className="mt-10 max-w-[800px] mx-auto space-y-4">
+          {fiveSteps.map((step) => (
+            <div key={step.number} className="flex gap-4 md:gap-6 items-center group">
+              <div
+                className="w-[52px] h-[52px] md:w-[60px] md:h-[60px] rounded-2xl flex items-center justify-center shadow-xs group-hover:shadow-sm transition-all duration-200 group-hover:scale-105 shrink-0"
+                style={{ backgroundColor: step.bg, color: step.color }}
+              >
+                {step.icon}
+              </div>
+              <div className="flex-1">
+                <span
+                  className="text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{ color: step.color }}
+                >
+                  Step {step.number}
+                </span>
+                <h3 className="font-body font-semibold text-[18px] md:text-[20px] text-ink leading-tight mt-1">
+                  {step.title}
+                </h3>
+                <p className="text-[15px] text-slate leading-relaxed mt-1.5 max-w-[500px]">
+                  {step.description}
+                </p>
+                <div
+                  className="w-10 h-1 rounded-full mt-3 opacity-40"
+                  style={{ backgroundColor: step.color }}
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </SectionShell>
 

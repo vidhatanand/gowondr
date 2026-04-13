@@ -111,12 +111,13 @@ export default function SubjectsPage() {
                 subjectSoftClass={subject.softClass}
                 subjectInkClass={subject.inkClass}
                 hover
+                className="flex flex-col"
               >
                 <Icon className="h-7 w-7 mb-3" />
                 <h3 className="font-display text-[24px] leading-[30px] text-ink mb-2">
                   {subject.shortName}
                 </h3>
-                <p className="text-[17px] leading-[28px] text-slate mb-4">
+                <p className="text-[17px] leading-[28px] text-slate mb-4 flex-1">
                   {subject.description}
                 </p>
                 <InternalLink href={`/subjects/${slug}`}>

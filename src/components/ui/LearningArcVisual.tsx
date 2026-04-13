@@ -224,59 +224,47 @@ export function LearningArcVisual({
             </svg>
           </div>
 
-          {/* Detail panel — shows active step or all steps */}
+          {/* Detail panel — always shows all steps, highlights active */}
           <div className="w-full md:w-1/2">
-            {activeStep !== null ? (
-              // Single step detail
-              <div className="text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                  <span
-                    className="inline-flex items-center justify-center w-8 h-8 rounded-full text-[14px] font-bold text-paper"
-                    style={{ backgroundColor: phaseConfig[steps[activeStep].phase]?.color || "#235A5F" }}
+            <div className="space-y-1">
+              {steps.map((step, i) => {
+                const phase = phaseConfig[step.phase];
+                const isActive = activeStep === i;
+                return (
+                  <div
+                    key={step.number}
+                    className={`flex items-start gap-3 p-2 rounded-lg transition-all duration-200 ${
+                      isActive
+                        ? "bg-paper shadow-xs scale-[1.02]"
+                        : "hover:bg-paper/60"
+                    }`}
+                    onMouseEnter={() => setActiveStep(i)}
+                    onMouseLeave={() => setActiveStep(null)}
                   >
-                    {steps[activeStep].number}
-                  </span>
-                  <span className="text-[12px] font-semibold uppercase tracking-wide" style={{ color: phaseConfig[steps[activeStep].phase]?.color }}>
-                    {steps[activeStep].phase}
-                  </span>
-                </div>
-                <h3 className="font-display text-[24px] text-ink leading-tight">
-                  {steps[activeStep].label}
-                </h3>
-                <p className="mt-2 text-[15px] text-slate leading-relaxed">
-                  {steps[activeStep].description}
-                </p>
-              </div>
-            ) : (
-              // All steps summary
-              <div className="space-y-2.5">
-                {steps.map((step, i) => {
-                  const phase = phaseConfig[step.phase];
-                  return (
-                    <button
-                      key={step.number}
-                      onClick={() => setActiveStep(i)}
-                      className="flex items-start gap-3 w-full text-left p-2 rounded-lg hover:bg-paper transition-colors cursor-pointer"
+                    <span
+                      className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-[11px] font-bold shrink-0 mt-0.5 transition-all duration-200 ${
+                        isActive ? "text-paper scale-110" : "text-paper"
+                      }`}
+                      style={{ backgroundColor: phase?.color || "#235A5F" }}
                     >
-                      <span
-                        className="inline-flex items-center justify-center w-6 h-6 rounded-full text-[11px] font-bold text-paper shrink-0 mt-0.5"
-                        style={{ backgroundColor: phase?.color || "#235A5F" }}
-                      >
-                        {step.number}
+                      {step.number}
+                    </span>
+                    <div className="min-w-0">
+                      <span className={`font-body font-semibold text-[14px] transition-colors ${
+                        isActive ? "text-ink" : "text-ink/80"
+                      }`}>
+                        {step.label}
                       </span>
-                      <div className="min-w-0">
-                        <span className="font-body font-semibold text-[14px] text-ink">
-                          {step.label}
-                        </span>
-                        <span className="text-[13px] text-slate ml-1.5">
-                          — {step.description}
-                        </span>
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-            )}
+                      <span className={`text-[13px] ml-1.5 transition-colors ${
+                        isActive ? "text-slate" : "text-slate/60"
+                      }`}>
+                        — {step.description}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

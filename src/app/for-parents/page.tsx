@@ -6,10 +6,11 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
-import { ComparisonColumns } from "@/components/ui/ComparisonColumns";
-import { FeatureGrid } from "@/components/ui/FeatureGrid";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
-import { Search, HelpCircle, Lightbulb, MessageCircle, Eye, ArrowRight } from "lucide-react";
+import {
+  Eye, Heart, HandHeart, Compass, Clock, Sparkles,
+  Search, CalendarDays, ShieldCheck, Leaf, BarChart3, MessageCircle,
+  BookOpen, RefreshCw, GitBranch, ClipboardCheck, TrendingUp,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "How to teach your child at home without being a teacher",
@@ -68,46 +69,43 @@ export default function ForParentsPage() {
         </p>
       </SectionShell>
 
-      {/* What parents bring */}
+      {/* What parents bring — color-coded cards */}
       <SectionShell bg="linen">
-        <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight max-w-2xl">
+        <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight text-center">
           What you already bring
         </h2>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {[
-            {
-              title: "Attention",
-              body: "You notice what excites your child, what frustrates them, and what they are ready for. No classroom teacher of thirty children can match that.",
-            },
-            {
-              title: "Warmth",
-              body: "Learning sticks when it feels safe. Your patience and encouragement create the conditions where real understanding can grow.",
-            },
-            {
-              title: "Trust",
-              body: "Your child trusts you in a way they trust no one else. That trust makes it safe to struggle, ask questions, and try again.",
-            },
-            {
-              title: "Context",
-              body: "You know your child's world: their routines, interests, fears, and strengths. That context makes every learning moment richer.",
-            },
-            {
-              title: "Continuity",
-              body: "You are there every day. Learning compounds when the same caring person follows the thread across weeks, months, and years.",
-            },
-            {
-              title: "Love",
-              body: "The deepest advantage of all. Children learn best from people who love them, and no curriculum can substitute for that.",
-            },
-          ].map((item) => (
-            <Card key={item.title} variant="default" hover>
-              <h3 className="font-display text-[20px] text-ink mb-2">
-                {item.title}
-              </h3>
-              <p className="text-[15px] leading-[24px] text-slate">
-                {item.body}
-              </p>
-            </Card>
+        <p className="mt-3 text-[17px] leading-[28px] text-slate text-center max-w-[520px] mx-auto">
+          No textbook can replace these. They are your superpower.
+        </p>
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {([
+            { icon: <Eye className="h-5 w-5" />, title: "Attention", body: "You notice what excites, frustrates, and readies your child. No teacher of thirty can match that.", color: "#235A5F", bg: "#EAF3F2" },
+            { icon: <Heart className="h-5 w-5" />, title: "Warmth", body: "Learning sticks when it feels safe. Your patience creates the conditions for real understanding.", color: "#A4582E", bg: "#F7ECE4" },
+            { icon: <HandHeart className="h-5 w-5" />, title: "Trust", body: "Your child trusts you uniquely. That trust makes it safe to struggle, question, and try again.", color: "#4B7A5B", bg: "#EAF3EC" },
+            { icon: <Compass className="h-5 w-5" />, title: "Context", body: "You know their routines, interests, fears, and strengths. That context makes every moment richer.", color: "#214D9C", bg: "#EAF0FB" },
+            { icon: <Clock className="h-5 w-5" />, title: "Continuity", body: "You are there every day. Learning compounds when the same caring person follows the thread.", color: "#6A4E73", bg: "#EDE8E9" },
+            { icon: <Sparkles className="h-5 w-5" />, title: "Love", body: "The deepest advantage. Children learn best from people who love them. No curriculum replaces that.", color: "#94536C", bg: "#F4EAEA" },
+          ]).map((item) => (
+            <div
+              key={item.title}
+              className="flex items-start gap-3.5 rounded-xl border border-sand/60 p-4 hover:shadow-xs transition-shadow"
+              style={{ backgroundColor: item.bg }}
+            >
+              <div
+                className="flex items-center justify-center w-10 h-10 rounded-lg shrink-0"
+                style={{ backgroundColor: `${item.color}15`, color: item.color }}
+              >
+                {item.icon}
+              </div>
+              <div>
+                <p className="font-body font-semibold text-[15px] leading-tight" style={{ color: item.color }}>
+                  {item.title}
+                </p>
+                <p className="text-[13px] text-slate/80 leading-relaxed mt-1">
+                  {item.body}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </SectionShell>
@@ -128,120 +126,151 @@ export default function ForParentsPage() {
         </div>
       </SectionShell>
 
-      {/* System carries vs You carry */}
+      {/* What the system carries — icon card style */}
       <SectionShell bg="paper-alt">
-        <div className="max-w-3xl">
-          <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
-            What the system carries, so you do not have to
-          </h2>
-          <div className="mt-8">
-            <ComparisonColumns
-              left={{
-                title: "The system carries",
-                items: [
-                  "Curriculum structure and sequencing",
-                  "Concept dependencies and prerequisites",
-                  "Daily activity suggestions",
-                  "Spaced review and revisit timing",
-                  "Progress tracking across subjects",
-                ],
-              }}
-              right={{
-                title: "You carry",
-                items: [
-                  "The conversation and the connection",
-                  "Simple observations after each session",
-                  "Patience when things take time",
-                  "Encouragement when things click",
-                  "The decision to show up each day",
-                ],
-              }}
-            />
-          </div>
+        <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight text-center">
+          What the system carries, so you do not have to
+        </h2>
+        <p className="mt-3 text-[17px] leading-[28px] text-slate text-center max-w-[520px] mx-auto">
+          You focus on the relationship. The system handles the rest.
+        </p>
+        <div className="mt-8 max-w-[800px] mx-auto space-y-4">
+          {([
+            { icon: <BookOpen className="h-6 w-6" />, title: "Curriculum structure", desc: "Full 8-subject curriculum, sequenced by concept and stage — so you never have to plan from scratch.", color: "#235A5F", bg: "#EAF3F2" },
+            { icon: <GitBranch className="h-6 w-6" />, title: "Concept dependencies", desc: "The system knows what should come before what, so your child builds on solid ground.", color: "#A4582E", bg: "#F7ECE4" },
+            { icon: <CalendarDays className="h-6 w-6" />, title: "Daily activity suggestions", desc: "Each session is ready to use — with materials, prompts, and coaching language.", color: "#4B7A5B", bg: "#EAF3EC" },
+            { icon: <RefreshCw className="h-6 w-6" />, title: "Spaced review timing", desc: "The planner remembers what needs revisiting, so important ideas don't fade.", color: "#214D9C", bg: "#EAF0FB" },
+            { icon: <TrendingUp className="h-6 w-6" />, title: "Progress tracking", desc: "See where understanding is strong, where it's still building, and what comes next.", color: "#6A4E73", bg: "#EDE8E9" },
+          ]).map((item) => (
+            <div key={item.title} className="flex gap-4 md:gap-6 items-center group">
+              <div
+                className="w-[52px] h-[52px] md:w-[60px] md:h-[60px] rounded-2xl flex items-center justify-center shadow-xs group-hover:shadow-sm transition-all duration-200 group-hover:scale-105 shrink-0"
+                style={{ backgroundColor: item.bg, color: item.color }}
+              >
+                {item.icon}
+              </div>
+              <div className="flex-1">
+                <h3 className="font-body font-semibold text-[18px] md:text-[20px] text-ink leading-tight">
+                  {item.title}
+                </h3>
+                <p className="text-[15px] text-slate leading-relaxed mt-1 max-w-[500px]">
+                  {item.desc}
+                </p>
+                <div className="w-10 h-1 rounded-full mt-3 opacity-40" style={{ backgroundColor: item.color }} />
+              </div>
+            </div>
+          ))}
         </div>
       </SectionShell>
 
-      {/* Six things parents need */}
+      {/* Six things parents need — subject-breadth style */}
       <SectionShell bg="paper">
-        <div className="max-w-3xl">
-          <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
-            Six things every parent needs
-          </h2>
-          <div className="mt-8">
-            <FeatureGrid
-              columns={3}
-              features={[
-                {
-                  icon: <Search className="h-5 w-5" />,
-                  title: "A clear starting point",
-                  description:
-                    "Not a generic age label, but a real assessment of where your child is across all subjects.",
-                },
-                {
-                  icon: <HelpCircle className="h-5 w-5" />,
-                  title: "A daily plan",
-                  description:
-                    "Tells you exactly what to do, with prompts and activities ready to go.",
-                },
-                {
-                  icon: <Lightbulb className="h-5 w-5" />,
-                  title: "Confidence in coverage",
-                  description:
-                    "Know the plan covers what matters, connected to a real adaptive planner.",
-                },
-                {
-                  icon: <MessageCircle className="h-5 w-5" />,
-                  title: "Natural activities",
-                  description:
-                    "Activities that feel natural, not like homework. Screen-light learning rooted in play, talk, and everyday life.",
-                },
-                {
-                  icon: <Eye className="h-5 w-5" />,
-                  title: "Visible progress",
-                  description:
-                    "A way to see progress without tests, grades, or comparison.",
-                },
-                {
-                  icon: <ArrowRight className="h-5 w-5" />,
-                  title: "Reassurance",
-                  description:
-                    "Confidence that you are doing enough, backed by parent-child connection research.",
-                },
-              ]}
-            />
-          </div>
+        <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight text-center">
+          Six things every parent needs
+        </h2>
+        <p className="mt-3 text-[17px] leading-[28px] text-slate text-center max-w-[520px] mx-auto">
+          goWondr is designed around exactly these needs.
+        </p>
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {([
+            { icon: <Search className="h-5 w-5" />, title: "What to explore", desc: "A clear starting point based on your child's real readiness — not a generic age label.", color: "text-teal", bg: "bg-teal-soft", border: "border-teal/20" },
+            { icon: <CalendarDays className="h-5 w-5" />, title: "A daily plan", desc: "Exactly what to do today, with prompts, materials, and activities ready to go.", color: "text-terracotta", bg: "bg-terracotta-soft", border: "border-terracotta/20" },
+            { icon: <ShieldCheck className="h-5 w-5" />, title: "Confidence in coverage", desc: "Know the plan covers what matters across 8 subjects, connected to a real curriculum.", color: "text-strong-ink", bg: "bg-strong-soft", border: "border-strong-ink/20" },
+            { icon: <Leaf className="h-5 w-5" />, title: "Natural activities", desc: "Learning that feels like play, talk, and everyday life — not homework or screen drills.", color: "text-science-ink", bg: "bg-science-soft", border: "border-science-ink/20" },
+            { icon: <BarChart3 className="h-5 w-5" />, title: "Visible progress", desc: "See growth without tests, grades, or comparison. Know where things are strong and where they're building.", color: "text-info-ink", bg: "bg-info-soft", border: "border-info-ink/20" },
+            { icon: <MessageCircle className="h-5 w-5" />, title: "Words to say", desc: "Parent coaching language so you always know how to start the conversation and respond to what happens.", color: "text-arts-ink", bg: "bg-arts-soft", border: "border-arts-ink/20" },
+          ]).map((item) => (
+            <div
+              key={item.title}
+              className={`rounded-xl border ${item.border} ${item.bg} p-5 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200`}
+            >
+              <div className={`${item.color} mb-3`}>{item.icon}</div>
+              <h3 className={`font-body font-semibold text-[16px] ${item.color} mb-1.5`}>
+                {item.title}
+              </h3>
+              <p className="text-[14px] text-slate leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </SectionShell>
 
-      {/* How it works together */}
+      {/* How the partnership works — creative SVG */}
       <SectionShell bg="paper-alt">
-        <div>
-          <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
-            How the guide supports you
-          </h2>
-          <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
-            goWondr takes the hard parts off your plate so you can
-            focus on the relationship.
-          </p>
-          <div className="mt-8">
-            <FlowDiagram
-              title="HOW THE PARTNERSHIP WORKS"
-              caption="The product carries structure and sequence. The parent carries warmth and attention. Together, they create the conditions for deeper learning."
-              direction="vertical"
-              nodes={[
-                { id: "guide", label: "goWondr", description: "Curriculum, sequence, coaching language", variant: "teal" },
-                { id: "structure", label: "Clear structure", description: "Daily plans, review timing, progress tracking" },
-                { id: "parent", label: "Parent guides with warmth", description: "Encouragement, observation, conversation" },
-                { id: "child", label: "Child learns deeply", description: "Understanding, confidence, curiosity", variant: "success" },
-              ]}
-              connections={[
-                { from: "guide", to: "structure", label: "provides" },
-                { from: "structure", to: "parent", label: "supports" },
-                { from: "parent", to: "child", label: "nurtures" },
-                { from: "child", to: "guide", label: "growth feeds back", dashed: true },
-              ]}
-            />
+        <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight text-center">
+          How the guide supports you
+        </h2>
+        <p className="mt-3 text-[17px] leading-[28px] text-slate text-center max-w-[520px] mx-auto">
+          goWondr takes the hard parts off your plate so you can focus on the relationship.
+        </p>
+
+        <div className="mt-10 max-w-[500px] mx-auto">
+          <div className="rounded-2xl border border-sand bg-paper p-6 md:p-8">
+            <div className="flex justify-center">
+              <svg viewBox="0 0 300 300" className="w-full max-w-[300px] h-auto">
+                {/* Outer circular flow path */}
+                <circle cx="150" cy="150" r="105" fill="none" stroke="#E6D5C3" strokeWidth="2" />
+
+                {/* Directional arc arrows along the circle */}
+                {/* goWondr → Parent (top-right arc) */}
+                <path d="M 205 62 L 212 70 L 200 68" fill="none" stroke="#235A5F" strokeWidth="1.5" strokeLinecap="round" />
+                {/* Parent → Child (bottom-right arc) */}
+                <path d="M 230 200 L 225 210 L 220 200" fill="none" stroke="#A4582E" strokeWidth="1.5" strokeLinecap="round" />
+                {/* Child → goWondr (bottom-left arc) */}
+                <path d="M 70 200 L 75 210 L 80 200" fill="none" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" />
+
+                {/* Arc labels */}
+                <text x="220" y="110" textAnchor="start" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">gives</text>
+                <text x="220" y="120" textAnchor="start" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">structure</text>
+                <text x="195" y="245" textAnchor="middle" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">nurtures</text>
+                <text x="105" y="245" textAnchor="middle" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">growth</text>
+                <text x="48" y="120" textAnchor="end" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">feeds</text>
+                <text x="48" y="130" textAnchor="end" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">back</text>
+
+                {/* goWondr node — top center */}
+                <circle cx="150" cy="45" r="32" fill="#EAF3F2" stroke="#235A5F" strokeWidth="2.5" />
+                <text x="150" y="40" textAnchor="middle" fill="#235A5F" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">go</text>
+                <text x="150" y="53" textAnchor="middle" fill="#235A5F" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">Wondr</text>
+
+                {/* Parent node — bottom right */}
+                <circle cx="237" cy="195" r="32" fill="#F7ECE4" stroke="#A4582E" strokeWidth="2.5" />
+                <text x="237" y="190" textAnchor="middle" fill="#A4582E" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">You,</text>
+                <text x="237" y="203" textAnchor="middle" fill="#A4582E" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">the parent</text>
+
+                {/* Child node — bottom left */}
+                <circle cx="63" cy="195" r="32" fill="#EAF3EC" stroke="#4B7A5B" strokeWidth="2.5" />
+                <text x="63" y="190" textAnchor="middle" fill="#4B7A5B" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">Your</text>
+                <text x="63" y="203" textAnchor="middle" fill="#4B7A5B" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">child</text>
+
+                {/* Center label */}
+                <text x="150" y="148" textAnchor="middle" fill="#1E2A34" fontSize="10" fontWeight="600" fontFamily="var(--font-body)">Deep</text>
+                <text x="150" y="162" textAnchor="middle" fill="#1E2A34" fontSize="10" fontWeight="600" fontFamily="var(--font-body)">learning</text>
+              </svg>
+            </div>
+
+            {/* Three roles explained */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center mt-6">
+              <div>
+                <div className="w-3 h-3 rounded-full bg-teal mx-auto mb-2" />
+                <p className="font-body font-semibold text-[14px] text-teal">goWondr carries</p>
+                <p className="text-[13px] text-slate mt-1">Structure, sequence, coaching language, review</p>
+              </div>
+              <div>
+                <div className="w-3 h-3 rounded-full bg-terracotta mx-auto mb-2" />
+                <p className="font-body font-semibold text-[14px] text-terracotta">You carry</p>
+                <p className="text-[13px] text-slate mt-1">Warmth, attention, conversation, encouragement</p>
+              </div>
+              <div>
+                <div className="w-3 h-3 rounded-full bg-strong-ink mx-auto mb-2" />
+                <p className="font-body font-semibold text-[14px] text-strong-ink">Your child gains</p>
+                <p className="text-[13px] text-slate mt-1">Understanding, confidence, curiosity, capability</p>
+              </div>
+            </div>
           </div>
+          <p className="text-center mt-4 text-[13px] text-slate">
+            The cycle reinforces itself — structure enables warmth, warmth nurtures growth, and growth informs the next step.
+          </p>
         </div>
       </SectionShell>
 

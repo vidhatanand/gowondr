@@ -48,7 +48,6 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-paper text-ink">
         <Navbar />
         <main className="flex-1">{children}</main>
-        <div className="h-8 bg-paper" aria-hidden="true" />
         <Footer />
       </body>
     </html>
