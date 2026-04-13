@@ -7,7 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Paintbrush, Hammer, Music, Drama, Sparkles } from "lucide-react";
 
@@ -119,23 +119,16 @@ export default function ArtsPage() {
 
       {/* Strand structure */}
       <SectionShell bg="paper">
-        <FlowDiagram
+        <StrandMapSVG
+          subject="Arts"
+          color="#7A5AA6"
+          bg="#EFE9EF"
           title="ARTS & EXPRESSION STRAND MAP"
-          caption="Children make, perform, and respond — and each strengthens the others. Expression is part of understanding."
-          direction="vertical"
-          nodes={[
-            { id: "making", label: "Making", description: "Drawing, painting, craft, design" },
-            { id: "performing", label: "Performing", description: "Music, dance, drama, story" },
-            { id: "responding", label: "Responding", description: "Awareness, talking about art, meaning", variant: "teal" },
-          ]}
-          connections={[
-            { from: "making", to: "responding", label: "expression through form" },
-            { from: "performing", to: "responding", label: "expression through body" },
-            { from: "responding", to: "making", label: "reflection deepens", dashed: true },
-          ]}
-          groups={[
-            { label: "Create", nodeIds: ["making", "performing"] },
-            { label: "Reflect", nodeIds: ["responding"] },
+          caption="Children make, perform, and respond — and each strengthens the others."
+          strands={[
+            { label: "Making", concepts: ["Drawing & painting", "Craft & construction", "Design for purpose"] },
+            { label: "Performing", concepts: ["Music & rhythm", "Dance & movement", "Drama & storytelling"] },
+            { label: "Responding", concepts: ["Aesthetic awareness", "Talking about art", "Expression & meaning"] },
           ]}
         />
       </SectionShell>

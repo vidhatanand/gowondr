@@ -7,7 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Hash, Layers, Ruler, BarChart3 } from "lucide-react";
 
@@ -109,21 +109,17 @@ export default function MathPage() {
 
       {/* Strand structure */}
       <SectionShell bg="paper">
-        <FlowDiagram
+        <StrandMapSVG
+          subject="Math"
+          color="#2A6E73"
+          bg="#E5ECE9"
           title="MATH STRAND MAP"
           caption="Number sense is the foundation. Operations build on it, measurement applies it, and data connects patterns across all mathematical thinking."
-          direction="vertical"
-          nodes={[
-            { id: "number", label: "Number Sense", description: "Counting, comparing, subitising" },
-            { id: "ops", label: "Operations", description: "Add, subtract, place value, multiply" },
-            { id: "measure", label: "Measurement", description: "Length, weight, shapes, position" },
-            { id: "data", label: "Data & Patterns", description: "Sorting, graphs, pattern recognition" },
-          ]}
-          connections={[
-            { from: "number", to: "ops", label: "foundation" },
-            { from: "number", to: "measure", label: "applied in" },
-            { from: "data", to: "number", label: "supports" },
-            { from: "ops", to: "measure", label: "used in" },
+          strands={[
+            { label: "Number Sense", concepts: ["Counting & quantity", "Comparing & ordering", "Subitising"] },
+            { label: "Operations", concepts: ["Add & subtract", "Place value", "Early multiplication"] },
+            { label: "Measurement", concepts: ["Length & weight", "Shapes & symmetry", "Position & direction"] },
+            { label: "Data & Patterns", concepts: ["Sorting & classifying", "Graphs & tables", "Pattern recognition"] },
           ]}
         />
       </SectionShell>

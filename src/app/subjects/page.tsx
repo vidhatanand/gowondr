@@ -7,7 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { subjects } from "@/lib/subjects";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { SubjectConnectionSVG } from "@/components/ui/SubjectConnectionSVG";
 import {
   BookOpen,
   Calculator,
@@ -134,35 +134,7 @@ export default function SubjectsPage() {
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight mb-8 text-center">
           How the subjects connect
         </h2>
-        <FlowDiagram
-          title="HOW 8 SUBJECTS CONNECT"
-          caption="No subject stands alone. Language supports all learning, inquiry connects every domain, and real-world context gives meaning to every concept."
-          direction="vertical"
-          nodes={[
-            { id: "reading", label: "Reading", description: "Language & Expression" },
-            { id: "math", label: "Math", description: "Logic & Patterns" },
-            { id: "science", label: "Science", description: "Nature & Inquiry" },
-            { id: "world", label: "World", description: "Society & Life" },
-            { id: "personal", label: "Personal Dev", description: "Health & Life Skills" },
-            { id: "arts", label: "Arts", description: "Design & Expression" },
-            { id: "digital", label: "Digital", description: "Literacy & Thinking" },
-            { id: "inquiry", label: "Inquiry", description: "Learning & Life Skills" },
-          ]}
-          connections={[
-            { from: "reading", to: "math" },
-            { from: "math", to: "science" },
-            { from: "science", to: "world" },
-            { from: "world", to: "personal" },
-            { from: "personal", to: "arts" },
-            { from: "arts", to: "digital" },
-            { from: "digital", to: "inquiry" },
-          ]}
-          groups={[
-            { label: "Foundations", nodeIds: ["reading", "math", "science"] },
-            { label: "Breadth", nodeIds: ["world", "personal", "arts"] },
-            { label: "Future-Ready", nodeIds: ["digital", "inquiry"] },
-          ]}
-        />
+        <SubjectConnectionSVG />
       </SectionShell>
 
       {/* Why breadth matters */}

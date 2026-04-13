@@ -212,18 +212,6 @@ export default function ForParentsPage() {
                 {/* Outer ring */}
                 <circle cx="160" cy="160" r="115" fill="none" stroke="#EFE6D8" strokeWidth="2" />
 
-                {/* Curved lines between nodes */}
-                <path d="M 195 58 Q 265 85 252 150" fill="none" stroke="#235A5F" strokeWidth="2" strokeLinecap="round" />
-                <path d="M 248 215 Q 215 280 125 240" fill="none" stroke="#A4582E" strokeWidth="2" strokeLinecap="round" />
-                <path d="M 78 185 Q 48 105 128 58" fill="none" stroke="#4B7A5B" strokeWidth="2" strokeLinecap="round" />
-
-                {/* Arc labels */}
-                <text x="255" y="100" textAnchor="start" fill="#235A5F" fontSize="12" fontWeight="600" fontFamily="var(--font-body)">gives</text>
-                <text x="255" y="114" textAnchor="start" fill="#235A5F" fontSize="12" fontWeight="600" fontFamily="var(--font-body)">structure</text>
-                <text x="200" y="272" textAnchor="middle" fill="#A4582E" fontSize="12" fontWeight="600" fontFamily="var(--font-body)">nurtures</text>
-                <text x="50" y="148" textAnchor="end" fill="#4B7A5B" fontSize="12" fontWeight="600" fontFamily="var(--font-body)">growth</text>
-                <text x="50" y="162" textAnchor="end" fill="#4B7A5B" fontSize="12" fontWeight="600" fontFamily="var(--font-body)">feeds back</text>
-
                 {/* goWondr node — top */}
                 <circle cx="160" cy="48" r="40" fill="#EAF3F2" stroke="#235A5F" strokeWidth="2.5" />
                 <text x="160" y="53" textAnchor="middle" fill="#235A5F" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">goWondr</text>

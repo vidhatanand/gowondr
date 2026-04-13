@@ -7,7 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { BookOpen, Ear, Music, Pencil } from "lucide-react";
 
@@ -108,21 +108,17 @@ export default function ReadingPage() {
 
       {/* Strand structure */}
       <SectionShell bg="paper">
-        <FlowDiagram
+        <StrandMapSVG
+          subject="Reading"
+          color="#6A4E73"
+          bg="#EDE8E9"
           title="READING & LANGUAGE STRAND MAP"
           caption="Each strand builds on the others — oral language supports phonics, decoding enables comprehension, and writing deepens the entire cycle."
-          direction="vertical"
-          nodes={[
-            { id: "oral", label: "Oral Language", description: "Vocabulary, retelling, directions" },
-            { id: "phonics", label: "Phonics", description: "Rhyme, letter-sounds, blending" },
-            { id: "comp", label: "Comprehension", description: "Prediction, main idea, connections" },
-            { id: "writing", label: "Writing", description: "Letters, sentences, description" },
-          ]}
-          connections={[
-            { from: "oral", to: "phonics", label: "supports" },
-            { from: "phonics", to: "comp", label: "enables" },
-            { from: "comp", to: "writing", label: "fuels" },
-            { from: "writing", to: "oral", label: "strengthens", dashed: true },
+          strands={[
+            { label: "Oral Language", concepts: ["Vocabulary building", "Retelling & sequencing", "Following directions"] },
+            { label: "Phonics", concepts: ["Rhyme & syllables", "Letter-sound links", "Blending & decoding"] },
+            { label: "Comprehension", concepts: ["Prediction & inference", "Main idea & detail", "Connecting to knowledge"] },
+            { label: "Writing", concepts: ["Letters & mark-making", "Sentence building", "Descriptive language"] },
           ]}
         />
       </SectionShell>

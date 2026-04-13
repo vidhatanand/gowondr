@@ -7,7 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Users, Building2, Map, Globe } from "lucide-react";
 
@@ -109,20 +109,17 @@ export default function WorldPage() {
 
       {/* Strand structure */}
       <SectionShell bg="paper">
-        <FlowDiagram
+        <StrandMapSVG
+          subject="World"
+          color="#886328"
+          bg="#F4EDE1"
           title="WORLD LEARNING STRAND MAP"
           caption="Children move from understanding self and family outward — to community, place, culture, and the systems that shape daily life."
-          direction="vertical"
-          nodes={[
-            { id: "self", label: "Self & Family", description: "Identity, relationships, routines" },
-            { id: "community", label: "Community", description: "Helpers, rules, cooperation" },
-            { id: "world", label: "Place & Culture", description: "Geography, traditions, environment" },
-            { id: "systems", label: "Life Systems", description: "Needs, money, work, value" },
-          ]}
-          connections={[
-            { from: "self", to: "community", label: "expands to" },
-            { from: "community", to: "world", label: "broadens to" },
-            { from: "systems", to: "community", label: "applies to" },
+          strands={[
+            { label: "Self & Family", concepts: ["Identity & roles", "Relationships", "Daily routines"] },
+            { label: "Community", concepts: ["Helpers & services", "Rules & fairness", "Cooperation"] },
+            { label: "Place & Culture", concepts: ["Geography & maps", "Traditions", "Environment & care"] },
+            { label: "Life Systems", concepts: ["Needs vs wants", "Money & exchange", "Work & value"] },
           ]}
         />
       </SectionShell>

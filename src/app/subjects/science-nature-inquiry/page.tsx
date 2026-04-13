@@ -7,7 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Search, Sprout, Magnet, CloudSun } from "lucide-react";
 
@@ -109,24 +109,17 @@ export default function SciencePage() {
 
       {/* Strand structure */}
       <SectionShell bg="paper">
-        <FlowDiagram
+        <StrandMapSVG
+          subject="Science"
+          color="#4B744F"
+          bg="#EAEDE5"
           title="SCIENCE STRAND MAP"
-          caption="Inquiry skills are the engine — observation, questioning, prediction. They apply across all domains: living things, materials, and the earth."
-          direction="vertical"
-          nodes={[
-            { id: "skills", label: "Inquiry Skills", description: "Observing, questioning, predicting", variant: "teal" },
-            { id: "living", label: "Living Things", description: "Plants, animals, body" },
-            { id: "physical", label: "Materials & Forces", description: "Properties, pushes, light" },
-            { id: "earth", label: "Earth & Weather", description: "Weather, seasons, sky" },
-          ]}
-          connections={[
-            { from: "skills", to: "living", label: "applied to" },
-            { from: "skills", to: "physical", label: "applied to" },
-            { from: "skills", to: "earth", label: "applied to" },
-          ]}
-          groups={[
-            { label: "Engine", nodeIds: ["skills"] },
-            { label: "Domains", nodeIds: ["living", "physical", "earth"] },
+          caption="Inquiry skills are the engine — observation, questioning, prediction. They apply across all domains."
+          strands={[
+            { label: "Inquiry Skills", concepts: ["Observing closely", "Asking questions", "Making predictions"] },
+            { label: "Living Things", concepts: ["Plants & growth", "Animals & habitats", "Body & health"] },
+            { label: "Materials & Forces", concepts: ["Properties", "Pushes & pulls", "Light & sound"] },
+            { label: "Earth & Weather", concepts: ["Weather patterns", "Seasons & change", "Earth & sky"] },
           ]}
         />
       </SectionShell>

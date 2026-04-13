@@ -7,7 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Monitor, Keyboard, Globe, Wand2, ShieldCheck, Code } from "lucide-react";
 
@@ -120,20 +120,17 @@ export default function DigitalPage() {
 
       {/* Strand structure */}
       <SectionShell bg="paper">
-        <FlowDiagram
+        <StrandMapSVG
+          subject="Digital"
+          color="#4966A8"
+          bg="#E9EBEF"
           title="DIGITAL LITERACY STRAND MAP"
-          caption="Digital literacy starts with understanding and judgment — not screen time. Computational thinking happens mostly unplugged."
-          direction="vertical"
-          nodes={[
-            { id: "understanding", label: "Understanding", description: "What technology is, how info moves" },
-            { id: "thinking", label: "Computational Thinking", description: "Logic, patterns, sequences" },
-            { id: "safety", label: "Safety & Citizenship", description: "What to share, boundaries" },
-            { id: "creation", label: "Digital Creation", description: "Making with purpose, guided tools" },
-          ]}
-          connections={[
-            { from: "understanding", to: "safety", label: "supports" },
-            { from: "thinking", to: "creation", label: "applied to" },
-            { from: "safety", to: "creation", label: "guides" },
+          caption="Digital literacy starts with understanding and judgment — not screen time."
+          strands={[
+            { label: "Understanding", concepts: ["What technology is", "How info moves", "Digital vocabulary"] },
+            { label: "Computational Thinking", concepts: ["Step-by-step logic", "Pattern recognition", "Problem breakdown"] },
+            { label: "Safety", concepts: ["What to share", "Boundaries online", "Respectful behaviour"] },
+            { label: "Creation", concepts: ["Making with purpose", "Simple digital tools", "Guided screen use"] },
           ]}
         />
       </SectionShell>

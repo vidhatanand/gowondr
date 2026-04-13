@@ -7,7 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Brain, Users, Scale, ShieldCheck, Activity } from "lucide-react";
 
@@ -114,20 +114,17 @@ export default function PersonalPage() {
 
       {/* Strand structure */}
       <SectionShell bg="paper">
-        <FlowDiagram
+        <StrandMapSVG
+          subject="Personal"
+          color="#94536C"
+          bg="#F4EAEA"
           title="PERSONAL DEVELOPMENT STRAND MAP"
           caption="Inner awareness builds the foundation for healthy relationships, ethical values, and physical wellbeing."
-          direction="vertical"
-          nodes={[
-            { id: "inner", label: "Inner Development", description: "Feelings, frustration, growth mindset" },
-            { id: "social", label: "Relationships", description: "Empathy, sharing, conflict" },
-            { id: "values", label: "Values & Ethics", description: "Fairness, responsibility, respect" },
-            { id: "body", label: "Health & Body", description: "Hygiene, safety, movement" },
-          ]}
-          connections={[
-            { from: "inner", to: "social", label: "enables" },
-            { from: "social", to: "values", label: "shaped by" },
-            { from: "inner", to: "body", label: "supports" },
+          strands={[
+            { label: "Inner Development", concepts: ["Naming feelings", "Managing frustration", "Growth mindset"] },
+            { label: "Relationships", concepts: ["Empathy & kindness", "Sharing & turn-taking", "Conflict resolution"] },
+            { label: "Values & Ethics", concepts: ["Fairness & honesty", "Responsibility", "Respect for others"] },
+            { label: "Health & Body", concepts: ["Hygiene & self-care", "Safety awareness", "Movement"] },
           ]}
         />
       </SectionShell>

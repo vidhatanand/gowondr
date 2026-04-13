@@ -7,7 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Lightbulb, MessageSquare, Users, Compass, RotateCcw } from "lucide-react";
 
@@ -114,21 +114,17 @@ export default function InquiryPage() {
 
       {/* Strand structure */}
       <SectionShell bg="paper">
-        <FlowDiagram
+        <StrandMapSVG
+          subject="Inquiry"
+          color="#9E563C"
+          bg="#F6EAE3"
           title="INQUIRY STRAND MAP"
-          caption="Inquiry is the skill of learning itself — asking, thinking, collaborating, and growing in comfort with complexity."
-          direction="vertical"
-          nodes={[
-            { id: "core", label: "Core Inquiry", description: "Asking, attending, connecting", variant: "teal" },
-            { id: "thinking", label: "Thinking", description: "Comparing, explaining, revising" },
-            { id: "social", label: "Collaboration", description: "Working together, listening, sharing" },
-            { id: "growth", label: "Dispositions", description: "Persistence, curiosity, comfort with unknowns" },
-          ]}
-          connections={[
-            { from: "core", to: "thinking", label: "drives" },
-            { from: "thinking", to: "social", label: "shared via" },
-            { from: "growth", to: "core", label: "sustains" },
-            { from: "social", to: "growth", label: "strengthens" },
+          caption="Inquiry is the skill of learning itself — asking, thinking, collaborating, and growing."
+          strands={[
+            { label: "Core Inquiry", concepts: ["Asking questions", "Paying attention", "Making connections"] },
+            { label: "Thinking", concepts: ["Comparing ideas", "Explaining reasoning", "Revising answers"] },
+            { label: "Collaboration", concepts: ["Working together", "Listening to others", "Sharing findings"] },
+            { label: "Dispositions", concepts: ["Persistence", "Curiosity", "Comfort with unknowns"] },
           ]}
         />
       </SectionShell>
