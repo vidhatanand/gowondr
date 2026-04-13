@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Neutrals */
+  --paper-0: #FFFDF9;
+  --paper-50: #FBF7F1;
+  --linen-100: #F8F4ED;
+  --sand-200: #EFE6D8;
+  --clay-300: #E6D5C3;
+  --slate-700: #52616D;
+  --ink-900: #1E2A34;
+
+  /* Brand */
+  --brand-teal-600: #235A5F;
+  --brand-teal-50: #EAF3F2;
+  --brand-terracotta-600: #A4582E;
+  --brand-terracotta-500: #B8743C;
+  --brand-terracotta-50: #F7ECE4;
+  --brand-focus: #214D9C;
+
+  /* Semantic states */
+  --state-strong-ink: #4B7A5B;
+  --state-strong-soft: #EAF3EC;
+  --state-building-ink: #8B6522;
+  --state-building-soft: #F8F0DE;
+  --state-refresh-ink: #9E563C;
+  --state-refresh-soft: #F6EAE3;
+  --state-info-ink: #214D9C;
+  --state-info-soft: #EAF0FB;
+  --state-danger-ink: #A23E48;
+  --state-danger-soft: #F9E8EA;
+
+  /* Subject colors */
+  --subject-reading-ink: #6A4E73;
+  --subject-reading-soft: #EDE8E9;
+  --subject-reading-accent: #8C7294;
+  --subject-math-ink: #2A6E73;
+  --subject-math-soft: #E5ECE9;
+  --subject-math-accent: #4F9296;
+  --subject-science-ink: #4B744F;
+  --subject-science-soft: #EAEDE5;
+  --subject-science-accent: #76A17A;
+  --subject-world-ink: #886328;
+  --subject-world-soft: #F4EDE1;
+  --subject-world-accent: #B28B46;
+  --subject-personal-ink: #94536C;
+  --subject-personal-soft: #F4EAEA;
+  --subject-personal-accent: #BE7D96;
+  --subject-arts-ink: #7A5AA6;
+  --subject-arts-soft: #EFE9EF;
+  --subject-arts-accent: #9C7BC6;
+  --subject-digital-ink: #4966A8;
+  --subject-digital-soft: #E9EBEF;
+  --subject-digital-accent: #718FD2;
+  --subject-inquiry-ink: #9E563C;
+  --subject-inquiry-soft: #F6EAE3;
+  --subject-inquiry-accent: #C67F62;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(30, 42, 52, 0.04);
+  --shadow-sm: 0 6px 16px rgba(30, 42, 52, 0.06);
+  --shadow-md: 0 12px 30px rgba(30, 42, 52, 0.08);
+  --shadow-lg: 0 18px 50px rgba(30, 42, 52, 0.10);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Colors */
+  --color-paper: #FFFDF9;
+  --color-paper-alt: #FBF7F1;
+  --color-linen: #F8F4ED;
+  --color-sand: #EFE6D8;
+  --color-clay: #E6D5C3;
+  --color-slate: #52616D;
+  --color-ink: #1E2A34;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-teal: #235A5F;
+  --color-teal-soft: #EAF3F2;
+  --color-terracotta: #A4582E;
+  --color-terracotta-mid: #B8743C;
+  --color-terracotta-soft: #F7ECE4;
+  --color-focus: #214D9C;
+
+  --color-strong-ink: #4B7A5B;
+  --color-strong-soft: #EAF3EC;
+  --color-building-ink: #8B6522;
+  --color-building-soft: #F8F0DE;
+  --color-refresh-ink: #9E563C;
+  --color-refresh-soft: #F6EAE3;
+  --color-info-ink: #214D9C;
+  --color-info-soft: #EAF0FB;
+  --color-danger-ink: #A23E48;
+  --color-danger-soft: #F9E8EA;
+
+  --color-reading-ink: #6A4E73;
+  --color-reading-soft: #EDE8E9;
+  --color-math-ink: #2A6E73;
+  --color-math-soft: #E5ECE9;
+  --color-science-ink: #4B744F;
+  --color-science-soft: #EAEDE5;
+  --color-world-ink: #886328;
+  --color-world-soft: #F4EDE1;
+  --color-personal-ink: #94536C;
+  --color-personal-soft: #F4EAEA;
+  --color-arts-ink: #7A5AA6;
+  --color-arts-soft: #EFE9EF;
+  --color-digital-ink: #4966A8;
+  --color-digital-soft: #E9EBEF;
+  --color-inquiry-ink: #9E563C;
+  --color-inquiry-soft: #F6EAE3;
+
+  /* Fonts */
+  --font-display: var(--font-newsreader), "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: var(--font-atkinson), Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(30, 42, 52, 0.04);
+  --shadow-sm: 0 6px 16px rgba(30, 42, 52, 0.06);
+  --shadow-md: 0 12px 30px rgba(30, 42, 52, 0.08);
+  --shadow-lg: 0 18px 50px rgba(30, 42, 52, 0.10);
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-pill: 999px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
 }
