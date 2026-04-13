@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "gowondr",
+  "name": "gopondr",
   "compatibility_date": "2025-04-01",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
@@ -12,7 +12,7 @@
   // Staging environment — deployed via `wrangler deploy --env staging`
   "env": {
     "staging": {
-      "name": "gowondr-stage",
+      "name": "gopondr-stage",
       "routes": []
     }
   }

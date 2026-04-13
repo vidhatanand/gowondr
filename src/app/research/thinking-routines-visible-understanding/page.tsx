@@ -18,12 +18,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Why thinking routines and visible understanding matter | goWondr",
+      "Why thinking routines and visible understanding matter | goPondr",
     description:
       "Explore how thinking routines, representation, and concept mapping deepen children's understanding and make learning visible to parents.",
     url: "/research/thinking-routines-visible-understanding",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -301,7 +301,7 @@ export default function ThinkingRoutinesPage() {
           What this means for the product
         </h2>
         <p className="mt-4 text-[17px] leading-[28px] text-slate">
-          goWondr embeds thinking routines directly into
+          goPondr embeds thinking routines directly into
           activities. Children are regularly asked to compare, connect,
           represent, and explain. These are not add-ons — they are core to
           how every concept is taught. The{" "}
@@ -359,7 +359,7 @@ export default function ThinkingRoutinesPage() {
             See visible thinking in action
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-paper/80">
-            Try goWondr free for 15 days.
+            Try goPondr free for 15 days.
           </p>
           <div className="mt-8">
             <Button variant="warm" size="lg" href="/pricing">

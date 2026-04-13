@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Why adaptive planning and spaced revisit matter | goWondr",
+      "Why adaptive planning and spaced revisit matter | goPondr",
     description:
       "Explore evidence for spaced repetition, adaptive sequencing, and review timing in building durable understanding for children.",
     url: "/research/adaptive-planning-spaced-revisit",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -321,7 +321,7 @@ export default function AdaptivePlanningPage() {
           What this means for the product
         </h2>
         <p className="mt-4 text-[17px] leading-[28px] text-slate">
-          goWondr's{" "}
+          goPondr's{" "}
           <InternalLink href="/adaptive-planner">
             adaptive planner
           </InternalLink>{" "}
@@ -386,7 +386,7 @@ export default function AdaptivePlanningPage() {
             See adaptive planning in action
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-paper/80">
-            Try goWondr free for 15 days.
+            Try goPondr free for 15 days.
           </p>
           <div className="mt-8">
             <Button variant="warm" size="lg" href="/pricing">

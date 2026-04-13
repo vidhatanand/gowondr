@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/research/concept-first-coverage" },
   openGraph: {
     title:
-      "Why concept-based curriculum beats random activities | goWondr",
+      "Why concept-based curriculum beats random activities | goPondr",
     description:
       "Learn why concept-first curriculum structure, developmental sequencing, and revisit create stronger understanding than disconnected activities.",
     url: "/research/concept-first-coverage",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -467,7 +467,7 @@ export default function ConceptFirstCoveragePage() {
             See concept-first learning in action
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-paper/80">
-            Try goWondr free for 15 days.
+            Try goPondr free for 15 days.
           </p>
           <div className="mt-8">
             <Button variant="warm" size="lg" href="/pricing">

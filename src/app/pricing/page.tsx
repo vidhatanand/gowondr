@@ -10,17 +10,17 @@ import { breadcrumbJsonLd } from "@/lib/seo";
 
 
 export const metadata: Metadata = {
-  title: "Pricing for goWondr | Parent-led home learning",
+  title: "Pricing for goPondr | Parent-led home learning",
   description:
-    "Choose monthly or annual pricing per child for goWondr. Start with a 15-day free trial and explore the full 8-subject home learning curriculum.",
+    "Choose monthly or annual pricing per child for goPondr. Start with a 15-day free trial and explore the full 8-subject home learning curriculum.",
   alternates: { canonical: "/pricing" },
   openGraph: {
-    title: "Pricing for goWondr | Parent-led home learning",
+    title: "Pricing for goPondr | Parent-led home learning",
     description:
-      "Choose monthly or annual pricing per child for goWondr. Start with a 15-day free trial and explore the full 8-subject home learning curriculum.",
+      "Choose monthly or annual pricing per child for goPondr. Start with a 15-day free trial and explore the full 8-subject home learning curriculum.",
     url: "/pricing",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -70,12 +70,12 @@ export default function PricingPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            name: "goWondr",
+            name: "goPondr",
             description:
               "Parent-led home learning curriculum for ages 4 through Grade 4.",
             brand: {
               "@type": "Organization",
-              name: "goWondr",
+              name: "goPondr",
             },
             offers: [
               {
@@ -100,7 +100,7 @@ export default function PricingPage() {
       />
       <EntityGraph
         mainEntity={{
-          name: "goWondr pricing",
+          name: "goPondr pricing",
           type: "Product",
           description:
             "Monthly and annual subscription pricing for parent-led home learning",

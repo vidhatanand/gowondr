@@ -141,7 +141,7 @@ export function SubjectConnectionSVG({ className = "" }: SubjectConnectionSVGPro
       </div>
 
       <p className="text-center mt-3 text-[13px] text-slate leading-relaxed max-w-[480px] mx-auto">
-        Above ground, subjects look distinct. Below, their roots intertwine — reading supports science, math connects to digital thinking, inquiry runs through everything. goWondr maps these connections so nothing grows in isolation.
+        Above ground, subjects look distinct. Below, their roots intertwine — reading supports science, math connects to digital thinking, inquiry runs through everything. goPondr maps these connections so nothing grows in isolation.
       </p>
     </figure>
   );

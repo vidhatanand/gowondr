@@ -21,11 +21,11 @@ export function generatePageMetadata({
       canonical: path,
     },
     openGraph: {
-      title: `${title} | goWondr`,
+      title: `${title} | goPondr`,
       description,
       url: path,
       type: path === "/" ? "website" : "article",
-      siteName: "goWondr",
+      siteName: "goPondr",
     },
   };
 }
@@ -62,7 +62,7 @@ export function articleJsonLd({
     url: path,
     publisher: {
       "@type": "Organization",
-      name: "goWondr",
+      name: "goPondr",
     },
   });
 }
@@ -71,7 +71,7 @@ export function organizationJsonLd(): string {
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "goWondr",
+    name: "goPondr",
     description:
       "A calm, parent-led home learning curriculum for ages 4 to Grade 4.",
     knowsAbout: [

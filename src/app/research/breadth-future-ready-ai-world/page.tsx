@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Why breadth matters in an AI world | goWondr",
+      "Why breadth matters in an AI world | goPondr",
     description:
       "Explore why broad foundations across subjects, not just math and reading, matter more in a future shaped by AI, automation, and rapid change.",
     url: "/research/breadth-future-ready-ai-world",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -317,7 +317,7 @@ export default function BreadthFutureReadyPage() {
           breadth done poorly. When each subject is organized around key
           concepts, taught with developmental sequencing, and revisited
           over time, breadth creates depth — not instead of depth, but
-          through depth across multiple domains. goWondr's{" "}
+          through depth across multiple domains. goPondr's{" "}
           <InternalLink href="/subjects">
             8-subject curriculum
           </InternalLink>{" "}
@@ -402,7 +402,7 @@ export default function BreadthFutureReadyPage() {
             See broad learning in action
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-paper/80">
-            Try goWondr free for 15 days.
+            Try goPondr free for 15 days.
           </p>
           <div className="mt-8">
             <Button variant="warm" size="lg" href="/pricing">

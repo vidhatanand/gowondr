@@ -37,7 +37,7 @@ export function FutureReady() {
         </ul>
 
         <p className="mt-8 text-[17px] leading-[28px] text-slate">
-          That is why goWondr builds fundamentals and breadth
+          That is why goPondr builds fundamentals and breadth
           together.
         </p>
 

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/playful-screen-light-learning" },
   openGraph: {
     title:
-      "Playful, screen-light learning for kids at home | goWondr",
+      "Playful, screen-light learning for kids at home | goPondr",
     description:
       "Discover a calmer alternative to noisy apps and worksheet-heavy routines with playful, screen-light learning that happens mostly in the real world.",
     url: "/playful-screen-light-learning",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -63,7 +63,7 @@ export default function PlayfulScreenLightLearningPage() {
         </h1>
         <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
           Children learn through conversation, objects, stories, drawing,
-          movement, building, and play. goWondr keeps the screen
+          movement, building, and play. goPondr keeps the screen
           where it belongs: as a planning tool for the parent, not a teaching
           tool for the child. Learning happens in the real world, between you
           and your child.
@@ -253,7 +253,7 @@ export default function PlayfulScreenLightLearningPage() {
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-slate">
             The best learning happens when children can touch, move, talk, draw,
-            and wonder. goWondr is built on this belief. The screen
+            and wonder. goPondr is built on this belief. The screen
             is just the planning layer. The learning itself belongs to you and
             your child, in your home, at your pace.
           </p>

@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/research/playful-screen-light-learning" },
   openGraph: {
     title:
-      "Why playful, screen-light learning works | goWondr",
+      "Why playful, screen-light learning works | goPondr",
     description:
       "Explore evidence for playful, guided, multi-modal learning that uses conversation, movement, and real materials instead of passive screen time.",
     url: "/research/playful-screen-light-learning",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -280,7 +280,7 @@ export default function PlayfulScreenLightPage() {
           Screen-light is not a rejection of technology. It is a design
           principle that keeps the screen in its proper role: as a planning
           and reference tool for the parent, not as the primary learning
-          surface for the child. goWondr uses technology to
+          surface for the child. goPondr uses technology to
           organize the curriculum, adapt the plan, and track progress —
           while the actual learning happens through conversation, play,
           drawing, building, and real-world exploration. Learn more about
@@ -298,7 +298,7 @@ export default function PlayfulScreenLightPage() {
           What this means for product design
         </h2>
         <p className="mt-4 text-[17px] leading-[28px] text-slate">
-          Every activity in goWondr is designed to be done
+          Every activity in goPondr is designed to be done
           off-screen. The parent reads a short prompt, then puts the device
           down and engages with the child. Activities involve talking,
           drawing, sorting, building, moving, storytelling, and exploring
@@ -351,7 +351,7 @@ export default function PlayfulScreenLightPage() {
             See playful learning in action
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-paper/80">
-            Try goWondr free for 15 days.
+            Try goPondr free for 15 days.
           </p>
           <div className="mt-8">
             <Button variant="warm" size="lg" href="/pricing">

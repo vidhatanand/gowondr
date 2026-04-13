@@ -94,7 +94,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="border-t border-sand py-5 text-center">
           <p className="text-[12px] text-slate/60">
-            &copy; {new Date().getFullYear()} goWondr. All rights reserved.
+            &copy; {new Date().getFullYear()} goPondr. All rights reserved.
           </p>
         </div>
       </Container>

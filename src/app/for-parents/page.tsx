@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/for-parents" },
   openGraph: {
     title:
-      "How to teach your child at home without being a teacher | goWondr",
+      "How to teach your child at home without being a teacher | goPondr",
     description:
       "Parents do not need a teaching degree to make a real difference. Get a calmer, parent-led way to help your child learn at home with the right next step, prompts, and support.",
     url: "/for-parents",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -45,7 +45,7 @@ export default function ForParentsPage() {
           name: "Parent-led learning support",
           type: "Service",
           description:
-            "How goWondr supports parents who are not trained teachers",
+            "How goPondr supports parents who are not trained teachers",
         }}
       />
 
@@ -62,7 +62,7 @@ export default function ForParentsPage() {
         </h1>
         <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
           You already bring what matters most: attention, warmth, trust,
-          context, continuity, and love. No textbook can replace that. goWondr simply gives you a clear{" "}
+          context, continuity, and love. No textbook can replace that. goPondr simply gives you a clear{" "}
           <InternalLink href="/how-it-works">daily learning guide</InternalLink>{" "}
           so you always know what to do next.
         </p>
@@ -168,7 +168,7 @@ export default function ForParentsPage() {
           Six things every parent needs
         </h2>
         <p className="mt-3 text-[17px] leading-[28px] text-slate text-center max-w-[520px] mx-auto">
-          goWondr is designed around exactly these needs.
+          goPondr is designed around exactly these needs.
         </p>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {([
@@ -198,10 +198,10 @@ export default function ForParentsPage() {
       {/* How the partnership works — creative SVG */}
       <SectionShell bg="paper-alt">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight text-center">
-          How goWondr supports you
+          How goPondr supports you
         </h2>
         <p className="mt-3 text-[17px] leading-[28px] text-slate text-center max-w-[520px] mx-auto">
-          goWondr takes the hard parts off your plate so you can focus on the relationship.
+          goPondr takes the hard parts off your plate so you can focus on the relationship.
         </p>
 
         <div className="mt-10 max-w-[700px] mx-auto">
@@ -245,10 +245,10 @@ export default function ForParentsPage() {
               {/* Distant hills */}
               <path d="M 0 170 Q 80 140 160 160 Q 240 175 300 155 Q 360 140 440 158 Q 520 170 600 150 L 600 175 L 0 175 Z" fill="#EAF3F2" opacity="0.4" />
 
-              {/* Ground layer 1 — goWondr structure (teal, deepest) */}
+              {/* Ground layer 1 — goPondr structure (teal, deepest) */}
               <path d="M 0 195 Q 100 175 200 185 Q 300 195 400 182 Q 500 175 600 185 L 600 340 L 0 340 Z" fill="#EAF3F2" />
               <path d="M 0 195 Q 100 175 200 185 Q 300 195 400 182 Q 500 175 600 185" fill="none" stroke="#235A5F" strokeWidth="1.5" opacity="0.25" />
-              {/* Texture dots in goWondr layer */}
+              {/* Texture dots in goPondr layer */}
               <circle cx="50" cy="290" r="1.5" fill="#235A5F" opacity="0.1" />
               <circle cx="100" cy="300" r="1.5" fill="#235A5F" opacity="0.1" />
               <circle cx="170" cy="295" r="1.5" fill="#235A5F" opacity="0.08" />
@@ -345,7 +345,7 @@ export default function ForParentsPage() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="w-3 h-3 rounded-full bg-teal-soft border-2 border-teal mx-auto mb-1.5" />
-                  <p className="font-body font-semibold text-[13px] text-teal">goWondr is the ground</p>
+                  <p className="font-body font-semibold text-[13px] text-teal">goPondr is the ground</p>
                   <p className="text-[12px] text-slate mt-0.5">Curriculum, sequence, review, coaching language</p>
                 </div>
                 <div>
@@ -362,7 +362,7 @@ export default function ForParentsPage() {
             </div>
           </div>
           <p className="text-center mt-4 text-[13px] text-slate max-w-[440px] mx-auto">
-            goWondr builds the ground. You walk the path together. Your child grows along the way.
+            goPondr builds the ground. You walk the path together. Your child grows along the way.
           </p>
         </div>
       </SectionShell>
@@ -416,7 +416,7 @@ export default function ForParentsPage() {
             You are already your child's best teacher
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-slate">
-            Not because you know everything, but because you care the most. goWondr does not replace you. It supports you. It gives you
+            Not because you know everything, but because you care the most. goPondr does not replace you. It supports you. It gives you
             the structure so you can focus on the relationship. And that
             relationship is where real learning lives.
           </p>

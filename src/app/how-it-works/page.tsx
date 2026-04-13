@@ -83,15 +83,15 @@ const fiveSteps = [
 export const metadata: Metadata = {
   title: "How parent-led home learning works",
   description:
-    "See how goWondr turns parent-child time into a clear daily learning plan with concept-based curriculum, review, and screen-light activities across 8 subjects.",
+    "See how goPondr turns parent-child time into a clear daily learning plan with concept-based curriculum, review, and screen-light activities across 8 subjects.",
   alternates: { canonical: "/how-it-works" },
   openGraph: {
-    title: "How parent-led home learning works | goWondr",
+    title: "How parent-led home learning works | goPondr",
     description:
-      "See how goWondr turns parent-child time into a clear daily learning plan with concept-based curriculum, review, and screen-light activities across 8 subjects.",
+      "See how goPondr turns parent-child time into a clear daily learning plan with concept-based curriculum, review, and screen-light activities across 8 subjects.",
     url: "/how-it-works",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -358,7 +358,7 @@ export default function HowItWorksPage() {
             Ready to see it for yourself?
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-paper/80">
-            Try goWondr free for 15 days. No payment details
+            Try goPondr free for 15 days. No payment details
             required.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">

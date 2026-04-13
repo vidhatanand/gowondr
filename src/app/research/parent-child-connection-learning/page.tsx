@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/research/parent-child-connection-learning" },
   openGraph: {
     title:
-      "Why parent-child connection matters for learning | goWondr",
+      "Why parent-child connection matters for learning | goPondr",
     description:
       "Learn why responsive parent-child interaction supports language, confidence, attention, and learning, and what that means for parent-led home learning.",
     url: "/research/parent-child-connection-learning",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -337,7 +337,7 @@ export default function ParentChildConnectionPage() {
           What this means for the product
         </h2>
         <p className="mt-4 text-[17px] leading-[28px] text-slate">
-          Because parent-child interaction is the engine of learning, goWondr is designed to support the parent, not replace them.
+          Because parent-child interaction is the engine of learning, goPondr is designed to support the parent, not replace them.
           Every activity is meant to be done together. The guide provides
           structure, sequencing, and prompts — but the parent brings the
           warmth, the context, and the responsiveness that no technology can
@@ -383,7 +383,7 @@ export default function ParentChildConnectionPage() {
       <SectionShell bg="paper" narrow={true}>
         <p className="text-[17px] leading-[28px] text-slate">
           Connection is not a bonus. It is the foundation. Everything else
-          in goWondr — the curriculum, the adaptive planner, the
+          in goPondr — the curriculum, the adaptive planner, the
           activities — exists to make the most of the time you already spend
           with your child.
         </p>
@@ -422,7 +422,7 @@ export default function ParentChildConnectionPage() {
             See connection-first learning in action
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-paper/80">
-            Try goWondr free for 15 days.
+            Try goPondr free for 15 days.
           </p>
           <div className="mt-8">
             <Button variant="warm" size="lg" href="/pricing">

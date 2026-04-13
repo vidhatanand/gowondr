@@ -50,7 +50,7 @@ export function Logo({ size = "md", className = "" }: LogoProps) {
       {/* Wordmark */}
       <span className={`font-body font-bold tracking-tight ${sizes[size]}`}>
         <span className="text-slate">go</span>
-        <span className="text-teal">Wondr</span>
+        <span className="text-teal">Pondr</span>
       </span>
     </Link>
   );

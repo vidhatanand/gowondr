@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/research" },
   openGraph: {
     title:
-      "Parent-led learning research and evidence | goWondr",
+      "Parent-led learning research and evidence | goPondr",
     description:
       "Explore the evidence behind parent-child learning, concept-first curriculum design, playful screen-light learning, adaptive planning, and future-ready skills.",
     url: "/research",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -138,7 +138,7 @@ export default function ResearchHubPage() {
           Research that supports the approach — and keeps the claims honest
         </h1>
         <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
-          goWondr is built on a set of beliefs about how children
+          goPondr is built on a set of beliefs about how children
           learn best. Those beliefs are shaped by research — not invented from
           scratch, not cherry-picked to sell a product. This hub collects the
           evidence that supports our approach, explains what the research
@@ -431,7 +431,7 @@ export default function ResearchHubPage() {
             See the research in action
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-paper/80">
-            Try goWondr free for 15 days. No payment details
+            Try goPondr free for 15 days. No payment details
             required.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">

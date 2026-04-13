@@ -3,9 +3,9 @@ import { Accordion } from "@/components/ui/Accordion";
 
 const faqItems = [
   {
-    question: "What age group is goWondr designed for?",
+    question: "What age group is goPondr designed for?",
     answer:
-      "goWondr is designed for children aged 4 through Grade 4. The adaptive planner adjusts content, complexity, and expectations based on your child's age, stage, and individual progress.",
+      "goPondr is designed for children aged 4 through Grade 4. The adaptive planner adjusts content, complexity, and expectations based on your child's age, stage, and individual progress.",
   },
   {
     question: "Do I need teaching experience to use this?",
@@ -20,7 +20,7 @@ const faqItems = [
   {
     question: "Is this a screen-based learning app?",
     answer:
-      "No. goWondr is screen-light by design. Children learn through talk, objects, movement, stories, play, drawing, and real-world life. The screen is used by the parent to access the plan, not by the child for content consumption.",
+      "No. goPondr is screen-light by design. Children learn through talk, objects, movement, stories, play, drawing, and real-world life. The screen is used by the parent to access the plan, not by the child for content consumption.",
   },
   {
     question: "How much time does a session take?",

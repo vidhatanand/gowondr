@@ -12,16 +12,16 @@ import { StepFlow } from "@/components/ui/StepFlow";
 export const metadata: Metadata = {
   title: "Concept-based curriculum maps and learning progressions",
   description:
-    "See how goWondr structures learning across stages, subjects, strands, concepts, evidence, and revisits so progress feels connected instead of random.",
+    "See how goPondr structures learning across stages, subjects, strands, concepts, evidence, and revisits so progress feels connected instead of random.",
   alternates: { canonical: "/curriculum-coverage" },
   openGraph: {
     title:
-      "Concept-based curriculum maps and learning progressions | goWondr",
+      "Concept-based curriculum maps and learning progressions | goPondr",
     description:
-      "See how goWondr structures learning across stages, subjects, strands, concepts, evidence, and revisits so progress feels connected instead of random.",
+      "See how goPondr structures learning across stages, subjects, strands, concepts, evidence, and revisits so progress feels connected instead of random.",
     url: "/curriculum-coverage",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -58,7 +58,7 @@ export default function CurriculumCoveragePage() {
           Coverage matters. Connected coverage matters more.
         </h1>
         <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
-          Most curricula give you a list of topics. goWondr gives you
+          Most curricula give you a list of topics. goPondr gives you
           a map: 6 stages, an{" "}
           <InternalLink href="/subjects">8-subject curriculum</InternalLink>,
           clear strands, concrete concepts, evidence of understanding, and
@@ -181,7 +181,7 @@ export default function CurriculumCoveragePage() {
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-slate">
             Without structure, home learning can feel random: a worksheet here,
-            a video there, and no way to know whether it all adds up. With goWondr, every session connects to a concept, every concept
+            a video there, and no way to know whether it all adds up. With goPondr, every session connects to a concept, every concept
             belongs to a strand, and every strand serves a subject. You can
             always see the bigger picture, and so can your child.
           </p>
@@ -208,7 +208,7 @@ export default function CurriculumCoveragePage() {
             Progress is not a score. It is not a percentage. Progress means your
             child can explain a concept in their own words, use it in a new
             situation, and return to it later without starting from scratch.
-            goWondr tracks this through parent observations, not
+            goPondr tracks this through parent observations, not
             tests, because understanding is something you witness, not something
             you measure with a number.
           </p>
@@ -223,7 +223,7 @@ export default function CurriculumCoveragePage() {
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-slate">
             Children do not learn something once and keep it forever. Memory
-            fades unless it is refreshed. goWondr schedules revisits
+            fades unless it is refreshed. goPondr schedules revisits
             automatically, bringing back earlier concepts at the right time so
             they stay strong. This is not repetition for the sake of repetition.
             It is spaced practice designed to make knowledge durable and

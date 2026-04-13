@@ -11,17 +11,17 @@ import { FlowDiagram } from "@/components/ui/FlowDiagram";
 import { Users, Brain, Layers, MonitorOff, RefreshCw, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About goWondr | Parent-led learning philosophy",
+  title: "About goPondr | Parent-led learning philosophy",
   description:
-    "Learn about the mission, ethos, and design philosophy behind goWondr and why it was built as a calmer, parent-led way for families to learn deeply together.",
+    "Learn about the mission, ethos, and design philosophy behind goPondr and why it was built as a calmer, parent-led way for families to learn deeply together.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About goWondr | Parent-led learning philosophy",
+    title: "About goPondr | Parent-led learning philosophy",
     description:
-      "Learn about the mission, ethos, and design philosophy behind goWondr and why it was built as a calmer, parent-led way for families to learn deeply together.",
+      "Learn about the mission, ethos, and design philosophy behind goPondr and why it was built as a calmer, parent-led way for families to learn deeply together.",
     url: "/about",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
       />
       <EntityGraph
         mainEntity={{
-          name: "goWondr",
+          name: "goPondr",
           type: "Organization",
           description:
             "Parent-led learning company building a calmer way for families to learn deeply together",
@@ -58,7 +58,7 @@ export default function AboutPage() {
           We are building a calmer way for families to learn deeply together.
         </h1>
         <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
-          goWondr exists because we believe every parent can help
+          goPondr exists because we believe every parent can help
           their child learn, and that the relationship between parent and child
           is the most powerful learning tool there is.
         </p>
@@ -214,7 +214,7 @@ export default function AboutPage() {
             Built with care, for families who care
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-slate">
-            Every detail of goWondr is designed with one question in
+            Every detail of goPondr is designed with one question in
             mind: does this help a parent and child learn together more deeply?
             If it does, it stays. If it does not, it goes. That is the standard
             we hold ourselves to, because the families who trust us deserve

@@ -8,23 +8,23 @@ import { Accordion } from "@/components/ui/Accordion";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Frequently asked questions about goWondr | FAQ",
+  title: "Frequently asked questions about goPondr | FAQ",
   description:
-    "Answers about ages, subjects, screen time, planning, pricing, free trial, and how parents use goWondr at home.",
+    "Answers about ages, subjects, screen time, planning, pricing, free trial, and how parents use goPondr at home.",
   alternates: { canonical: "/faq" },
   openGraph: {
-    title: "Frequently asked questions about goWondr | FAQ",
+    title: "Frequently asked questions about goPondr | FAQ",
     description:
-      "Answers about ages, subjects, screen time, planning, pricing, free trial, and how parents use goWondr at home.",
+      "Answers about ages, subjects, screen time, planning, pricing, free trial, and how parents use goPondr at home.",
     url: "/faq",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
 const aboutProductItems = [
   {
-    question: "Who is goWondr for?",
+    question: "Who is goPondr for?",
     answer:
       "It is for parents of children aged 4 through Grade 4 who want a structured, calm, and connected way to support learning at home. You do not need to be a teacher or homeschooler to use it.",
   },
@@ -36,12 +36,12 @@ const aboutProductItems = [
   {
     question: "Is this homeschooling?",
     answer:
-      "Not necessarily. Many families use goWondr alongside school to supplement and strengthen what their child is learning. Others use it as their primary curriculum. It works either way.",
+      "Not necessarily. Many families use goPondr alongside school to supplement and strengthen what their child is learning. Others use it as their primary curriculum. It works either way.",
   },
   {
     question: "Can I use it for just one subject, like math?",
     answer:
-      "You can focus on any subject, but goWondr is designed to support all 8 subjects because breadth builds stronger foundations. Even if math is your focus, your child benefits from the connections across subjects.",
+      "You can focus on any subject, but goPondr is designed to support all 8 subjects because breadth builds stronger foundations. Even if math is your focus, your child benefits from the connections across subjects.",
   },
   {
     question: "Is this a gamified learning app?",
@@ -144,10 +144,10 @@ export default function FAQPage() {
       />
       <EntityGraph
         mainEntity={{
-          name: "goWondr FAQ",
+          name: "goPondr FAQ",
           type: "FAQPage",
           description:
-            "Frequently asked questions about goWondr for parent-led home learning",
+            "Frequently asked questions about goPondr for parent-led home learning",
         }}
       />
 
@@ -164,7 +164,7 @@ export default function FAQPage() {
         </h1>
         <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
           Answers about ages, subjects, screen time, planning, pricing, and how
-          parents use goWondr at home. If you do not find your answer
+          parents use goPondr at home. If you do not find your answer
           here, explore{" "}
           <InternalLink href="/how-it-works">how it works</InternalLink> or
           read more{" "}

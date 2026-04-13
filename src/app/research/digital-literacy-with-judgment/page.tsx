@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Why digital literacy should be taught with judgment | goWondr",
+      "Why digital literacy should be taught with judgment | goPondr",
     description:
       "Explore why children need digital understanding, safety, and agency — not just device skills — and how screen-light digital literacy builds real judgment.",
     url: "/research/digital-literacy-with-judgment",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -328,7 +328,7 @@ export default function DigitalLiteracyPage() {
           everyday activities — sorting, sequencing, giving instructions,
           debugging. You can discuss online safety during a family
           conversation. You can explore how technology works by taking
-          things apart, asking questions, and wondering together. goWondr's{" "}
+          things apart, asking questions, and wondering together. goPondr's{" "}
           <InternalLink href="/subjects/digital-literacy-computational-thinking">
             digital literacy curriculum
           </InternalLink>{" "}
@@ -390,7 +390,7 @@ export default function DigitalLiteracyPage() {
             See judgment-first digital literacy in action
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-paper/80">
-            Try goWondr free for 15 days.
+            Try goPondr free for 15 days.
           </p>
           <div className="mt-8">
             <Button variant="warm" size="lg" href="/pricing">

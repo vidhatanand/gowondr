@@ -21,12 +21,12 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            name: "goWondr",
+            name: "goPondr",
             description:
               "A calm, concept-first learning guide for parents. Full curriculum across 8 subjects for ages 4 through Grade 4.",
             brand: {
               "@type": "Organization",
-              name: "goWondr",
+              name: "goPondr",
             },
             offers: [
               {

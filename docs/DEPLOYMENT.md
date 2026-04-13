@@ -1,12 +1,12 @@
-# goWondr — Deployment Guide
+# goPondr — Deployment Guide
 
 ## Branch Strategy
 
 | Branch | Purpose | Auto-deploys to |
 |--------|---------|-----------------|
 | `dev` | Active development | Nothing (local only) |
-| `stage` | Staging preview | `gowondr-stage.workers.dev` |
-| `main` | Production | `gowondr.com` |
+| `stage` | Staging preview | `gopondr-stage.workers.dev` |
+| `main` | Production | `gopondr.com` |
 
 ### Workflow
 
@@ -85,10 +85,10 @@ gh secret set CLOUDFLARE_API_TOKEN
 
 ### Step 4: Set Up Custom Domain (optional)
 
-1. In Cloudflare dashboard → Workers & Pages → `gowondr` worker
+1. In Cloudflare dashboard → Workers & Pages → `gopondr` worker
 2. Click **Settings** → **Triggers** → **Custom Domains**
-3. Add `gowondr.com` (domain must be on Cloudflare DNS)
-4. For staging: add `stage.gowondr.com` to the `gowondr-stage` worker
+3. Add `gopondr.com` (domain must be on Cloudflare DNS)
+4. For staging: add `stage.gopondr.com` to the `gopondr-stage` worker
 
 ---
 
@@ -111,12 +111,12 @@ Two GitHub Actions workflows in `.github/workflows/`:
 ### `deploy-prod.yml`
 - **Trigger:** Push to `main`
 - **Steps:** Checkout → Install → OpenNext build → Wrangler deploy
-- **Target:** `gowondr` worker (production)
+- **Target:** `gopondr` worker (production)
 
 ### `deploy-stage.yml`
 - **Trigger:** Push to `stage`
 - **Steps:** Checkout → Install → OpenNext build → Wrangler deploy --env staging
-- **Target:** `gowondr-stage` worker (staging)
+- **Target:** `gopondr-stage` worker (staging)
 
 ---
 
@@ -124,8 +124,8 @@ Two GitHub Actions workflows in `.github/workflows/`:
 
 `wrangler.jsonc` defines two environments:
 
-- **Default (production):** Worker name `gowondr`
-- **Staging:** Worker name `gowondr-stage` (via `--env staging`)
+- **Default (production):** Worker name `gopondr`
+- **Staging:** Worker name `gopondr-stage` (via `--env staging`)
 
 Both use `@opennextjs/cloudflare` with `nodejs_compat` flag.
 

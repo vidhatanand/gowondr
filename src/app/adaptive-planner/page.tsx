@@ -18,12 +18,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/adaptive-planner" },
   openGraph: {
     title:
-      "Adaptive learning plan and progress tracking for kids | goWondr",
+      "Adaptive learning plan and progress tracking for kids | goPondr",
     description:
       "See how the adaptive planner uses parent observations, review timing, and concept progress to create a clearer daily learning plan for each child.",
     url: "/adaptive-planner",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -206,7 +206,7 @@ export default function AdaptivePlannerPage() {
                 ],
               }}
               right={{
-                title: "goWondr approach",
+                title: "goPondr approach",
                 items: [
                   "Daily plan tied to specific concepts",
                   "Clear progress across all subjects",

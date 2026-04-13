@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/future-ready-learning" },
   openGraph: {
     title:
-      "Future-ready learning for kids in an AI world | goWondr",
+      "Future-ready learning for kids in an AI world | goPondr",
     description:
       "Prepare children for an AI-shaped future through strong foundations, broader knowledge, digital judgment, and adaptable thinking instead of more screen dependence.",
     url: "/future-ready-learning",
     type: "article",
-    siteName: "goWondr",
+    siteName: "goPondr",
   },
 };
 
@@ -200,10 +200,10 @@ export default function FutureReadyLearningPage() {
       <SectionShell bg="paper-alt">
         <div className="max-w-2xl">
           <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
-            How goWondr supports future-ready thinking
+            How goPondr supports future-ready thinking
           </h2>
           <p className="mt-4 text-[17px] leading-[28px] text-slate">
-            Every session in goWondr is designed to build the kind of
+            Every session in goPondr is designed to build the kind of
             thinking that matters most. Activities ask children to notice, then
             explore, then explain in their own words. Concepts connect across
             subjects so knowledge forms a web, not a list. Review is spaced so

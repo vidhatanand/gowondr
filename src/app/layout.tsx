@@ -20,16 +20,16 @@ const atkinson = Atkinson_Hyperlegible({
 
 export const metadata: Metadata = {
   title: {
-    default: "Parent-led home learning for ages 4 to Grade 4 | goWondr",
-    template: "%s | goWondr",
+    default: "Parent-led home learning for ages 4 to Grade 4 | goPondr",
+    template: "%s | goPondr",
   },
   description:
     "A calm, concept-first learning guide for parents. Full curriculum across 8 subjects, adaptive daily plans, screen-light activities, printables, and progress you can actually understand.",
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "goWondr",
-    title: "Parent-led home learning for ages 4 to Grade 4 | goWondr",
+    siteName: "goPondr",
+    title: "Parent-led home learning for ages 4 to Grade 4 | goPondr",
     description:
       "A calm, concept-first learning guide for parents. Full curriculum across 8 subjects, adaptive daily plans, screen-light activities, printables, and progress you can actually understand.",
   },

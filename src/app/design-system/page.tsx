@@ -31,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Design System",
-  description: "goWondr design system preview",
+  description: "goPondr design system preview",
 };
 
 const neutralColors = [
@@ -77,7 +77,7 @@ const typeScale = [
 ];
 
 const faqDemo = [
-  { question: "What is goWondr?", answer: "A parent-led, concept-first home learning system for ages 4 through Grade 4, covering 8 subjects with adaptive daily plans." },
+  { question: "What is goPondr?", answer: "A parent-led, concept-first home learning system for ages 4 through Grade 4, covering 8 subjects with adaptive daily plans." },
   { question: "Do I need to be a teacher?", answer: "No. The system carries the sequence, coverage, and pedagogy. You bring warmth, encouragement, and real-life connection." },
   { question: "How much does it cost?", answer: "Monthly plan at ₹1,000 per child per month, or annual at ₹10,000 per child per year. Start with a free 15-day trial." },
 ];
@@ -101,7 +101,7 @@ export default function DesignSystemPage() {
           Design System
         </h1>
         <p className="mt-4 text-[19px] leading-[32px] text-slate max-w-[600px]">
-          goWondr visual foundation. Tokens, components, and patterns
+          goPondr visual foundation. Tokens, components, and patterns
           for building a calm, warm, trustworthy learning brand.
         </p>
       </SectionShell>
