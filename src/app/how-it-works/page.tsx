@@ -183,31 +183,8 @@ export default function HowItWorksPage() {
         </div>
       </SectionShell>
 
-      {/* Screen-light callout */}
-      <SectionShell bg="paper">
-        <div className="max-w-[700px] mx-auto">
-          <div className="flex items-start gap-4 rounded-2xl border border-teal/15 bg-teal-soft p-5 md:p-6">
-            <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-teal shrink-0">
-              <MonitorOff className="h-6 w-6 text-paper" />
-            </div>
-            <div>
-              <p className="font-body font-bold text-[16px] text-teal">
-                Every activity happens off-screen
-              </p>
-              <p className="text-[15px] text-slate leading-relaxed mt-1.5">
-                Every activity in goWondr is designed to be done off-screen.
-                The parent reads a short prompt, then puts the device down and
-                engages with the child. Activities involve talking, drawing,
-                sorting, building, moving, storytelling, and exploring the real
-                world. The screen is a guide, not a babysitter.
-              </p>
-            </div>
-          </div>
-        </div>
-      </SectionShell>
-
       {/* Learning Arc */}
-      <SectionShell bg="paper-alt" id="learning-arc">
+      <SectionShell bg="paper" id="learning-arc">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight text-center">
           The learning arc
         </h2>
@@ -352,6 +329,27 @@ export default function HowItWorksPage() {
             doing more. It is about doing the right thing, in the right order,
             at the right time.
           </p>
+        </div>
+      </SectionShell>
+
+      {/* Screen-light callout */}
+      <SectionShell bg="paper">
+        <div className="max-w-[700px] mx-auto">
+          <div className="flex items-start gap-4 rounded-2xl border border-teal/15 bg-teal-soft p-5 md:p-6">
+            <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-teal shrink-0">
+              <MonitorOff className="h-6 w-6 text-paper" />
+            </div>
+            <div>
+              <p className="font-body font-bold text-[16px] text-teal">
+                Every activity happens off-screen
+              </p>
+              <p className="text-[15px] text-slate leading-relaxed mt-1.5">
+                The parent reads a short prompt, then puts the device down.
+                Activities involve talking, drawing, sorting, building, moving,
+                and exploring the real world. The screen is a guide, not a babysitter.
+              </p>
+            </div>
+          </div>
         </div>
       </SectionShell>
 
