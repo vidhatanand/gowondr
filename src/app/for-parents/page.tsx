@@ -199,7 +199,7 @@ export default function ForParentsPage() {
       {/* How the partnership works — creative SVG */}
       <SectionShell bg="paper-alt">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight text-center">
-          How the guide supports you
+          How goWondr supports you
         </h2>
         <p className="mt-3 text-[17px] leading-[28px] text-slate text-center max-w-[520px] mx-auto">
           goWondr takes the hard parts off your plate so you can focus on the relationship.
@@ -208,44 +208,39 @@ export default function ForParentsPage() {
         <div className="mt-10 max-w-[500px] mx-auto">
           <div className="rounded-2xl border border-sand bg-paper p-6 md:p-8">
             <div className="flex justify-center">
-              <svg viewBox="0 0 300 300" className="w-full max-w-[300px] h-auto">
-                {/* Outer circular flow path */}
-                <circle cx="150" cy="150" r="105" fill="none" stroke="#E6D5C3" strokeWidth="2" />
+              <svg viewBox="0 0 320 320" className="w-full max-w-[320px] h-auto">
+                {/* Outer ring */}
+                <circle cx="160" cy="160" r="115" fill="none" stroke="#EFE6D8" strokeWidth="2" />
 
-                {/* Directional arc arrows along the circle */}
-                {/* goWondr → Parent (top-right arc) */}
-                <path d="M 205 62 L 212 70 L 200 68" fill="none" stroke="#235A5F" strokeWidth="1.5" strokeLinecap="round" />
-                {/* Parent → Child (bottom-right arc) */}
-                <path d="M 230 200 L 225 210 L 220 200" fill="none" stroke="#A4582E" strokeWidth="1.5" strokeLinecap="round" />
-                {/* Child → goWondr (bottom-left arc) */}
-                <path d="M 70 200 L 75 210 L 80 200" fill="none" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" />
+                {/* Curved lines between nodes */}
+                <path d="M 195 58 Q 265 85 252 150" fill="none" stroke="#235A5F" strokeWidth="2" strokeLinecap="round" />
+                <path d="M 248 215 Q 215 280 125 240" fill="none" stroke="#A4582E" strokeWidth="2" strokeLinecap="round" />
+                <path d="M 78 185 Q 48 105 128 58" fill="none" stroke="#4B7A5B" strokeWidth="2" strokeLinecap="round" />
 
                 {/* Arc labels */}
-                <text x="220" y="110" textAnchor="start" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">gives</text>
-                <text x="220" y="120" textAnchor="start" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">structure</text>
-                <text x="195" y="245" textAnchor="middle" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">nurtures</text>
-                <text x="105" y="245" textAnchor="middle" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">growth</text>
-                <text x="48" y="120" textAnchor="end" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">feeds</text>
-                <text x="48" y="130" textAnchor="end" fill="#52616D" fontSize="9" fontStyle="italic" fontFamily="var(--font-body)">back</text>
+                <text x="255" y="100" textAnchor="start" fill="#235A5F" fontSize="12" fontWeight="600" fontFamily="var(--font-body)">gives</text>
+                <text x="255" y="114" textAnchor="start" fill="#235A5F" fontSize="12" fontWeight="600" fontFamily="var(--font-body)">structure</text>
+                <text x="200" y="272" textAnchor="middle" fill="#A4582E" fontSize="12" fontWeight="600" fontFamily="var(--font-body)">nurtures</text>
+                <text x="50" y="148" textAnchor="end" fill="#4B7A5B" fontSize="12" fontWeight="600" fontFamily="var(--font-body)">growth</text>
+                <text x="50" y="162" textAnchor="end" fill="#4B7A5B" fontSize="12" fontWeight="600" fontFamily="var(--font-body)">feeds back</text>
 
-                {/* goWondr node — top center */}
-                <circle cx="150" cy="45" r="32" fill="#EAF3F2" stroke="#235A5F" strokeWidth="2.5" />
-                <text x="150" y="40" textAnchor="middle" fill="#235A5F" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">go</text>
-                <text x="150" y="53" textAnchor="middle" fill="#235A5F" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">Wondr</text>
+                {/* goWondr node — top */}
+                <circle cx="160" cy="48" r="40" fill="#EAF3F2" stroke="#235A5F" strokeWidth="2.5" />
+                <text x="160" y="53" textAnchor="middle" fill="#235A5F" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">goWondr</text>
 
                 {/* Parent node — bottom right */}
-                <circle cx="237" cy="195" r="32" fill="#F7ECE4" stroke="#A4582E" strokeWidth="2.5" />
-                <text x="237" y="190" textAnchor="middle" fill="#A4582E" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">You,</text>
-                <text x="237" y="203" textAnchor="middle" fill="#A4582E" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">the parent</text>
+                <circle cx="252" cy="212" r="40" fill="#F7ECE4" stroke="#A4582E" strokeWidth="2.5" />
+                <text x="252" y="207" textAnchor="middle" fill="#A4582E" fontSize="13" fontWeight="700" fontFamily="var(--font-body)">You,</text>
+                <text x="252" y="222" textAnchor="middle" fill="#A4582E" fontSize="13" fontWeight="700" fontFamily="var(--font-body)">the parent</text>
 
                 {/* Child node — bottom left */}
-                <circle cx="63" cy="195" r="32" fill="#EAF3EC" stroke="#4B7A5B" strokeWidth="2.5" />
-                <text x="63" y="190" textAnchor="middle" fill="#4B7A5B" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">Your</text>
-                <text x="63" y="203" textAnchor="middle" fill="#4B7A5B" fontSize="10" fontWeight="700" fontFamily="var(--font-body)">child</text>
+                <circle cx="68" cy="212" r="40" fill="#EAF3EC" stroke="#4B7A5B" strokeWidth="2.5" />
+                <text x="68" y="207" textAnchor="middle" fill="#4B7A5B" fontSize="13" fontWeight="700" fontFamily="var(--font-body)">Your</text>
+                <text x="68" y="222" textAnchor="middle" fill="#4B7A5B" fontSize="13" fontWeight="700" fontFamily="var(--font-body)">child</text>
 
                 {/* Center label */}
-                <text x="150" y="148" textAnchor="middle" fill="#1E2A34" fontSize="10" fontWeight="600" fontFamily="var(--font-body)">Deep</text>
-                <text x="150" y="162" textAnchor="middle" fill="#1E2A34" fontSize="10" fontWeight="600" fontFamily="var(--font-body)">learning</text>
+                <text x="160" y="155" textAnchor="middle" fill="#1E2A34" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">Deep</text>
+                <text x="160" y="173" textAnchor="middle" fill="#1E2A34" fontSize="14" fontWeight="700" fontFamily="var(--font-body)">learning</text>
               </svg>
             </div>
 
