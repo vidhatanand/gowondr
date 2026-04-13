@@ -127,17 +127,17 @@ export default function ResearchHubPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper" narrow={true}>
+      <SectionShell bg="paper">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
             { label: "Research" },
           ]}
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight">
+        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
           Research that supports the approach — and keeps the claims honest
         </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate">
+        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
           goWondr is built on a set of beliefs about how children
           learn best. Those beliefs are shaped by research — not invented from
           scratch, not cherry-picked to sell a product. This hub collects the
