@@ -16,7 +16,7 @@ export function LearningArc() {
   return (
     <SectionShell className="relative overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-30"
+        className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{ backgroundImage: "url('/images/abstract-5.jpg')" }}
         aria-hidden="true"
       />

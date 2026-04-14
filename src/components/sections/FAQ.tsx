@@ -46,12 +46,20 @@ const faqItems = [
 
 export function FAQ() {
   return (
-    <SectionShell bg="paper-alt" id="faq">
+    <SectionShell bg="paper-alt" id="faq" className="relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-40"
+        style={{ backgroundImage: "url('/images/abstract-2.jpg')" }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-paper-alt/70" aria-hidden="true" />
+      <div className="relative z-10">
       <div className="max-w-[760px] mx-auto">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight text-center mb-10">
           Common questions
         </h2>
         <Accordion items={faqItems} />
+      </div>
       </div>
     </SectionShell>
   );

@@ -4,14 +4,7 @@ import { Chip } from "@/components/ui/Chip";
 
 export function PricingTeaser() {
   return (
-    <SectionShell id="pricing" className="relative overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-30"
-        style={{ backgroundImage: "url('/images/abstract-2.jpg')" }}
-        aria-hidden="true"
-      />
-      <div className="absolute inset-0 bg-paper/70" aria-hidden="true" />
-      <div className="relative z-10">
+    <SectionShell id="pricing">
       <div className="text-center mb-10">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
           Start free. Choose the plan that fits your family.
@@ -56,7 +49,6 @@ export function PricingTeaser() {
           ctaText="Start free trial"
           ctaHref="#"
         />
-      </div>
       </div>
     </SectionShell>
   );
