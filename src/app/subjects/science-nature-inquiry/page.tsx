@@ -7,6 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Search, Sprout, Magnet, CloudSun } from "lucide-react";
@@ -75,36 +76,39 @@ export default function SciencePage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Subjects", href: "/subjects" },
-            { label: "Science, Nature & Inquiry" },
-          ]}
-        />
-        <Chip variant="subject" subjectSoftClass="bg-science-soft" subjectInkClass="text-science-ink">
-          Science, Nature & Inquiry
-        </Chip>
-        <h1 className="mt-4 font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          Science, nature, and inquiry for kids at home
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl italic">
-          Science should feel like wonder disciplined by attention.
-        </p>
-        <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
-          This strand of the{" "}
-          <InternalLink href="/subjects">
-            8-subject home learning curriculum
-          </InternalLink>{" "}
-          builds scientific thinking through real-world materials: observation,
-          living things, plants, animals, the body, materials, forces, light,
-          sound, weather, and engineering. Aligned with{" "}
-          <InternalLink href="/curriculum-coverage">
-            concept-based curriculum maps
-          </InternalLink>{" "}
-          so each investigation has purpose and progression.
-        </p>
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/subject-science-1.jpg", "/images/subject-science-2.jpg"]} />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Subjects", href: "/subjects" },
+              { label: "Science, Nature & Inquiry" },
+            ]}
+          />
+          <Chip variant="subject" subjectSoftClass="bg-science-soft" subjectInkClass="text-science-ink">
+            Science, Nature & Inquiry
+          </Chip>
+          <h1 className="mt-4 font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            Science, nature, and inquiry for kids at home
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl italic">
+            Science should feel like wonder disciplined by attention.
+          </p>
+          <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
+            This strand of the{" "}
+            <InternalLink href="/subjects">
+              8-subject home learning curriculum
+            </InternalLink>{" "}
+            builds scientific thinking through real-world materials: observation,
+            living things, plants, animals, the body, materials, forces, light,
+            sound, weather, and engineering. Aligned with{" "}
+            <InternalLink href="/curriculum-coverage">
+              concept-based curriculum maps
+            </InternalLink>{" "}
+            so each investigation has purpose and progression.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Strand structure */}

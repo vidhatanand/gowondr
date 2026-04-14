@@ -7,6 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Brain, Users, Scale, ShieldCheck, Activity } from "lucide-react";
@@ -80,36 +81,39 @@ export default function PersonalPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Subjects", href: "/subjects" },
-            { label: "Personal Development, Health & Life Skills" },
-          ]}
-        />
-        <Chip variant="subject" subjectSoftClass="bg-personal-soft" subjectInkClass="text-personal-ink">
-          Personal Development, Health & Life Skills
-        </Chip>
-        <h1 className="mt-4 font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          Personal development, health, and life skills for kids
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl italic">
-          Learning is not separate from the child&apos;s inner life.
-        </p>
-        <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
-          This strand of the{" "}
-          <InternalLink href="/subjects">
-            8-subject home learning curriculum
-          </InternalLink>{" "}
-          nurtures the whole child: self-awareness, emotional regulation,
-          relationships, values, health, hygiene, safety, and physical
-          development. Woven through{" "}
-          <InternalLink href="/curriculum-coverage">
-            concept-based curriculum maps
-          </InternalLink>{" "}
-          so personal growth is intentional, not incidental.
-        </p>
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/subject-personal-1.jpg", "/images/subject-personal-2.jpg"]} />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Subjects", href: "/subjects" },
+              { label: "Personal Development, Health & Life Skills" },
+            ]}
+          />
+          <Chip variant="subject" subjectSoftClass="bg-personal-soft" subjectInkClass="text-personal-ink">
+            Personal Development, Health & Life Skills
+          </Chip>
+          <h1 className="mt-4 font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            Personal development, health, and life skills for kids
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl italic">
+            Learning is not separate from the child&apos;s inner life.
+          </p>
+          <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
+            This strand of the{" "}
+            <InternalLink href="/subjects">
+              8-subject home learning curriculum
+            </InternalLink>{" "}
+            nurtures the whole child: self-awareness, emotional regulation,
+            relationships, values, health, hygiene, safety, and physical
+            development. Woven through{" "}
+            <InternalLink href="/curriculum-coverage">
+              concept-based curriculum maps
+            </InternalLink>{" "}
+            so personal growth is intentional, not incidental.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Strand structure */}

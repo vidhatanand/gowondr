@@ -7,6 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Users, Building2, Map, Globe } from "lucide-react";
@@ -75,36 +76,39 @@ export default function WorldPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Subjects", href: "/subjects" },
-            { label: "World Learning, Society & Life Systems" },
-          ]}
-        />
-        <Chip variant="subject" subjectSoftClass="bg-world-soft" subjectInkClass="text-world-ink">
-          World Learning, Society & Life Systems
-        </Chip>
-        <h1 className="mt-4 font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          World learning, society, and life systems for kids at home
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl italic">
-          Children should learn not only what exists, but how life works.
-        </p>
-        <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
-          This strand of the{" "}
-          <InternalLink href="/subjects">
-            8-subject home learning curriculum
-          </InternalLink>{" "}
-          helps children understand the world they live in: self and family,
-          community, needs and wants, money, time and routines, geography,
-          culture, rules and fairness, services, and the environment. Grounded in{" "}
-          <InternalLink href="/curriculum-coverage">
-            concept-based curriculum maps
-          </InternalLink>{" "}
-          so understanding deepens over time.
-        </p>
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/subject-world-1.jpg", "/images/subject-world-2.jpg"]} />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Subjects", href: "/subjects" },
+              { label: "World Learning, Society & Life Systems" },
+            ]}
+          />
+          <Chip variant="subject" subjectSoftClass="bg-world-soft" subjectInkClass="text-world-ink">
+            World Learning, Society & Life Systems
+          </Chip>
+          <h1 className="mt-4 font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            World learning, society, and life systems for kids at home
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl italic">
+            Children should learn not only what exists, but how life works.
+          </p>
+          <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
+            This strand of the{" "}
+            <InternalLink href="/subjects">
+              8-subject home learning curriculum
+            </InternalLink>{" "}
+            helps children understand the world they live in: self and family,
+            community, needs and wants, money, time and routines, geography,
+            culture, rules and fairness, services, and the environment. Grounded in{" "}
+            <InternalLink href="/curriculum-coverage">
+              concept-based curriculum maps
+            </InternalLink>{" "}
+            so understanding deepens over time.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Strand structure */}
