@@ -314,10 +314,17 @@ export default function DesignSystemPage() {
         </div>
       </SectionShell>
 
-      {/* Buttons */}
+      {/* ═══════════════════════════════════════════════════════════
+          COMPONENTS — organised by complexity
+          ═══════════════════════════════════════════════════════════ */}
+
+      {/* ── ATOMS ─────────────────────────────────────────────── */}
       <SectionShell>
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Atoms
+        </p>
         <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
-          Buttons
+          Button
         </h2>
         <div className="space-y-8">
           <div>
@@ -359,48 +366,13 @@ export default function DesignSystemPage() {
         </div>
       </SectionShell>
 
-      {/* Cards */}
+      {/* Chip */}
       <SectionShell bg="paper-alt">
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Atoms
+        </p>
         <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
-          Cards
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card>
-            <h3 className="font-display text-[24px] text-ink mb-2">
-              Default Card
-            </h3>
-            <p className="text-[15px] text-slate">
-              Paper background with sand border. Clean, calm, and structured.
-            </p>
-          </Card>
-          <Card variant="elevated" hover>
-            <h3 className="font-display text-[24px] text-ink mb-2">
-              Elevated Card
-            </h3>
-            <p className="text-[15px] text-slate">
-              With shadow and hover lift effect for interactive elements.
-            </p>
-          </Card>
-          <Card
-            variant="subject"
-            subjectSoftClass="bg-math-soft"
-            subjectInkClass="text-math-ink"
-            hover
-          >
-            <h3 className="font-display text-[24px] mb-2">
-              Subject Card
-            </h3>
-            <p className="text-[15px] opacity-80">
-              Tinted with a subject color for contextual identification.
-            </p>
-          </Card>
-        </div>
-      </SectionShell>
-
-      {/* Chips */}
-      <SectionShell>
-        <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
-          Chips
+          Chip
         </h2>
         <div className="space-y-6">
           <div>
@@ -437,30 +409,54 @@ export default function DesignSystemPage() {
         </div>
       </SectionShell>
 
-      {/* Section Shells */}
-      <SectionShell bg="paper-alt">
+      {/* Card */}
+      <SectionShell>
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Atoms
+        </p>
         <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
-          Section Backgrounds
+          Card
         </h2>
-      </SectionShell>
-      <SectionShell bg="paper" className="!py-6">
-        <p className="text-[15px] text-slate">bg=&quot;paper&quot; (default)</p>
-      </SectionShell>
-      <SectionShell bg="paper-alt" className="!py-6">
-        <p className="text-[15px] text-slate">bg=&quot;paper-alt&quot;</p>
-      </SectionShell>
-      <SectionShell bg="linen" className="!py-6">
-        <p className="text-[15px] text-slate">bg=&quot;linen&quot;</p>
-      </SectionShell>
-      <SectionShell bg="teal" className="!py-6">
-        <p className="text-[15px] text-paper/80">bg=&quot;teal&quot;</p>
-      </SectionShell>
-      <SectionShell bg="terracotta-soft" className="!py-6">
-        <p className="text-[15px] text-slate">bg=&quot;terracotta-soft&quot;</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card>
+            <h3 className="font-display text-[24px] text-ink mb-2">
+              Default Card
+            </h3>
+            <p className="text-[15px] text-slate">
+              Paper background with sand border. Clean, calm, and structured.
+            </p>
+          </Card>
+          <Card variant="elevated" hover>
+            <h3 className="font-display text-[24px] text-ink mb-2">
+              Elevated Card
+            </h3>
+            <p className="text-[15px] text-slate">
+              With shadow and hover lift effect for interactive elements.
+            </p>
+          </Card>
+          <Card
+            variant="subject"
+            subjectSoftClass="bg-math-soft"
+            subjectInkClass="text-math-ink"
+            hover
+          >
+            <h3 className="font-display text-[24px] mb-2">
+              Subject Card
+            </h3>
+            <p className="text-[15px] opacity-80">
+              Tinted with a subject color for contextual identification.
+            </p>
+          </Card>
+        </div>
       </SectionShell>
 
+      {/* ── MOLECULES ─────────────────────────────────────────── */}
+
       {/* Accordion */}
-      <SectionShell>
+      <SectionShell bg="paper-alt">
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Molecules
+        </p>
         <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
           Accordion / FAQ
         </h2>
@@ -470,9 +466,12 @@ export default function DesignSystemPage() {
       </SectionShell>
 
       {/* Pricing Cards */}
-      <SectionShell bg="paper-alt">
+      <SectionShell>
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Molecules
+        </p>
         <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
-          Pricing Cards
+          Pricing Card
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[700px]">
           <PricingCard
@@ -508,111 +507,11 @@ export default function DesignSystemPage() {
         </div>
       </SectionShell>
 
-      {/* FlowDiagram */}
-      <SectionShell>
-        <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
-          Flow Diagram
-        </h2>
-        <div className="space-y-10">
-          <div>
-            <h3 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-slate mb-4">
-              Linear Flow (Vertical)
-            </h3>
-            <FlowDiagram
-              title="CURRICULUM STRUCTURE"
-              caption="Learning flows from broad stages down to specific concepts."
-              direction="vertical"
-              nodes={[
-                { id: "stages", label: "6 Stages", description: "Age 4 through Grade 4" },
-                { id: "subjects", label: "8 Subjects", description: "Full curriculum breadth" },
-                { id: "concepts", label: "Concepts", description: "Real units of learning", variant: "teal" },
-                { id: "evidence", label: "Evidence", description: "Can the child use it?" },
-                { id: "revisit", label: "Revisit", description: "Spaced return to deepen" },
-              ]}
-              connections={[
-                { from: "stages", to: "subjects", label: "organised into" },
-                { from: "subjects", to: "concepts", label: "built from" },
-                { from: "concepts", to: "evidence", label: "assessed via" },
-                { from: "evidence", to: "revisit", label: "informs" },
-                { from: "revisit", to: "concepts", label: "deepens", dashed: true },
-              ]}
-            />
-          </div>
-          <div>
-            <h3 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-slate mb-4">
-              Grouped Flow (Horizontal)
-            </h3>
-            <FlowDiagram
-              title="THE LEARNING ARC"
-              caption="Every concept follows this progression from first noticing to lasting understanding."
-              direction="vertical"
-              nodes={[
-                { id: "notice", label: "Notice", description: "Observe something real" },
-                { id: "explore", label: "Explore", description: "Touch, sort, test" },
-                { id: "talk", label: "Talk", description: "Describe, question" },
-                { id: "represent", label: "Represent", description: "Draw, build, model" },
-                { id: "connect", label: "Connect", description: "Link to life" },
-                { id: "revisit", label: "Revisit", description: "Return to deepen" },
-              ]}
-              connections={[
-                { from: "notice", to: "explore" },
-                { from: "explore", to: "talk" },
-                { from: "talk", to: "represent" },
-                { from: "represent", to: "connect" },
-                { from: "connect", to: "revisit" },
-              ]}
-              groups={[
-                { label: "Experience", nodeIds: ["notice", "explore", "talk"] },
-                { label: "Understanding", nodeIds: ["represent", "connect"] },
-                { label: "Transfer", nodeIds: ["revisit"] },
-              ]}
-            />
-          </div>
-        </div>
-      </SectionShell>
-
-      {/* StepFlow */}
-      <SectionShell bg="paper-alt">
-        <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
-          Step Flow
-        </h2>
-        <StepFlow
-          steps={[
-            { number: 1, title: "Tell us about your child", description: "Age, stage, subject readiness" },
-            { number: 2, title: "Open today's session", description: "Guided plan with materials and prompts" },
-            { number: 3, title: "Learn together", description: "Talk, explore, represent, connect" },
-            { number: 4, title: "Log observations", description: "What you noticed and what happened" },
-            { number: 5, title: "Planner adapts", description: "Next session adjusts automatically" },
-          ]}
-        />
-      </SectionShell>
-
-      {/* ComparisonColumns */}
-      <SectionShell>
-        <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
-          Comparison Columns
-        </h2>
-        <div className="space-y-8">
-          <div>
-            <h3 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-slate mb-4">
-              Default Variant
-            </h3>
-            <ComparisonColumns
-              left={{
-                title: "What the system carries",
-                items: ["Sequence and coverage", "Revisit timing", "Concept connections", "Parent scripts"],
-              }}
-              right={{
-                title: "What you carry",
-                items: ["Encouragement", "Patience and delight", "Emotional safety", "Real-life curiosity"],
-              }}
-            />
-          </div>
-        </div>
-      </SectionShell>
-
       {/* FeatureGrid */}
       <SectionShell bg="paper-alt">
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Molecules
+        </p>
         <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
           Feature Grid
         </h2>
@@ -649,19 +548,231 @@ export default function DesignSystemPage() {
         </div>
       </SectionShell>
 
-      {/* StatStrip */}
+      {/* ── ORGANISMS ─────────────────────────────────────────── */}
+
+      {/* StepFlow */}
       <SectionShell>
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Organisms
+        </p>
         <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
-          Stat Strip
+          Step Flow
         </h2>
-        <StatStrip
-          stats={[
-            { value: "8", label: "Subjects" },
-            { value: "6", label: "Stages" },
-            { value: "15", label: "Day Trial" },
-            { value: "9", label: "Step Arc" },
+        <StepFlow
+          steps={[
+            { number: 1, title: "Tell us about your child", description: "Age, stage, subject readiness" },
+            { number: 2, title: "Open today's session", description: "Guided plan with materials and prompts" },
+            { number: 3, title: "Learn together", description: "Talk, explore, represent, connect" },
+            { number: 4, title: "Log observations", description: "What you noticed and what happened" },
+            { number: 5, title: "Planner adapts", description: "Next session adjusts automatically" },
           ]}
         />
+      </SectionShell>
+
+      {/* ComparisonColumns */}
+      <SectionShell bg="paper-alt">
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Organisms
+        </p>
+        <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
+          Comparison Columns
+        </h2>
+        <ComparisonColumns
+          left={{
+            title: "What the system carries",
+            items: ["Sequence and coverage", "Revisit timing", "Concept connections", "Parent scripts"],
+          }}
+          right={{
+            title: "What you carry",
+            items: ["Encouragement", "Patience and delight", "Emotional safety", "Real-life curiosity"],
+          }}
+        />
+      </SectionShell>
+
+      {/* FlowDiagram */}
+      <SectionShell>
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Organisms
+        </p>
+        <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
+          Flow Diagram
+        </h2>
+        <div className="space-y-10">
+          <div>
+            <h3 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-slate mb-4">
+              Linear Flow (Vertical)
+            </h3>
+            <FlowDiagram
+              title="CURRICULUM STRUCTURE"
+              caption="Learning flows from broad stages down to specific concepts."
+              direction="vertical"
+              nodes={[
+                { id: "stages", label: "6 Stages", description: "Age 4 through Grade 4" },
+                { id: "subjects", label: "8 Subjects", description: "Full curriculum breadth" },
+                { id: "concepts", label: "Concepts", description: "Real units of learning", variant: "teal" },
+                { id: "evidence", label: "Evidence", description: "Can the child use it?" },
+                { id: "revisit", label: "Revisit", description: "Spaced return to deepen" },
+              ]}
+              connections={[
+                { from: "stages", to: "subjects", label: "organised into" },
+                { from: "subjects", to: "concepts", label: "built from" },
+                { from: "concepts", to: "evidence", label: "assessed via" },
+                { from: "evidence", to: "revisit", label: "informs" },
+                { from: "revisit", to: "concepts", label: "deepens", dashed: true },
+              ]}
+            />
+          </div>
+          <div>
+            <h3 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-slate mb-4">
+              Grouped Flow
+            </h3>
+            <FlowDiagram
+              title="THE LEARNING ARC"
+              caption="Every concept follows this progression from first noticing to lasting understanding."
+              direction="vertical"
+              nodes={[
+                { id: "notice", label: "Notice", description: "Observe something real" },
+                { id: "explore", label: "Explore", description: "Touch, sort, test" },
+                { id: "talk", label: "Talk", description: "Describe, question" },
+                { id: "represent", label: "Represent", description: "Draw, build, model" },
+                { id: "connect", label: "Connect", description: "Link to life" },
+                { id: "revisit", label: "Revisit", description: "Return to deepen" },
+              ]}
+              connections={[
+                { from: "notice", to: "explore" },
+                { from: "explore", to: "talk" },
+                { from: "talk", to: "represent" },
+                { from: "represent", to: "connect" },
+                { from: "connect", to: "revisit" },
+              ]}
+              groups={[
+                { label: "Experience", nodeIds: ["notice", "explore", "talk"] },
+                { label: "Understanding", nodeIds: ["represent", "connect"] },
+                { label: "Transfer", nodeIds: ["revisit"] },
+              ]}
+            />
+          </div>
+        </div>
+      </SectionShell>
+
+      {/* FlowComparison */}
+      <SectionShell bg="paper-alt">
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Organisms
+        </p>
+        <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
+          Flow Comparison
+        </h2>
+        <FlowComparison
+          title="SCREEN-HEAVY VS SCREEN-LIGHT"
+          caption="Two contrasting paths rendered side-by-side with semantic color coding."
+          left={{
+            label: "Screen-Heavy Path",
+            variant: "warning",
+            steps: [
+              { label: "App-based task", description: "Child taps and swipes through content" },
+              { label: "Task completed", description: "Correct answer registered" },
+              { label: "Idea not owned", description: "Cannot explain or transfer" },
+            ],
+            outcome: { label: "Fades quickly", description: "No lasting understanding" },
+          }}
+          right={{
+            label: "Screen-Light Path",
+            variant: "success",
+            steps: [
+              { label: "Real-world prompt", description: "Activity with real materials" },
+              { label: "Multi-modal engagement", description: "Talk, touch, move, draw" },
+              { label: "Parent conversation", description: "Coaching language deepens learning" },
+            ],
+            outcome: { label: "Understanding that lasts", description: "Transfers to new contexts" },
+          }}
+        />
+      </SectionShell>
+
+      {/* ── LAYOUT ────────────────────────────────────────────── */}
+
+      {/* SectionShell */}
+      <SectionShell>
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Layout
+        </p>
+        <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
+          Section Shell Backgrounds
+        </h2>
+      </SectionShell>
+      <SectionShell bg="paper" className="!py-6">
+        <p className="text-[15px] text-slate">bg=&quot;paper&quot; (default)</p>
+      </SectionShell>
+      <SectionShell bg="paper-alt" className="!py-6">
+        <p className="text-[15px] text-slate">bg=&quot;paper-alt&quot;</p>
+      </SectionShell>
+      <SectionShell bg="linen" className="!py-6">
+        <p className="text-[15px] text-slate">bg=&quot;linen&quot;</p>
+      </SectionShell>
+      <SectionShell bg="teal" className="!py-6">
+        <p className="text-[15px] text-paper/80">bg=&quot;teal&quot;</p>
+      </SectionShell>
+      <SectionShell bg="terracotta-soft" className="!py-6">
+        <p className="text-[15px] text-slate">bg=&quot;terracotta-soft&quot;</p>
+      </SectionShell>
+
+      {/* Container */}
+      <SectionShell>
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Layout
+        </p>
+        <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
+          Container
+        </h2>
+        <div className="space-y-4">
+          <div className="border border-dashed border-teal/30 rounded-xl p-1">
+            <Container className="bg-teal-soft/50 rounded-lg py-3 text-center">
+              <p className="text-[13px] text-slate font-mono">Container (max-w-1280)</p>
+            </Container>
+          </div>
+          <div className="border border-dashed border-teal/30 rounded-xl p-1">
+            <Container narrow className="bg-teal-soft/50 rounded-lg py-3 text-center">
+              <p className="text-[13px] text-slate font-mono">Container narrow (max-w-760)</p>
+            </Container>
+          </div>
+        </div>
+      </SectionShell>
+
+      {/* Breadcrumb */}
+      <SectionShell bg="paper-alt">
+        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-teal mb-2">
+          Layout
+        </p>
+        <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
+          Breadcrumb
+        </h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-slate mb-4">
+              Standard
+            </h3>
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Subjects", href: "/subjects" },
+                { label: "Mathematics" },
+              ]}
+            />
+          </div>
+          <div>
+            <h3 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-slate mb-4">
+              Deep Nesting
+            </h3>
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "How It Works", href: "/how-it-works" },
+                { label: "Curriculum", href: "/how-it-works" },
+                { label: "Stage 2" },
+              ]}
+            />
+          </div>
+        </div>
       </SectionShell>
     </div>
   );
