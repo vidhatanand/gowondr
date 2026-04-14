@@ -156,20 +156,20 @@ export function ParentChildSVG({ className = "" }: Props) {
 
         {/* Labels */}
         {/* Soil label */}
-        <text x="200" y="465" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#A4582E" opacity="0.8" textAnchor="middle">Responsive interaction</text>
-        <text x="200" y="479" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.5" textAnchor="middle">Notice, respond, talk</text>
+        <text x="200" y="465" fontFamily="var(--font-body)" fontSize="16" fontWeight="700" fill="#A4582E" opacity="0.8" textAnchor="middle">Responsive interaction</text>
+        <text x="200" y="479" fontFamily="var(--font-body)" fontSize="12" fontWeight="600" fill="#A4582E" opacity="0.5" textAnchor="middle">Notice, respond, talk</text>
 
         {/* Branch labels — positioned outside branches, horizontal */}
-        <text x="55" y="200" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Language</text>
-        <text x="200" y="175" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Safety</text>
-        <text x="345" y="200" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Attention</text>
+        <text x="55" y="200" fontFamily="var(--font-body)" fontSize="16" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Language</text>
+        <text x="200" y="175" fontFamily="var(--font-body)" fontSize="16" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Safety</text>
+        <text x="345" y="200" fontFamily="var(--font-body)" fontSize="16" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Attention</text>
 
         {/* Canopy / outcome label — above the canopy */}
-        <text x="200" y="55" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#4B7A5B" opacity="0.8" textAnchor="middle">Stronger learning</text>
-        <text x="200" y="72" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4B7A5B" opacity="0.5" textAnchor="middle">Willingness to try, ability to explain</text>
+        <text x="200" y="55" fontFamily="var(--font-body)" fontSize="16" fontWeight="700" fill="#4B7A5B" opacity="0.8" textAnchor="middle">Stronger learning</text>
+        <text x="200" y="72" fontFamily="var(--font-body)" fontSize="12" fontWeight="600" fill="#4B7A5B" opacity="0.5" textAnchor="middle">Willingness to try, ability to explain</text>
 
         {/* Soil label */}
-        <text x="200" y="505" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.5" textAnchor="middle">Good soil: trust, warmth, presence</text>
+        <text x="200" y="505" fontFamily="var(--font-body)" fontSize="12" fontWeight="600" fill="#A4582E" opacity="0.5" textAnchor="middle">Good soil: trust, warmth, presence</text>
       </svg>
     </div>
   );
