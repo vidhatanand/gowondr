@@ -225,39 +225,33 @@ export function LearningArcVisual({
           </div>
 
           {/* Detail panel — always shows all steps, highlights active */}
-          <div className="w-full md:w-1/2">
-            <div className="space-y-1">
+          <div className="w-full md:w-1/2 text-left">
+            <div className="space-y-1.5">
               {steps.map((step, i) => {
                 const phase = phaseConfig[step.phase];
                 const isActive = activeStep === i;
                 return (
                   <div
                     key={step.number}
-                    className={`flex items-start gap-3 p-2 rounded-lg transition-all duration-200 ${
+                    className={`flex items-center gap-3 p-2.5 rounded-lg transition-all duration-200 ${
                       isActive
-                        ? "bg-paper shadow-xs scale-[1.02]"
+                        ? "bg-paper shadow-xs"
                         : "hover:bg-paper/60"
                     }`}
                     onMouseEnter={() => setActiveStep(i)}
                     onMouseLeave={() => setActiveStep(null)}
                   >
                     <span
-                      className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-[11px] font-bold shrink-0 mt-0.5 transition-all duration-200 ${
-                        isActive ? "text-paper scale-110" : "text-paper"
-                      }`}
+                      className="inline-flex items-center justify-center w-7 h-7 rounded-full text-[12px] font-bold text-paper shrink-0"
                       style={{ backgroundColor: phase?.color || "#235A5F" }}
                     >
                       {step.number}
                     </span>
                     <div className="min-w-0">
-                      <span className={`font-body font-semibold text-[14px] transition-colors ${
-                        isActive ? "text-ink" : "text-ink"
-                      }`}>
+                      <span className="font-body font-semibold text-[14px] text-ink">
                         {step.label}
                       </span>
-                      <span className={`text-[13px] ml-1.5 transition-colors ${
-                        isActive ? "text-slate" : "text-slate"
-                      }`}>
+                      <span className="text-[13px] text-slate block sm:inline sm:ml-1.5">
                         — {step.description}
                       </span>
                     </div>
