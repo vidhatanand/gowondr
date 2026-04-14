@@ -84,36 +84,35 @@ export default function ForParentsPage() {
         <p className="mt-3 text-[17px] leading-[28px] text-slate text-center max-w-[520px] mx-auto">
           No textbook can replace these. They are your superpower.
         </p>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {([
-            { icon: <Eye className="h-5 w-5" />, title: "Attention", body: "You notice what excites, frustrates, and readies your child. No teacher of thirty can match that.", color: "#235A5F", bg: "#EAF3F2" },
-            { icon: <Heart className="h-5 w-5" />, title: "Warmth", body: "Learning sticks when it feels safe. Your patience creates the conditions for real understanding.", color: "#A4582E", bg: "#F7ECE4" },
-            { icon: <HandHeart className="h-5 w-5" />, title: "Trust", body: "Your child trusts you uniquely. That trust makes it safe to struggle, question, and try again.", color: "#4B7A5B", bg: "#EAF3EC" },
-            { icon: <Compass className="h-5 w-5" />, title: "Context", body: "You know their routines, interests, fears, and strengths. That context makes every moment richer.", color: "#214D9C", bg: "#EAF0FB" },
-            { icon: <Clock className="h-5 w-5" />, title: "Continuity", body: "You are there every day. Learning compounds when the same caring person follows the thread.", color: "#6A4E73", bg: "#EDE8E9" },
-            { icon: <Sparkles className="h-5 w-5" />, title: "Love", body: "The deepest advantage. Children learn best from people who love them. No curriculum replaces that.", color: "#94536C", bg: "#F4EAEA" },
-          ]).map((item) => (
-            <div
-              key={item.title}
-              className="flex items-start gap-3.5 rounded-xl border border-sand/60 p-4 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
-              style={{ backgroundColor: item.bg }}
-            >
-              <div
-                className="flex items-center justify-center w-10 h-10 rounded-lg shrink-0"
-                style={{ backgroundColor: `${item.color}15`, color: item.color }}
+            { icon: Eye, title: "Attention", body: "You notice what excites, frustrates, and readies your child. No teacher of thirty can match that.", softClass: "bg-teal-soft", inkClass: "text-teal" },
+            { icon: Heart, title: "Warmth", body: "Learning sticks when it feels safe. Your patience creates the conditions for real understanding.", softClass: "bg-terracotta-soft", inkClass: "text-terracotta" },
+            { icon: HandHeart, title: "Trust", body: "Your child trusts you uniquely. That trust makes it safe to struggle, question, and try again.", softClass: "bg-strong-soft", inkClass: "text-strong-ink" },
+            { icon: Compass, title: "Context", body: "You know their routines, interests, fears, and strengths. That context makes every moment richer.", softClass: "bg-info-soft", inkClass: "text-info-ink" },
+            { icon: Clock, title: "Continuity", body: "You are there every day. Learning compounds when the same caring person follows the thread.", softClass: "bg-reading-soft", inkClass: "text-reading-ink" },
+            { icon: Sparkles, title: "Love", body: "The deepest advantage. Children learn best from people who love them. No curriculum replaces that.", softClass: "bg-personal-soft", inkClass: "text-personal-ink" },
+          ]).map((item) => {
+            const Icon = item.icon;
+            return (
+              <Card
+                key={item.title}
+                variant="subject"
+                subjectSoftClass={item.softClass}
+                subjectInkClass={item.inkClass}
+                hover
+                className="flex flex-col"
               >
-                {item.icon}
-              </div>
-              <div>
-                <p className="font-body font-semibold text-[15px] leading-tight" style={{ color: item.color }}>
+                <Icon className="h-7 w-7 mb-3" />
+                <h3 className="font-display text-[24px] leading-[30px] text-ink mb-2">
                   {item.title}
-                </p>
-                <p className="text-[13px] text-slate leading-relaxed mt-1">
+                </h3>
+                <p className="text-[15px] text-slate leading-relaxed flex-1">
                   {item.body}
                 </p>
-              </div>
-            </div>
-          ))}
+              </Card>
+            );
+          })}
         </div>
       </SectionShell>
 
@@ -178,28 +177,35 @@ export default function ForParentsPage() {
         <p className="mt-3 text-[17px] leading-[28px] text-slate text-center max-w-[520px] mx-auto">
           goPondr is designed around exactly these needs.
         </p>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {([
-            { icon: <Search className="h-5 w-5" />, title: "What to explore", desc: "A clear starting point based on your child's real readiness — not a generic age label.", color: "text-teal", bg: "bg-teal-soft", border: "border-teal/20" },
-            { icon: <CalendarDays className="h-5 w-5" />, title: "A daily plan", desc: "Exactly what to do today, with prompts, materials, and activities ready to go.", color: "text-terracotta", bg: "bg-terracotta-soft", border: "border-terracotta/20" },
-            { icon: <ShieldCheck className="h-5 w-5" />, title: "Confidence in coverage", desc: "Know the plan covers what matters across 8 subjects, connected to a real curriculum.", color: "text-strong-ink", bg: "bg-strong-soft", border: "border-strong-ink/20" },
-            { icon: <Leaf className="h-5 w-5" />, title: "Natural activities", desc: "Learning that feels like play, talk, and everyday life — not homework or screen drills.", color: "text-science-ink", bg: "bg-science-soft", border: "border-science-ink/20" },
-            { icon: <BarChart3 className="h-5 w-5" />, title: "Visible progress", desc: "See growth without tests, grades, or comparison. Know where things are strong and where they're building.", color: "text-info-ink", bg: "bg-info-soft", border: "border-info-ink/20" },
-            { icon: <MessageCircle className="h-5 w-5" />, title: "Words to say", desc: "Parent coaching language so you always know how to start the conversation and respond to what happens.", color: "text-arts-ink", bg: "bg-arts-soft", border: "border-arts-ink/20" },
-          ]).map((item) => (
-            <div
-              key={item.title}
-              className={`rounded-xl border ${item.border} ${item.bg} p-5 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200`}
-            >
-              <div className={`${item.color} mb-3`}>{item.icon}</div>
-              <h3 className={`font-body font-semibold text-[16px] ${item.color} mb-1.5`}>
-                {item.title}
-              </h3>
-              <p className="text-[14px] text-slate leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-          ))}
+            { icon: Search, title: "What to explore", desc: "A clear starting point based on your child's real readiness — not a generic age label.", softClass: "bg-teal-soft", inkClass: "text-teal" },
+            { icon: CalendarDays, title: "A daily plan", desc: "Exactly what to do today, with prompts, materials, and activities ready to go.", softClass: "bg-terracotta-soft", inkClass: "text-terracotta" },
+            { icon: ShieldCheck, title: "Confidence in coverage", desc: "Know the plan covers what matters across 8 subjects, connected to a real curriculum.", softClass: "bg-strong-soft", inkClass: "text-strong-ink" },
+            { icon: Leaf, title: "Natural activities", desc: "Learning that feels like play, talk, and everyday life — not homework or screen drills.", softClass: "bg-science-soft", inkClass: "text-science-ink" },
+            { icon: BarChart3, title: "Visible progress", desc: "See growth without tests, grades, or comparison. Know where things are strong and where they're building.", softClass: "bg-info-soft", inkClass: "text-info-ink" },
+            { icon: MessageCircle, title: "Words to say", desc: "Parent coaching language so you always know how to start the conversation and respond to what happens.", softClass: "bg-arts-soft", inkClass: "text-arts-ink" },
+          ]).map((item) => {
+            const Icon = item.icon;
+            return (
+              <Card
+                key={item.title}
+                variant="subject"
+                subjectSoftClass={item.softClass}
+                subjectInkClass={item.inkClass}
+                hover
+                className="flex flex-col"
+              >
+                <Icon className="h-7 w-7 mb-3" />
+                <h3 className="font-display text-[24px] leading-[30px] text-ink mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-[15px] text-slate leading-relaxed flex-1">
+                  {item.desc}
+                </p>
+              </Card>
+            );
+          })}
         </div>
       </SectionShell>
 
