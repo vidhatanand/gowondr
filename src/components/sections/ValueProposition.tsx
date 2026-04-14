@@ -6,7 +6,7 @@ export function ValueProposition() {
     <SectionShell bg="teal">
       <div className="max-w-[900px] mx-auto text-center">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-paper tracking-tight">
-          The curriculum thinks hard, so you can stay close.
+          goPondr thinks hard, so you can stay close.
         </h2>
 
         <p className="mt-5 text-[17px] leading-[28px] text-paper/80 max-w-[640px] mx-auto">

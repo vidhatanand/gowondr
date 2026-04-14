@@ -59,7 +59,7 @@ export function Footer() {
           <div>
             <Logo size="sm" />
             <p className="mt-3 text-[14px] text-slate leading-relaxed">
-              The curriculum thinks hard, so you can stay close.
+              goPondr thinks hard, so you can stay close.
             </p>
           </div>
 
