@@ -56,12 +56,21 @@ export const metadata: Metadata = {
     title: "Parent-led home learning for ages 4 to Grade 4 | goPondr",
     description:
       "A calm, concept-first learning guide for parents. Full curriculum across 8 subjects, adaptive daily plans, screen-light activities, printables, and progress you can actually understand.",
+    images: [
+      {
+        url: "/images/hero-1.jpg",
+        width: 2534,
+        height: 1351,
+        alt: "goPondr — calm, concept-first learning for parents and children",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Parent-led home learning for ages 4 to Grade 4 | goPondr",
     description:
       "A calm, concept-first learning guide for parents. Full curriculum across 8 subjects.",
+    images: ["/images/hero-1.jpg"],
   },
 };
 

@@ -38,8 +38,8 @@ const variantStyles: Record<ButtonVariant, string> = {
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  default: "h-12 px-5 text-[15px]",
-  lg: "h-14 px-7 text-[17px]",
+  default: "h-11 md:h-12 px-4 md:px-5 text-[14px] md:text-[15px]",
+  lg: "h-12 md:h-14 px-5 md:px-7 text-[15px] md:text-[17px]",
 };
 
 export function Button({
