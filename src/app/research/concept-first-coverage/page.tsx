@@ -6,6 +6,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 
 export const metadata: Metadata = {
   title: "Why concept-based curriculum beats random activities | Research",
@@ -65,21 +66,24 @@ export default function ConceptFirstCoveragePage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Research", href: "/research" },
-            { label: "Concept-First Coverage" },
-          ]}
-        />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          Why concept-first coverage beats random activity bundles
-        </h1>
-        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
-          Children do not need more disconnected content. They need connected
-          understanding.
-        </p>
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/research-concept-first-1.jpg", "/images/research-concept-first-2.jpg"]} />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Research", href: "/research" },
+              { label: "Concept-First Coverage" },
+            ]}
+          />
+          <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            Why concept-first coverage beats random activity bundles
+          </h1>
+          <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
+            Children do not need more disconnected content. They need connected
+            understanding.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Diagram */}
