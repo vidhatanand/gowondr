@@ -168,213 +168,200 @@ export default function ResearchHubPage() {
           HOW OUR RESEARCH CONNECTS
         </h3>
         <div className="rounded-2xl border border-sand bg-paper overflow-hidden">
-          <svg viewBox="0 0 800 380" className="w-full h-auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Seven research streams flowing together like river tributaries into one river of understanding">
+          <svg viewBox="0 0 700 300" className="w-full h-auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Research landscape showing seven evidence landmarks along a path">
             <defs>
-              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="researchSky" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="#FFFDF9" />
-                <stop offset="80%" stopColor="#F8F4ED" />
-                <stop offset="100%" stopColor="#EFE6D8" />
-              </linearGradient>
-              <linearGradient id="river" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="#235A5F" stopOpacity="0.15" />
-                <stop offset="50%" stopColor="#235A5F" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="#235A5F" stopOpacity="0.35" />
-              </linearGradient>
-              <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#235A5F" stopOpacity="0.25" />
-                <stop offset="100%" stopColor="#235A5F" stopOpacity="0.08" />
+                <stop offset="100%" stopColor="#F8F4ED" />
               </linearGradient>
             </defs>
 
             {/* Sky */}
-            <rect width="800" height="380" fill="url(#sky)" />
+            <rect width="700" height="300" fill="url(#researchSky)" />
 
             {/* Clouds */}
-            <ellipse cx="140" cy="40" rx="55" ry="14" fill="#FBF7F1" opacity="0.7" />
-            <ellipse cx="165" cy="35" rx="38" ry="11" fill="#FFFDF9" opacity="0.5" />
-            <ellipse cx="480" cy="28" rx="65" ry="16" fill="#FBF7F1" opacity="0.6" />
-            <ellipse cx="510" cy="22" rx="42" ry="12" fill="#FFFDF9" opacity="0.4" />
-            <ellipse cx="680" cy="45" rx="35" ry="10" fill="#FBF7F1" opacity="0.4" />
+            <ellipse cx="120" cy="32" rx="48" ry="12" fill="#FBF7F1" opacity="0.7" />
+            <ellipse cx="145" cy="27" rx="32" ry="9" fill="#FFFDF9" opacity="0.5" />
+            <ellipse cx="400" cy="22" rx="55" ry="13" fill="#FBF7F1" opacity="0.6" />
+            <ellipse cx="425" cy="17" rx="35" ry="10" fill="#FFFDF9" opacity="0.4" />
+            <ellipse cx="580" cy="38" rx="30" ry="9" fill="#FBF7F1" opacity="0.45" />
+
+            {/* Sun glow near horizon */}
+            <circle cx="620" cy="95" r="18" fill="#F8E8D0" opacity="0.2" />
+            <circle cx="620" cy="95" r="10" fill="#F8E8D0" opacity="0.3" />
+            {/* Sun rays */}
+            <line x1="620" y1="75" x2="620" y2="70" stroke="#E8C87A" strokeWidth="0.8" strokeLinecap="round" opacity="0.15" />
+            <line x1="634" y1="81" x2="638" y2="78" stroke="#E8C87A" strokeWidth="0.8" strokeLinecap="round" opacity="0.12" />
+            <line x1="606" y1="81" x2="602" y2="78" stroke="#E8C87A" strokeWidth="0.8" strokeLinecap="round" opacity="0.12" />
+            <line x1="640" y1="95" x2="644" y2="95" stroke="#E8C87A" strokeWidth="0.8" strokeLinecap="round" opacity="0.1" />
+            <line x1="600" y1="95" x2="596" y2="95" stroke="#E8C87A" strokeWidth="0.8" strokeLinecap="round" opacity="0.1" />
 
             {/* Birds */}
-            <path d="M200 55 L205 50 L210 55" fill="none" stroke="#52616D" strokeWidth="0.8" opacity="0.2" />
-            <path d="M220 48 L225 43 L230 48" fill="none" stroke="#52616D" strokeWidth="0.8" opacity="0.15" />
-            <path d="M550 38 L555 33 L560 38" fill="none" stroke="#52616D" strokeWidth="0.8" opacity="0.15" />
+            <path d="M170 48 L175 43 L180 48" fill="none" stroke="#52616D" strokeWidth="0.8" opacity="0.2" />
+            <path d="M190 42 L194 38 L198 42" fill="none" stroke="#52616D" strokeWidth="0.7" opacity="0.15" />
+            <path d="M480 30 L484 26 L488 30" fill="none" stroke="#52616D" strokeWidth="0.7" opacity="0.2" />
 
             {/* Far distant mountains */}
-            <path d="M0 130 Q60 90 120 115 Q180 85 250 108 Q320 80 400 105 Q470 82 540 100 Q610 78 680 95 Q730 88 800 100 L800 160 L0 160Z" fill="#235A5F" opacity="0.06" />
+            <path d="M0 115 Q50 85 110 100 Q160 78 230 95 Q290 72 360 90 Q420 75 480 88 Q540 70 600 85 Q650 78 700 88 L700 140 L0 140Z" fill="#235A5F" opacity="0.06" />
 
             {/* Nearer hills */}
-            <path d="M0 155 Q80 120 170 145 Q250 115 350 140 Q430 118 530 135 Q610 112 700 130 Q750 125 800 135 L800 180 L0 180Z" fill="#4B7A5B" opacity="0.1" />
-            <path d="M0 170 Q100 145 210 162 Q310 140 420 158 Q520 142 630 155 Q710 140 800 150 L800 195 L0 195Z" fill="#4B7A5B" opacity="0.07" />
+            <path d="M0 135 Q70 108 150 128 Q220 105 310 122 Q380 106 460 118 Q530 100 610 115 Q660 108 700 118 L700 158 L0 158Z" fill="#4B7A5B" opacity="0.1" />
 
-            {/* Ground / riverbank */}
-            <path d="M0 210 Q100 200 200 208 Q350 198 500 205 Q650 200 800 210 L800 380 L0 380Z" fill="#EFE6D8" opacity="0.5" />
+            {/* Ground layer 1 — research foundation (deeper) */}
+            <path d="M0 175 Q80 162 170 170 Q280 160 400 168 Q520 158 630 165 Q670 162 700 168 L700 300 L0 300Z" fill="#EAF3F2" opacity="0.6" />
 
-            {/* === FOUNDATION STREAMS (teal, left) === */}
+            {/* Ground layer 2 — learning path surface */}
+            <path d="M0 195 Q90 182 190 190 Q310 180 430 188 Q540 178 640 185 Q675 183 700 188 L700 300 L0 300Z" fill="#F7ECE4" opacity="0.5" />
 
-            {/* Stream 1: Parent-Child Connection — widest, most important */}
-            <path d="M10 125 Q35 148 65 168 Q100 188 145 202 Q200 214 260 222 Q320 228 380 230" fill="none" stroke="#235A5F" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
-            <path d="M10 125 Q35 148 65 168 Q100 188 145 202 Q200 214 260 222 Q320 228 380 230" fill="none" stroke="#235A5F" strokeWidth="10" strokeLinecap="round" opacity="0.06" />
-
-            {/* Stream 2: Playful Learning */}
-            <path d="M20 180 Q55 192 95 205 Q145 215 205 224 Q270 230 340 233 Q360 234 380 234" fill="none" stroke="#235A5F" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" />
-            <path d="M20 180 Q55 192 95 205 Q145 215 205 224 Q270 230 340 233 Q360 234 380 234" fill="none" stroke="#235A5F" strokeWidth="8" strokeLinecap="round" opacity="0.05" />
-
-            {/* Foundation merge */}
-            <circle cx="380" cy="232" r="5" fill="#235A5F" opacity="0.3" />
-            <circle cx="380" cy="232" r="8" fill="#235A5F" opacity="0.08" />
-
-            {/* === CURRICULUM DESIGN STREAMS (terracotta/green, middle) === */}
-
-            {/* Stream 3: Concept-First */}
-            <path d="M200 128 Q250 155 300 180 Q350 200 400 218 Q430 226 470 232" fill="none" stroke="#A4582E" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" />
-            <path d="M200 128 Q250 155 300 180 Q350 200 400 218 Q430 226 470 232" fill="none" stroke="#A4582E" strokeWidth="8" strokeLinecap="round" opacity="0.05" />
-
-            {/* Stream 4: Thinking Routines */}
-            <path d="M280 108 Q325 140 370 172 Q415 198 455 220 Q475 228 500 234" fill="none" stroke="#4B7A5B" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" />
-            <path d="M280 108 Q325 140 370 172 Q415 198 455 220 Q475 228 500 234" fill="none" stroke="#4B7A5B" strokeWidth="8" strokeLinecap="round" opacity="0.05" />
-
-            {/* Stream 5: Adaptive Planning */}
-            <path d="M350 145 Q395 170 440 195 Q475 212 510 226 Q530 232 545 236" fill="none" stroke="#A4582E" strokeWidth="2" strokeLinecap="round" opacity="0.45" />
-            <path d="M350 145 Q395 170 440 195 Q475 212 510 226 Q530 232 545 236" fill="none" stroke="#A4582E" strokeWidth="6" strokeLinecap="round" opacity="0.04" />
-
-            {/* Curriculum merge */}
-            <circle cx="510" cy="234" r="5" fill="#A4582E" opacity="0.25" />
-            <circle cx="510" cy="234" r="8" fill="#A4582E" opacity="0.06" />
-
-            {/* === MAIN RIVER (combined, widening) === */}
-            <path d="M380 228 Q440 228 510 232 Q570 236 630 242 Q680 250 730 258 Q760 264 800 270" fill="none" stroke="#235A5F" strokeWidth="4" strokeLinecap="round" opacity="0.4" />
-            <path d="M380 236 Q440 238 510 240 Q570 244 630 252 Q680 260 730 270 Q760 276 800 284" fill="none" stroke="#235A5F" strokeWidth="2.5" strokeLinecap="round" opacity="0.25" />
-            {/* River body fill */}
-            <path d="M380 226 Q440 226 510 230 Q570 234 630 240 Q680 248 730 256 Q760 262 800 268 L800 286 Q760 278 730 272 Q680 264 630 256 Q570 248 510 244 Q440 240 380 238Z" fill="url(#river)" />
-
-            {/* Water shimmer highlights */}
-            <path d="M420 232 Q440 230 460 232" fill="none" stroke="#FFFDF9" strokeWidth="0.8" opacity="0.3" />
-            <path d="M530 236 Q555 234 575 237" fill="none" stroke="#FFFDF9" strokeWidth="0.8" opacity="0.25" />
-            <path d="M640 248 Q660 246 680 250" fill="none" stroke="#FFFDF9" strokeWidth="0.8" opacity="0.2" />
-            <path d="M470 236 Q480 234 490 236" fill="none" stroke="#FFFDF9" strokeWidth="0.5" opacity="0.2" />
-            <path d="M590 242 Q600 240 612 243" fill="none" stroke="#FFFDF9" strokeWidth="0.6" opacity="0.2" />
-            <path d="M710 258 Q720 256 735 260" fill="none" stroke="#FFFDF9" strokeWidth="0.7" opacity="0.15" />
-
-            {/* === FUTURE READINESS STREAMS (slate, right) === */}
-
-            {/* Stream 6: Breadth */}
-            <path d="M490 125 Q530 152 570 182 Q600 205 630 225 Q650 236 670 244" fill="none" stroke="#52616D" strokeWidth="2" strokeLinecap="round" opacity="0.45" />
-            <path d="M490 125 Q530 152 570 182 Q600 205 630 225 Q650 236 670 244" fill="none" stroke="#52616D" strokeWidth="7" strokeLinecap="round" opacity="0.04" />
-
-            {/* Stream 7: Digital Judgment */}
-            <path d="M570 135 Q600 158 630 185 Q655 208 675 228 Q685 238 695 248" fill="none" stroke="#52616D" strokeWidth="1.8" strokeLinecap="round" opacity="0.4" />
-            <path d="M570 135 Q600 158 630 185 Q655 208 675 228 Q685 238 695 248" fill="none" stroke="#52616D" strokeWidth="5" strokeLinecap="round" opacity="0.03" />
-
-            {/* Future merge */}
-            <circle cx="675" cy="244" r="4" fill="#52616D" opacity="0.25" />
-            <circle cx="675" cy="244" r="7" fill="#52616D" opacity="0.06" />
-
-            {/* === SEA / HORIZON === */}
-            <path d="M730 255 Q755 260 780 268 Q800 276 800 290 L800 380 L730 380 Q733 340 730 300Z" fill="url(#sea)" />
-            {/* Horizon shimmer */}
-            <path d="M735 260 Q750 256 765 262" fill="none" stroke="#FFFDF9" strokeWidth="0.6" opacity="0.2" />
-            <path d="M750 270 Q760 267 775 272" fill="none" stroke="#FFFDF9" strokeWidth="0.5" opacity="0.15" />
-
-            {/* === RIVERBANK DETAIL === */}
-
-            {/* Pebbles/texture */}
-            {[140,190,260,340,400,470,540,600,660,720].map((x, i) => (
-              <circle key={`p1-${i}`} cx={x} cy={250 + (i % 3) * 5} r="1" fill="#A4582E" opacity="0.12" />
+            {/* Texture dots in ground */}
+            {[60,120,180,250,320,390,450,520,580,640].map((x, i) => (
+              <circle key={`gt1-${i}`} cx={x} cy={210 + (i % 3) * 8} r="1" fill="#A4582E" opacity="0.1" />
             ))}
-            {[110,170,230,320,380,450,510,580,640,700].map((x, i) => (
-              <circle key={`p2-${i}`} cx={x} cy={258 + (i % 2) * 6} r="0.8" fill="#4B7A5B" opacity="0.1" />
+            {[90,150,210,280,350,420,480,550,610].map((x, i) => (
+              <circle key={`gt2-${i}`} cx={x} cy={225 + (i % 2) * 6} r="0.8" fill="#235A5F" opacity="0.08" />
             ))}
-            {[160,240,330,420,500,570,630].map((x, i) => (
-              <circle key={`p3-${i}`} cx={x} cy={265 + (i % 3) * 4} r="0.6" fill="#886328" opacity="0.08" />
+            {[75,140,200,270,340,410,470,540,600,660].map((x, i) => (
+              <circle key={`gt3-${i}`} cx={x} cy={240 + (i % 3) * 5} r="0.6" fill="#886328" opacity="0.08" />
             ))}
 
-            {/* Trees along upper bank */}
-            <line x1="55" y1="175" x2="55" y2="158" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" opacity="0.3" />
-            <circle cx="55" cy="154" r="5.5" fill="#4B7A5B" opacity="0.18" />
-            <circle cx="50" cy="157" r="4" fill="#4B7A5B" opacity="0.12" />
+            {/* === THE WINDING PATH === */}
+            <path d="M30 215 Q80 205 130 212 Q180 220 230 210 Q290 198 340 208 Q400 218 450 205 Q510 192 560 200 Q610 210 660 198" fill="none" stroke="#A4582E" strokeWidth="2" strokeLinecap="round" strokeDasharray="6 4" opacity="0.35" />
+            {/* Path glow */}
+            <path d="M30 215 Q80 205 130 212 Q180 220 230 210 Q290 198 340 208 Q400 218 450 205 Q510 192 560 200 Q610 210 660 198" fill="none" stroke="#A4582E" strokeWidth="6" strokeLinecap="round" strokeDasharray="6 4" opacity="0.06" />
 
-            <line x1="105" y1="195" x2="105" y2="180" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" opacity="0.25" />
-            <circle cx="105" cy="176" r="5" fill="#4B7A5B" opacity="0.15" />
-            <circle cx="100" cy="179" r="3.5" fill="#4B7A5B" opacity="0.1" />
+            {/* === GROUP LABELS above the path === */}
+            <text x="110" y="168" fontFamily="var(--font-body)" fontSize="10" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">FOUNDATION</text>
+            <text x="340" y="168" fontFamily="var(--font-body)" fontSize="10" fontWeight="700" fill="#A4582E" opacity="0.65" textAnchor="middle">DESIGN</text>
+            <text x="580" y="168" fontFamily="var(--font-body)" fontSize="10" fontWeight="700" fill="#52616D" opacity="0.65" textAnchor="middle">FUTURE</text>
 
-            <line x1="165" y1="205" x2="165" y2="192" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
-            <circle cx="165" cy="189" r="4" fill="#4B7A5B" opacity="0.12" />
+            {/* === LANDMARK 1: Connection (teal) === */}
+            <circle cx="70" cy="213" r="6" fill="#235A5F" opacity="0.15" />
+            <circle cx="70" cy="213" r="3.5" fill="#235A5F" opacity="0.4" />
+            {/* Icon: two overlapping circles */}
+            <circle cx="67" cy="213" r="2.5" fill="none" stroke="#235A5F" strokeWidth="0.8" opacity="0.5" />
+            <circle cx="73" cy="213" r="2.5" fill="none" stroke="#235A5F" strokeWidth="0.8" opacity="0.5" />
+            <text x="70" y="228" fontFamily="var(--font-body)" fontSize="8" fill="#235A5F" opacity="0.5" textAnchor="middle">Connection</text>
 
-            <line x1="320" y1="212" x2="320" y2="198" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.18" />
-            <circle cx="320" cy="195" r="4.5" fill="#4B7A5B" opacity="0.12" />
-            <circle cx="316" cy="198" r="3" fill="#4B7A5B" opacity="0.08" />
+            {/* === LANDMARK 2: Play (teal) === */}
+            <circle cx="155" cy="210" r="6" fill="#235A5F" opacity="0.15" />
+            <circle cx="155" cy="210" r="3.5" fill="#235A5F" opacity="0.4" />
+            {/* Icon: leaf shape */}
+            <path d="M153 212 Q155 207 157 212 Q155 211 153 212Z" fill="#235A5F" opacity="0.5" />
+            <line x1="155" y1="212" x2="155" y2="214" stroke="#235A5F" strokeWidth="0.6" strokeLinecap="round" opacity="0.4" />
+            <text x="155" y="225" fontFamily="var(--font-body)" fontSize="8" fill="#235A5F" opacity="0.5" textAnchor="middle">Play</text>
 
-            <line x1="430" y1="215" x2="430" y2="202" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.15" />
-            <circle cx="430" cy="199" r="3.5" fill="#4B7A5B" opacity="0.1" />
+            {/* === LANDMARK 3: Concepts (terracotta) === */}
+            <circle cx="260" cy="206" r="6" fill="#A4582E" opacity="0.15" />
+            <circle cx="260" cy="206" r="3.5" fill="#A4582E" opacity="0.4" />
+            {/* Icon: small book */}
+            <rect x="257" y="204" width="6" height="5" rx="0.5" fill="none" stroke="#A4582E" strokeWidth="0.7" opacity="0.5" />
+            <line x1="260" y1="204" x2="260" y2="209" stroke="#A4582E" strokeWidth="0.5" opacity="0.4" />
+            <text x="260" y="221" fontFamily="var(--font-body)" fontSize="8" fill="#A4582E" opacity="0.5" textAnchor="middle">Concepts</text>
 
-            <line x1="560" y1="218" x2="560" y2="205" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.15" />
-            <circle cx="560" cy="202" r="4" fill="#4B7A5B" opacity="0.1" />
+            {/* === LANDMARK 4: Thinking (green) === */}
+            <circle cx="355" cy="210" r="6" fill="#4B7A5B" opacity="0.15" />
+            <circle cx="355" cy="210" r="3.5" fill="#4B7A5B" opacity="0.4" />
+            {/* Icon: magnifying glass */}
+            <circle cx="354" cy="209" r="2" fill="none" stroke="#4B7A5B" strokeWidth="0.7" opacity="0.5" />
+            <line x1="355.5" y1="210.5" x2="357.5" y2="212.5" stroke="#4B7A5B" strokeWidth="0.7" strokeLinecap="round" opacity="0.5" />
+            <text x="355" y="225" fontFamily="var(--font-body)" fontSize="8" fill="#4B7A5B" opacity="0.5" textAnchor="middle">Thinking</text>
 
-            {/* Flowers/details */}
-            <circle cx="80" cy="198" r="2" fill="#A4582E" opacity="0.2" />
-            <circle cx="240" cy="220" r="1.5" fill="#94536C" opacity="0.15" />
-            <circle cx="480" cy="222" r="2" fill="#A4582E" opacity="0.15" />
-            <circle cx="620" cy="232" r="1.5" fill="#7A5AA6" opacity="0.12" />
+            {/* === LANDMARK 5: Revisit (terracotta) === */}
+            <circle cx="445" cy="208" r="6" fill="#A4582E" opacity="0.15" />
+            <circle cx="445" cy="208" r="3.5" fill="#A4582E" opacity="0.4" />
+            {/* Icon: spiral */}
+            <path d="M445 206 Q448 206 448 208 Q448 210 445 210 Q443 210 443 208.5 Q443 207 444.5 207" fill="none" stroke="#A4582E" strokeWidth="0.7" strokeLinecap="round" opacity="0.5" />
+            <text x="445" y="223" fontFamily="var(--font-body)" fontSize="8" fill="#A4582E" opacity="0.5" textAnchor="middle">Revisit</text>
 
-            {/* Small rocks near river */}
-            <ellipse cx="350" cy="245" rx="4" ry="2.5" fill="#E6D5C3" opacity="0.4" />
-            <ellipse cx="530" cy="248" rx="3.5" ry="2" fill="#E6D5C3" opacity="0.35" />
-            <ellipse cx="680" cy="255" rx="3" ry="2" fill="#E6D5C3" opacity="0.3" />
+            {/* === LANDMARK 6: Breadth (slate) === */}
+            <circle cx="535" cy="198" r="6" fill="#52616D" opacity="0.15" />
+            <circle cx="535" cy="198" r="3.5" fill="#52616D" opacity="0.4" />
+            {/* Icon: flower with petals */}
+            <circle cx="535" cy="198" r="1" fill="#52616D" opacity="0.4" />
+            {[0,45,90,135,180,225,270,315].map((angle, i) => {
+              const rad = (angle * Math.PI) / 180;
+              const px = 535 + Math.cos(rad) * 2.8;
+              const py = 198 + Math.sin(rad) * 2.8;
+              return <circle key={`petal-${i}`} cx={px} cy={py} r="0.8" fill="#52616D" opacity="0.35" />;
+            })}
+            <text x="535" y="213" fontFamily="var(--font-body)" fontSize="8" fill="#52616D" opacity="0.5" textAnchor="middle">Breadth</text>
 
-            {/* === PARENT + CHILD FIGURES at the sea === */}
+            {/* === LANDMARK 7: Digital (slate) === */}
+            <circle cx="620" cy="202" r="6" fill="#52616D" opacity="0.15" />
+            <circle cx="620" cy="202" r="3.5" fill="#52616D" opacity="0.4" />
+            {/* Icon: compass shape */}
+            <circle cx="620" cy="202" r="2.5" fill="none" stroke="#52616D" strokeWidth="0.7" opacity="0.45" />
+            <line x1="620" y1="199" x2="620" y2="205" stroke="#52616D" strokeWidth="0.5" strokeLinecap="round" opacity="0.4" />
+            <line x1="617.5" y1="202" x2="622.5" y2="202" stroke="#52616D" strokeWidth="0.5" strokeLinecap="round" opacity="0.4" />
+            <text x="620" y="217" fontFamily="var(--font-body)" fontSize="8" fill="#52616D" opacity="0.5" textAnchor="middle">Digital</text>
+
+            {/* === TREES along the upper bank === */}
+            <line x1="45" y1="185" x2="45" y2="170" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" opacity="0.25" />
+            <circle cx="45" cy="166" r="5" fill="#4B7A5B" opacity="0.15" />
+            <circle cx="41" cy="169" r="3.5" fill="#4B7A5B" opacity="0.1" />
+
+            <line x1="110" y1="182" x2="110" y2="168" stroke="#4B7A5B" strokeWidth="1.2" strokeLinecap="round" opacity="0.22" />
+            <circle cx="110" cy="165" r="4.5" fill="#4B7A5B" opacity="0.13" />
+
+            <line x1="200" y1="180" x2="200" y2="167" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
+            <circle cx="200" cy="164" r="4" fill="#4B7A5B" opacity="0.12" />
+            <circle cx="196" cy="166" r="3" fill="#4B7A5B" opacity="0.08" />
+
+            <line x1="310" y1="178" x2="310" y2="165" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.18" />
+            <circle cx="310" cy="162" r="4.5" fill="#4B7A5B" opacity="0.12" />
+
+            <line x1="480" y1="176" x2="480" y2="164" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.15" />
+            <circle cx="480" cy="161" r="3.5" fill="#4B7A5B" opacity="0.1" />
+
+            <line x1="590" y1="178" x2="590" y2="166" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.15" />
+            <circle cx="590" cy="163" r="4" fill="#4B7A5B" opacity="0.1" />
+
+            {/* Small plants growing progressively taller left to right */}
+            <line x1="85" y1="220" x2="85" y2="216" stroke="#4B7A5B" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" />
+            <circle cx="85" cy="215" r="1.5" fill="#4B7A5B" opacity="0.2" />
+
+            <line x1="230" y1="215" x2="230" y2="209" stroke="#4B7A5B" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" />
+            <circle cx="230" cy="208" r="2" fill="#4B7A5B" opacity="0.2" />
+
+            <line x1="400" y1="218" x2="400" y2="210" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.25" />
+            <circle cx="400" cy="209" r="2.5" fill="#4B7A5B" opacity="0.2" />
+
+            <line x1="570" y1="205" x2="570" y2="195" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.25" />
+            <circle cx="570" cy="194" r="3" fill="#4B7A5B" opacity="0.2" />
+
+            {/* Tiny flowers scattered */}
+            <circle cx="100" cy="218" r="1.5" fill="#A4582E" opacity="0.2" />
+            <circle cx="190" cy="212" r="1.5" fill="#A4582E" opacity="0.18" />
+            <circle cx="290" cy="216" r="1.5" fill="#A4582E" opacity="0.15" />
+            <circle cx="420" cy="214" r="1.5" fill="#A4582E" opacity="0.15" />
+            <circle cx="510" cy="205" r="1.5" fill="#A4582E" opacity="0.12" />
+            <circle cx="650" cy="208" r="1.5" fill="#A4582E" opacity="0.12" />
+
+            {/* === PARENT + CHILD FIGURES walking center-right === */}
             {/* Parent */}
-            <circle cx="745" cy="232" r="6" fill="#A4582E" opacity="0.5" />
-            <line x1="745" y1="238" x2="745" y2="258" stroke="#A4582E" strokeWidth="1.8" strokeLinecap="round" opacity="0.5" />
-            <line x1="745" y1="246" x2="736" y2="254" stroke="#A4582E" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-            <path d="M745 246 Q752 242 758 244" fill="none" stroke="#A4582E" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-            <line x1="745" y1="258" x2="739" y2="272" stroke="#A4582E" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-            <line x1="745" y1="258" x2="751" y2="272" stroke="#A4582E" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
+            <circle cx="500" cy="188" r="5" fill="#A4582E" opacity="0.5" />
+            <line x1="500" y1="193" x2="500" y2="208" stroke="#A4582E" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
+            <line x1="500" y1="199" x2="493" y2="205" stroke="#A4582E" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
+            <path d="M500 199 Q505 196 509 198" fill="none" stroke="#A4582E" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
+            <line x1="500" y1="208" x2="495" y2="218" stroke="#A4582E" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
+            <line x1="500" y1="208" x2="505" y2="218" stroke="#A4582E" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
 
             {/* Child */}
-            <circle cx="762" cy="240" r="5" fill="#4B7A5B" opacity="0.5" />
-            <line x1="762" y1="245" x2="762" y2="262" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-            <path d="M762 252 Q758 248 756 245" fill="none" stroke="#4B7A5B" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
-            <line x1="762" y1="252" x2="768" y2="258" stroke="#4B7A5B" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
-            <line x1="762" y1="262" x2="757" y2="274" stroke="#4B7A5B" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
-            <line x1="762" y1="262" x2="767" y2="274" stroke="#4B7A5B" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
+            <circle cx="513" cy="194" r="4" fill="#4B7A5B" opacity="0.5" />
+            <line x1="513" y1="198" x2="513" y2="211" stroke="#4B7A5B" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" />
+            <path d="M513 204 Q510 201 508 199" fill="none" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+            <line x1="513" y1="204" x2="518" y2="209" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+            <line x1="513" y1="211" x2="509" y2="220" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+            <line x1="513" y1="211" x2="517" y2="220" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
 
-            {/* === LABELS === */}
+            {/* Connected hands */}
+            <line x1="508" y1="198" x2="509" y2="199" stroke="#C4886A" strokeWidth="1" strokeLinecap="round" opacity="0.4" />
 
-            {/* Group headers */}
-            <text x="18" y="115" fontFamily="var(--font-body)" fontSize="11" fontWeight="700" fill="#235A5F" opacity="0.8">FOUNDATION</text>
-            <text x="290" y="98" fontFamily="var(--font-body)" fontSize="11" fontWeight="700" fill="#A4582E" opacity="0.7">CURRICULUM DESIGN</text>
-            <text x="520" y="115" fontFamily="var(--font-body)" fontSize="11" fontWeight="700" fill="#52616D" opacity="0.7">FUTURE READINESS</text>
-
-            {/* Stream labels with background pills */}
-            <rect x="14" y="120" width="82" height="16" rx="8" fill="#235A5F" opacity="0.08" />
-            <text x="55" y="132" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.7" textAnchor="middle">Parent-Child</text>
-
-            <rect x="14" y="168" width="95" height="16" rx="8" fill="#235A5F" opacity="0.08" />
-            <text x="62" y="180" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.7" textAnchor="middle">Playful Learning</text>
-
-            <rect x="193" y="115" width="80" height="16" rx="8" fill="#A4582E" opacity="0.08" />
-            <text x="233" y="127" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.65" textAnchor="middle">Concept-First</text>
-
-            <rect x="267" y="96" width="108" height="16" rx="8" fill="#4B7A5B" opacity="0.08" />
-            <text x="321" y="108" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4B7A5B" opacity="0.65" textAnchor="middle">Thinking Routines</text>
-
-            <rect x="342" y="133" width="60" height="16" rx="8" fill="#A4582E" opacity="0.06" />
-            <text x="372" y="145" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.55" textAnchor="middle">Adaptive</text>
-
-            <rect x="483" y="113" width="55" height="16" rx="8" fill="#52616D" opacity="0.06" />
-            <text x="510" y="125" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.55" textAnchor="middle">Breadth</text>
-
-            <rect x="563" y="123" width="50" height="16" rx="8" fill="#52616D" opacity="0.06" />
-            <text x="588" y="135" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.5" textAnchor="middle">Digital</text>
-
-            {/* Figures label */}
-            <text x="753" y="288" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#1E2A34" opacity="0.45" textAnchor="middle">the child</text>
-            <text x="753" y="300" fontFamily="var(--font-body)" fontSize="9" fill="#52616D" opacity="0.35" textAnchor="middle">at the horizon</text>
-
-            {/* River label */}
-            <text x="600" y="280" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.3" textAnchor="middle">understanding flows together</text>
+            {/* "the child" label near horizon */}
+            <text x="660" y="185" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#1E2A34" opacity="0.4" textAnchor="middle">the child</text>
+            {/* Small figure at the horizon */}
+            <circle cx="660" cy="192" r="3" fill="#4B7A5B" opacity="0.3" />
+            <line x1="660" y1="195" x2="660" y2="203" stroke="#4B7A5B" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
           </svg>
         </div>
         <p className="mt-3 text-[14px] leading-[22px] text-slate/70 text-center">
