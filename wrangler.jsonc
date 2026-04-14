@@ -8,8 +8,11 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  "routes": [
+    { "pattern": "gopondr.com", "custom_domain": true },
+    { "pattern": "www.gopondr.com", "custom_domain": true }
+  ],
 
-  // Staging environment — deployed via `wrangler deploy --env staging`
   "env": {
     "staging": {
       "name": "gopondr-stage",
