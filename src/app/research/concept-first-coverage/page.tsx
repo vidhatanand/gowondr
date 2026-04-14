@@ -215,9 +215,9 @@ export default function ConceptFirstCoveragePage() {
 
             {/* Small plant stakes with labels */}
             <line x1="365" y1="210" x2="365" y2="200" stroke="#A4582E" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
-            <text x="365" y="198" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#A4582E" opacity="0.4" textAnchor="middle">Strand 1</text>
+            <text x="365" y="198" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.45" textAnchor="middle">Strand 1</text>
             <line x1="465" y1="210" x2="465" y2="200" stroke="#A4582E" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
-            <text x="465" y="198" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#A4582E" opacity="0.4" textAnchor="middle">Strand 2</text>
+            <text x="465" y="198" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.45" textAnchor="middle">Strand 2</text>
 
             {/* Confident parent + child walking the path */}
             {/* Parent */}

@@ -201,9 +201,9 @@ export default function AdaptivePlanningPage() {
             <path d="M470 198 q5 -3 8 1" fill="none" stroke="#4B7A5B" strokeWidth="1" strokeLinecap="round" opacity="0.35" />
 
             {/* Return labels at loop points */}
-            <text x="175" y="237" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#235A5F" opacity="0.35" textAnchor="middle">Return</text>
-            <text x="305" y="237" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#235A5F" opacity="0.35" textAnchor="middle">Return</text>
-            <text x="445" y="237" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#235A5F" opacity="0.35" textAnchor="middle">Return</text>
+            <text x="175" y="237" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.4" textAnchor="middle">Return</text>
+            <text x="305" y="237" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.4" textAnchor="middle">Return</text>
+            <text x="445" y="237" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.4" textAnchor="middle">Return</text>
 
             {/* Small return arrows at loops */}
             <path d="M168 228 Q175 223 182 228" fill="none" stroke="#235A5F" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
@@ -231,7 +231,7 @@ export default function AdaptivePlanningPage() {
 
             {/* Labels */}
             <text x="150" y="30" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.55" textAnchor="middle">Without revisit</text>
-            <text x="150" y="45" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.35" textAnchor="middle">Straight through, never looking back</text>
+            <text x="150" y="45" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.4" textAnchor="middle">Straight through, never looking back</text>
 
             <text x="150" y="158" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">With spaced revisit</text>
             <text x="150" y="173" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.45" textAnchor="middle">Looping back keeps knowledge alive</text>

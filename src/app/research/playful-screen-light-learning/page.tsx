@@ -211,7 +211,7 @@ export default function PlayfulScreenLightPage() {
 
             {/* Labels */}
             <text x="150" y="245" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.55" textAnchor="middle">Screen-heavy</text>
-            <text x="150" y="260" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.35" textAnchor="middle">Single mode, alone, surface only</text>
+            <text x="150" y="260" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.4" textAnchor="middle">Single mode, alone, surface only</text>
 
             <text x="450" y="245" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">Screen-light</text>
             <text x="450" y="260" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.45" textAnchor="middle">Multi-modal, together, durable</text>

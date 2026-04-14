@@ -156,12 +156,12 @@ export default function DigitalLiteracyPage() {
             <rect x="394" y="128" width="7" height="30" rx="1.5" fill="#235A5F" opacity="0.3" />
             <circle cx="397" cy="125" r="6" fill="none" stroke="#235A5F" strokeWidth="1.5" opacity="0.35" />
             <circle cx="397" cy="125" r="2.5" fill="#235A5F" opacity="0.15" />
-            <text x="397" y="170" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#235A5F" opacity="0.45" textAnchor="middle">Understand</text>
+            <text x="397" y="170" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.5" textAnchor="middle">Understand</text>
 
             {/* Tool 2: Safety — green shield */}
             <path d="M420 122 L427 116 L434 122 L434 138 Q427 144 420 138Z" fill="#4B7A5B" opacity="0.25" stroke="#4B7A5B" strokeWidth="1" />
             <line x1="427" y1="120" x2="427" y2="138" stroke="#4B7A5B" strokeWidth="0.5" opacity="0.2" />
-            <text x="427" y="170" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#4B7A5B" opacity="0.45" textAnchor="middle">Safety</text>
+            <text x="427" y="182" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4B7A5B" opacity="0.5" textAnchor="middle">Safety</text>
 
             {/* Tool 3: Logic — terracotta ruler */}
             <rect x="446" y="112" width="6" height="42" rx="1" fill="#A4582E" opacity="0.25" />
@@ -170,14 +170,14 @@ export default function DigitalLiteracyPage() {
             <line x1="447" y1="130" x2="451" y2="130" stroke="#FFFDF9" strokeWidth="0.5" opacity="0.3" />
             <line x1="447" y1="136" x2="451" y2="136" stroke="#FFFDF9" strokeWidth="0.5" opacity="0.3" />
             <line x1="447" y1="142" x2="451" y2="142" stroke="#FFFDF9" strokeWidth="0.5" opacity="0.3" />
-            <text x="449" y="170" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#A4582E" opacity="0.45" textAnchor="middle">Logic</text>
+            <text x="449" y="170" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.5" textAnchor="middle">Logic</text>
 
             {/* Tool 4: Creation — blue pencil */}
             <line x1="472" y1="110" x2="472" y2="152" stroke="#4966A8" strokeWidth="3" strokeLinecap="round" opacity="0.3" />
             <path d="M470.5 110 L472 104 L473.5 110" fill="#A4582E" opacity="0.35" />
             {/* Pencil body stripe */}
             <line x1="472" y1="115" x2="472" y2="148" stroke="#4966A8" strokeWidth="1" strokeLinecap="round" opacity="0.15" />
-            <text x="472" y="172" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#4966A8" opacity="0.5" textAnchor="end">Creation</text>
+            <text x="472" y="182" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4966A8" opacity="0.5" textAnchor="middle">Creation</text>
 
             {/* Tool 5: Judgment — gold compass */}
             <circle cx="497" cy="130" r="8" fill="none" stroke="#886328" strokeWidth="1.5" opacity="0.35" />
@@ -187,7 +187,7 @@ export default function DigitalLiteracyPage() {
             <line x1="491" y1="130" x2="503" y2="130" stroke="#886328" strokeWidth="0.8" strokeLinecap="round" opacity="0.2" />
             {/* Compass cardinal marks */}
             <circle cx="497" cy="123" r="1" fill="#886328" opacity="0.3" />
-            <text x="497" y="172" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#886328" opacity="0.5" textAnchor="start">Judgment</text>
+            <text x="497" y="170" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#886328" opacity="0.5" textAnchor="middle">Judgment</text>
 
             {/* Child figure building a small structure */}
             <circle cx="355" cy="145" r="7" fill="#4B7A5B" />
@@ -207,7 +207,7 @@ export default function DigitalLiteracyPage() {
 
             {/* Labels */}
             <text x="130" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.55" textAnchor="middle">Device fluency alone</text>
-            <text x="130" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.35" textAnchor="middle">One skill, limited capability</text>
+            <text x="130" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.4" textAnchor="middle">One skill, limited capability</text>
 
             <text x="450" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">Digital literacy with judgment</text>
             <text x="450" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.45" textAnchor="middle">Understanding, safety, logic, creation, judgment</text>

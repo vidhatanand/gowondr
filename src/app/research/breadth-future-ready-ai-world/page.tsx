@@ -128,9 +128,9 @@ export default function BreadthFutureReadyPage() {
 
             {/* Narrow plank bridge — two thin planks that don't reach */}
             <rect x="50" y="155" width="110" height="4" rx="1" fill="#2A6E73" opacity="0.2" />
-            <text x="105" y="153" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#2A6E73" opacity="0.45" textAnchor="middle">Math</text>
+            <text x="105" y="153" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#2A6E73" opacity="0.5" textAnchor="middle">Math</text>
             <rect x="50" y="160" width="110" height="4" rx="1" fill="#6A4E73" opacity="0.2" />
-            <text x="105" y="170" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#6A4E73" opacity="0.45" textAnchor="middle">Reading</text>
+            <text x="105" y="170" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#6A4E73" opacity="0.5" textAnchor="middle">Reading</text>
 
             {/* Gap — plank ends, doesn't reach far bank */}
             <path d="M160 158 L245 158" fill="none" stroke="#52616D" strokeWidth="0.6" opacity="0.15" strokeDasharray="3 4" />
@@ -140,7 +140,7 @@ export default function BreadthFutureReadyPage() {
             <line x1="105" y1="164" x2="105" y2="180" stroke="#A4582E" strokeWidth="1.2" opacity="0.15" />
 
             {/* Void label */}
-            <text x="150" y="195" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.3" textAnchor="middle">Future challenges</text>
+            <text x="150" y="195" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.4" textAnchor="middle">Future challenges</text>
 
             {/* Hesitant figure at edge of plank */}
             <circle cx="148" cy="138" r="7" fill="#A4582E" />
@@ -189,14 +189,14 @@ export default function BreadthFutureReadyPage() {
             <rect x="527" y="150" width="28" height="16" rx="3" fill="#9E563C" opacity="0.2" />
 
             {/* Subject labels on bridge */}
-            <text x="362" y="143" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#6A4E73" opacity="0.55" textAnchor="middle">Reading</text>
-            <text x="387" y="143" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#2A6E73" opacity="0.55" textAnchor="middle">Math</text>
-            <text x="413" y="143" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#4B744F" opacity="0.55" textAnchor="middle">Science</text>
-            <text x="438" y="143" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#886328" opacity="0.5" textAnchor="middle">World</text>
-            <text x="464" y="143" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#94536C" opacity="0.5" textAnchor="middle">Personal</text>
-            <text x="489" y="143" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#7A5AA6" opacity="0.5" textAnchor="middle">Arts</text>
-            <text x="514" y="143" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#4966A8" opacity="0.5" textAnchor="middle">Digital</text>
-            <text x="541" y="143" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#9E563C" opacity="0.5" textAnchor="middle">Inquiry</text>
+            <text x="362" y="143" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#6A4E73" opacity="0.6" textAnchor="middle">Reading</text>
+            <text x="387" y="130" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#2A6E73" opacity="0.6" textAnchor="middle">Math</text>
+            <text x="413" y="143" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4B744F" opacity="0.6" textAnchor="middle">Science</text>
+            <text x="438" y="130" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#886328" opacity="0.55" textAnchor="middle">World</text>
+            <text x="464" y="143" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#94536C" opacity="0.55" textAnchor="middle">Personal</text>
+            <text x="489" y="130" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#7A5AA6" opacity="0.55" textAnchor="middle">Arts</text>
+            <text x="514" y="143" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4966A8" opacity="0.55" textAnchor="middle">Digital</text>
+            <text x="541" y="130" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#9E563C" opacity="0.55" textAnchor="middle">Inquiry</text>
 
             {/* Bridge supports (sturdy) */}
             <line x1="390" y1="166" x2="390" y2="182" stroke="#A4582E" strokeWidth="2" opacity="0.2" />
@@ -222,14 +222,14 @@ export default function BreadthFutureReadyPage() {
             <line x1="483" y1="146" x2="490" y2="151" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" />
 
             {/* Future challenges label */}
-            <text x="450" y="197" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.3" textAnchor="middle">Future challenges</text>
+            <text x="450" y="197" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.4" textAnchor="middle">Future challenges</text>
 
             {/* Far shore label */}
             <text x="570" y="148" fontFamily="var(--font-body)" fontSize="9" fontWeight="700" fill="#4B7A5B" opacity="0.5" textAnchor="middle">Future-ready</text>
 
             {/* Labels */}
             <text x="150" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.55" textAnchor="middle">Narrow approach</text>
-            <text x="150" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.35" textAnchor="middle">Only two subjects, can&apos;t bridge the gap</text>
+            <text x="150" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.4" textAnchor="middle">Only two subjects, can&apos;t bridge the gap</text>
 
             <text x="450" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">Breadth approach</text>
             <text x="450" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.45" textAnchor="middle">Eight subjects span the full river</text>
