@@ -46,12 +46,12 @@ export function Footer() {
     <footer className="relative border-t border-sand overflow-hidden">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{ backgroundImage: "url('/footer-bg.jpg')" }}
         aria-hidden="true"
       />
       {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-linen/80" aria-hidden="true" />
+      <div className="absolute inset-0 bg-linen/70" aria-hidden="true" />
       <Container className="relative z-10">
         {/* Main footer */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
