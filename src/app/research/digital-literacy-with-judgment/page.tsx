@@ -6,6 +6,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 
 export const metadata: Metadata = {
   title:
@@ -68,22 +69,25 @@ export default function DigitalLiteracyPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Research", href: "/research" },
-            { label: "Digital Literacy with Judgment" },
-          ]}
-        />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          Why digital literacy should be taught with judgment, not just
-          devices
-        </h1>
-        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
-          Knowing how to use a device is not the same as understanding the
-          digital world. Children need both — and judgment comes first.
-        </p>
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/research-digital-1.jpg", "/images/research-digital-2.jpg"]} />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Research", href: "/research" },
+              { label: "Digital Literacy with Judgment" },
+            ]}
+          />
+          <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            Why digital literacy should be taught with judgment, not just
+            devices
+          </h1>
+          <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
+            Knowing how to use a device is not the same as understanding the
+            digital world. Children need both — and judgment comes first.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Diagram */}

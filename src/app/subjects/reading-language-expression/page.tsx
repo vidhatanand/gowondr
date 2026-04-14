@@ -8,6 +8,7 @@ import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
 import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { BookOpen, Ear, Music, Pencil } from "lucide-react";
 
@@ -75,35 +76,38 @@ export default function ReadingPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Subjects", href: "/subjects" },
-            { label: "Reading, Language & Expression" },
-          ]}
-        />
-        <Chip variant="subject" subjectSoftClass="bg-reading-soft" subjectInkClass="text-reading-ink">
-          Reading, Language & Expression
-        </Chip>
-        <h1 className="mt-4 font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          Reading, language, and expression for kids at home
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl italic">
-          Reading is not just decoding. It is a whole language life.
-        </p>
-        <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
-          This strand of the{" "}
-          <InternalLink href="/subjects">
-            8-subject home learning curriculum
-          </InternalLink>{" "}
-          builds every dimension of literacy: listening, speaking, reading,
-          writing, and the confidence to express ideas. Mapped to{" "}
-          <InternalLink href="/curriculum-coverage">
-            concept-based curriculum maps
-          </InternalLink>{" "}
-          so nothing is missed and nothing is rushed.
-        </p>
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/subject-reading-1.jpg", "/images/subject-reading-2.jpg"]} />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Subjects", href: "/subjects" },
+              { label: "Reading, Language & Expression" },
+            ]}
+          />
+          <Chip variant="subject" subjectSoftClass="bg-reading-soft" subjectInkClass="text-reading-ink">
+            Reading, Language & Expression
+          </Chip>
+          <h1 className="mt-4 font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            Reading, language, and expression for kids at home
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl italic">
+            Reading is not just decoding. It is a whole language life.
+          </p>
+          <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
+            This strand of the{" "}
+            <InternalLink href="/subjects">
+              8-subject home learning curriculum
+            </InternalLink>{" "}
+            builds every dimension of literacy: listening, speaking, reading,
+            writing, and the confidence to express ideas. Mapped to{" "}
+            <InternalLink href="/curriculum-coverage">
+              concept-based curriculum maps
+            </InternalLink>{" "}
+            so nothing is missed and nothing is rushed.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Strand structure */}

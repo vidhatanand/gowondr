@@ -7,6 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Hash, Layers, Ruler, BarChart3 } from "lucide-react";
@@ -75,36 +76,39 @@ export default function MathPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Subjects", href: "/subjects" },
-            { label: "Math, Logic & Patterns" },
-          ]}
-        />
-        <Chip variant="subject" subjectSoftClass="bg-math-soft" subjectInkClass="text-math-ink">
-          Math, Logic & Patterns
-        </Chip>
-        <h1 className="mt-4 font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          Math, logic, and patterns for kids at home
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl italic">
-          Math should feel sensible, visible, and grounded.
-        </p>
-        <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
-          This strand of the{" "}
-          <InternalLink href="/subjects">
-            8-subject home learning curriculum
-          </InternalLink>{" "}
-          builds mathematical thinking from the ground up: sorting, patterns,
-          counting, number sense, operations, place value, fractions,
-          measurement, geometry, data, estimation, and chance. Structured around{" "}
-          <InternalLink href="/curriculum-coverage">
-            concept-based curriculum maps
-          </InternalLink>{" "}
-          so each idea arrives at the right time.
-        </p>
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/subject-math-1.jpg", "/images/subject-math-2.jpg"]} />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Subjects", href: "/subjects" },
+              { label: "Math, Logic & Patterns" },
+            ]}
+          />
+          <Chip variant="subject" subjectSoftClass="bg-math-soft" subjectInkClass="text-math-ink">
+            Math, Logic & Patterns
+          </Chip>
+          <h1 className="mt-4 font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            Math, logic, and patterns for kids at home
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl italic">
+            Math should feel sensible, visible, and grounded.
+          </p>
+          <p className="mt-4 text-[17px] leading-[28px] text-slate max-w-2xl">
+            This strand of the{" "}
+            <InternalLink href="/subjects">
+              8-subject home learning curriculum
+            </InternalLink>{" "}
+            builds mathematical thinking from the ground up: sorting, patterns,
+            counting, number sense, operations, place value, fractions,
+            measurement, geometry, data, estimation, and chance. Structured around{" "}
+            <InternalLink href="/curriculum-coverage">
+              concept-based curriculum maps
+            </InternalLink>{" "}
+            so each idea arrives at the right time.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Strand structure */}
