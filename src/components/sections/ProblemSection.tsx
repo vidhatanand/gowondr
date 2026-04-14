@@ -49,7 +49,7 @@ export function ProblemSection() {
           {needs.map((need) => (
             <div
               key={need.label}
-              className="flex items-start gap-3.5 rounded-xl border border-sand/60 p-4 hover:shadow-xs transition-shadow"
+              className="flex items-start gap-3.5 rounded-xl border border-sand/60 p-4 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
               style={{ backgroundColor: need.bg }}
             >
               <div
@@ -65,7 +65,7 @@ export function ProblemSection() {
                 >
                   {need.label}
                 </p>
-                <p className="text-[13px] text-slate/80 leading-relaxed mt-1">
+                <p className="text-[13px] text-slate leading-relaxed mt-1">
                   {need.detail}
                 </p>
               </div>
