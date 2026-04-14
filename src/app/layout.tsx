@@ -19,12 +19,36 @@ const atkinson = Atkinson_Hyperlegible({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gopondr.com"),
   title: {
     default: "Parent-led home learning for ages 4 to Grade 4 | goPondr",
     template: "%s | goPondr",
   },
   description:
     "A calm, concept-first learning guide for parents. Full curriculum across 8 subjects, adaptive daily plans, screen-light activities, printables, and progress you can actually understand.",
+  keywords: [
+    "parent-led learning",
+    "home learning curriculum",
+    "concept-first learning",
+    "screen-light learning",
+    "ages 4 to Grade 4",
+    "8-subject curriculum",
+    "adaptive learning plan",
+  ],
+  authors: [{ name: "goPondr" }],
+  creator: "goPondr",
+  publisher: "goPondr",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -32,6 +56,12 @@ export const metadata: Metadata = {
     title: "Parent-led home learning for ages 4 to Grade 4 | goPondr",
     description:
       "A calm, concept-first learning guide for parents. Full curriculum across 8 subjects, adaptive daily plans, screen-light activities, printables, and progress you can actually understand.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Parent-led home learning for ages 4 to Grade 4 | goPondr",
+    description:
+      "A calm, concept-first learning guide for parents. Full curriculum across 8 subjects.",
   },
 };
 

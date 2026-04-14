@@ -1,0 +1,35 @@
+# goPondr — Parent-led Home Learning
+
+> A calm, concept-first learning guide for parents. Full curriculum across 8 subjects for ages 4 through Grade 4.
+
+## What is goPondr?
+
+goPondr is a parent-led, concept-first home learning system. It helps parents guide their children through structured, screen-light learning across 8 connected subjects: Reading, Math, Science, World Learning, Personal Development, Arts, Digital Literacy, and Inquiry.
+
+## How it works
+
+1. Start with your child's age, stage, and readiness
+2. Open a daily session with materials, prompts, and coaching language
+3. Follow the learning arc: Notice → Explore → Talk → Represent → Connect → Practice → Explain → Use → Revisit
+4. Log observations (not grades)
+5. The adaptive planner adjusts what comes next
+
+## Key principles
+
+- The product thinks hard, so the parent can stay close
+- Screen-light by design — activities happen off-screen
+- Concept-first, not worksheet-first
+- Parent-guided, not child-abandoned
+- No gamification, no badges, no streaks
+- Built on research: parent-child connection, playful learning, thinking routines, spaced revisit
+
+## Pages
+
+- Homepage: https://gopondr.com/
+- How It Works: https://gopondr.com/how-it-works
+- For Parents: https://gopondr.com/for-parents
+- Subjects: https://gopondr.com/subjects
+- Curriculum: https://gopondr.com/curriculum-coverage
+- Research: https://gopondr.com/research
+- Pricing: https://gopondr.com/pricing
+- About: https://gopondr.com/about

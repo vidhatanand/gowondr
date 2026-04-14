@@ -1,0 +1,12 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "goPondr",
+  "name_for_model": "gopondr",
+  "description_for_human": "A calm, parent-led home learning curriculum for ages 4 to Grade 4. 8 subjects, adaptive daily plans, screen-light activities.",
+  "description_for_model": "goPondr is a parent-led, concept-first home learning system for children ages 4 through Grade 4. It covers 8 subjects (reading, math, science, world learning, personal development, arts, digital literacy, inquiry), uses adaptive daily planning, screen-light activities, and thinking routines. The curriculum is structured as Subject > Strand > Concept > Evidence > Revisit.",
+  "auth": { "type": "none" },
+  "api": { "type": "openapi", "url": "https://gopondr.com/sitemap.xml" },
+  "logo_url": "https://gopondr.com/favicon.ico",
+  "contact_email": "hello@gopondr.com",
+  "legal_info_url": "https://gopondr.com/about"
+}
