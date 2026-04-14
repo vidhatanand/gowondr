@@ -27,7 +27,7 @@ export function SubjectBreadth() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {subjects.map((subject, i) => {
           const Icon = subjectIcons[i];
           return (
@@ -37,13 +37,13 @@ export function SubjectBreadth() {
               subjectSoftClass={subject.softClass}
               subjectInkClass={subject.inkClass}
               hover
-              className="!p-6"
+              className="flex flex-col"
             >
-              <Icon className={`h-6 w-6 ${subject.inkClass} mb-3`} />
-              <h3 className={`font-body font-semibold text-[17px] ${subject.inkClass} mb-2`}>
-                {subject.name}
+              <Icon className={`h-7 w-7 ${subject.inkClass} mb-3`} />
+              <h3 className={`font-display text-[24px] leading-[30px] text-ink mb-2`}>
+                {subject.shortName}
               </h3>
-              <p className="text-[14px] text-slate leading-relaxed">
+              <p className="text-[15px] text-slate leading-relaxed mb-4 flex-1">
                 {subject.description}
               </p>
             </Card>

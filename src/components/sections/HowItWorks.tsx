@@ -107,24 +107,33 @@ export function HowItWorks() {
         </div>
       </div>
 
-      {/* Screen-light callout */}
-      <div className="mt-10 max-w-[700px] mx-auto">
-        <div className="flex items-start gap-4 rounded-2xl border border-teal/15 bg-teal-soft p-5 md:p-6">
-          <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-teal shrink-0">
-            <MonitorOff className="h-6 w-6 text-paper" />
+        {/* Screen-light pledge */}
+        <div className="mt-12 rounded-2xl bg-teal p-6 md:p-8 text-center">
+          <div className="flex items-center justify-center w-14 h-14 rounded-full bg-paper/15 mx-auto mb-4">
+            <MonitorOff className="h-7 w-7 text-paper" />
           </div>
-          <div>
-            <p className="font-body font-bold text-[15px] text-teal">
-              Every activity happens off-screen
-            </p>
-            <p className="text-[14px] text-slate leading-relaxed mt-1">
-              The parent reads a short prompt, then puts the device down.
-              Activities involve talking, drawing, sorting, building, moving,
-              and exploring the real world. The screen is a guide, not a babysitter.
-            </p>
+          <h3 className="font-display text-[24px] md:text-[28px] leading-tight text-paper tracking-tight">
+            Every activity happens off-screen
+          </h3>
+          <p className="mt-3 text-[15px] md:text-[17px] leading-relaxed text-paper/80 max-w-[520px] mx-auto">
+            The parent reads a short prompt, then puts the device down.
+            Activities involve talking, drawing, sorting, building, moving,
+            and exploring the real world. The screen is a guide, not a babysitter.
+          </p>
+          <div className="mt-4 flex justify-center gap-3 flex-wrap">
+            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Talk</span>
+            <span className="text-paper/30">·</span>
+            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Draw</span>
+            <span className="text-paper/30">·</span>
+            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Sort</span>
+            <span className="text-paper/30">·</span>
+            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Build</span>
+            <span className="text-paper/30">·</span>
+            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Move</span>
+            <span className="text-paper/30">·</span>
+            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Explore</span>
           </div>
         </div>
-      </div>
 
       <div className="mt-8 text-center">
         <Button variant="ghost" href="/how-it-works">
