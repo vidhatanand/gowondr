@@ -34,7 +34,14 @@ const needs = [
 
 export function ProblemSection() {
   return (
-    <SectionShell id="for-parents">
+    <SectionShell id="for-parents" className="relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-30"
+        style={{ backgroundImage: "url('/images/abstract-2.jpg')" }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-paper/70" aria-hidden="true" />
+      <div className="relative z-10">
       <div className="max-w-[800px] mx-auto">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight text-center">
           You care deeply. The hard part is knowing what comes next.
@@ -78,6 +85,7 @@ export function ProblemSection() {
           curriculum planner, a pacing expert, and a pedagogy specialist after
           dinner.
         </p>
+      </div>
       </div>
     </SectionShell>
   );

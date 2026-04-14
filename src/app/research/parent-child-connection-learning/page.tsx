@@ -65,7 +65,7 @@ export default function ParentChildConnectionPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper" className="relative overflow-hidden">
+      <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
         <RandomHeroBg images={["/images/research-parent-child-1.jpg", "/images/research-parent-child-2.jpg"]} />
         <div className="relative z-10">
           <Breadcrumb

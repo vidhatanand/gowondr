@@ -49,7 +49,7 @@ export default function AdaptivePlannerPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper" className="relative overflow-hidden">
+      <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-50"
           style={{ backgroundImage: "url('/images/page-stacked-stones.jpg')" }}

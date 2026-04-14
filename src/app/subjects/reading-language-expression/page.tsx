@@ -76,7 +76,7 @@ export default function ReadingPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper" className="relative overflow-hidden">
+      <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
         <RandomHeroBg images={["/images/subject-reading-1.jpg", "/images/subject-reading-2.jpg"]} />
         <div className="relative z-10">
           <Breadcrumb

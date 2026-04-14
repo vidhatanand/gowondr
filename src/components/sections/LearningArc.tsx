@@ -14,7 +14,14 @@ import {
 
 export function LearningArc() {
   return (
-    <SectionShell>
+    <SectionShell className="relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-30"
+        style={{ backgroundImage: "url('/images/abstract-4.jpg')" }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-paper/70" aria-hidden="true" />
+      <div className="relative z-10">
       <div className="max-w-[1000px] mx-auto text-center">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
           A learning arc, not a content dump.
@@ -41,6 +48,7 @@ export function LearningArc() {
             ]}
           />
         </div>
+      </div>
       </div>
     </SectionShell>
   );

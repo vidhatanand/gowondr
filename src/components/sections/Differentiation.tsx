@@ -30,7 +30,14 @@ const contrasts = [
 
 export function Differentiation() {
   return (
-    <SectionShell>
+    <SectionShell className="relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-30"
+        style={{ backgroundImage: "url('/images/abstract-3.jpg')" }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-paper/70" aria-hidden="true" />
+      <div className="relative z-10">
       <div className="text-center mb-12">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
           Coverage without overwhelm. Depth without academic heaviness.
@@ -51,6 +58,7 @@ export function Differentiation() {
             </p>
           </Card>
         ))}
+      </div>
       </div>
     </SectionShell>
   );

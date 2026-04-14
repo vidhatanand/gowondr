@@ -68,7 +68,7 @@ export default function BreadthFutureReadyPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper" className="relative overflow-hidden">
+      <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
         <RandomHeroBg images={["/images/research-breadth-1.jpg", "/images/research-breadth-2.jpg"]} />
         <div className="relative z-10">
           <Breadcrumb
