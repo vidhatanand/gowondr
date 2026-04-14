@@ -59,23 +59,31 @@ export default function FutureReadyLearningPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Future-Ready Learning" },
-          ]}
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: "url('/images/page-new-leaf.jpg')" }}
+          aria-hidden="true"
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          In an AI world, answers get cheaper. Thinking gets more valuable.
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
-          The future belongs to children who can understand, explain, connect,
-          question, create, adapt, and use judgment. These are not skills you
-          learn from an app. They grow through real relationships, real
-          conversations, and a broad foundation across the full{" "}
-          <InternalLink href="/subjects">8-subject curriculum</InternalLink>.
-        </p>
+        <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Future-Ready Learning" },
+            ]}
+          />
+          <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            In an AI world, answers get cheaper. Thinking gets more valuable.
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
+            The future belongs to children who can understand, explain, connect,
+            question, create, adapt, and use judgment. These are not skills you
+            learn from an app. They grow through real relationships, real
+            conversations, and a broad foundation across the full{" "}
+            <InternalLink href="/subjects">8-subject curriculum</InternalLink>.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Stats */}

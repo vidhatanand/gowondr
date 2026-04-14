@@ -1,6 +1,17 @@
+"use client";
+
+import { useState } from "react";
 import { SectionShell } from "@/components/ui/SectionShell";
 import { Button } from "@/components/ui/Button";
 import { StatStrip } from "@/components/ui/StatStrip";
+
+const heroImages = [
+  '/images/hero-1.jpg',
+  '/images/hero-2.jpg',
+  '/images/hero-3.jpg',
+  '/images/hero-4.jpg',
+  '/images/hero-5.jpg',
+];
 
 const heroStats = [
   { value: "8", label: "Subjects" },
@@ -10,9 +21,17 @@ const heroStats = [
 ];
 
 export function Hero() {
+  const [heroImage] = useState(() => heroImages[Math.floor(Math.random() * heroImages.length)]);
+
   return (
-    <SectionShell bg="linen" className="!pt-20 !pb-16 md:!pt-28 md:!pb-20">
-      <div className="max-w-[800px]">
+    <SectionShell bg="linen" className="!pt-20 !pb-16 md:!pt-28 md:!pb-20 relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-50"
+        style={{ backgroundImage: `url('${heroImage}')` }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+      <div className="max-w-[800px] relative z-10">
         {/* Eyebrow */}
         <p className="text-[13px] font-semibold uppercase tracking-[0.1em] text-teal mb-5">
           Parent-led &middot; Concept-first &middot; Ages 4 through Grade 4
@@ -43,7 +62,7 @@ export function Hero() {
       </div>
 
       {/* Stat strip */}
-      <div className="mt-12 pt-8 border-t border-sand/60">
+      <div className="mt-12 pt-8 border-t border-sand/60 relative z-10">
         <StatStrip stats={heroStats} />
       </div>
     </SectionShell>

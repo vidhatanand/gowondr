@@ -49,23 +49,31 @@ export default function AdaptivePlannerPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Adaptive Planner" },
-          ]}
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: "url('/images/page-stacked-stones.jpg')" }}
+          aria-hidden="true"
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          The planner adapts, so you do not have to guess.
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
-          Every child learns at a different pace. The adaptive planner watches
-          how your child is progressing and adjusts the daily plan accordingly.
-          You never have to decide what to teach next. See{" "}
-          <InternalLink href="/how-it-works">how it works</InternalLink> in the
-          full learning flow.
-        </p>
+        <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Adaptive Planner" },
+            ]}
+          />
+          <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            The planner adapts, so you do not have to guess.
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
+            Every child learns at a different pace. The adaptive planner watches
+            how your child is progressing and adjusts the daily plan accordingly.
+            You never have to decide what to teach next. See{" "}
+            <InternalLink href="/how-it-works">how it works</InternalLink> in the
+            full learning flow.
+          </p>
+        </div>
       </SectionShell>
 
       {/* What the planner considers */}

@@ -152,24 +152,32 @@ export default function FAQPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "FAQ" },
-          ]}
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: "url('/images/page-layered-paper.jpg')" }}
+          aria-hidden="true"
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          Frequently asked questions
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
-          Answers about ages, subjects, screen time, planning, pricing, and how
-          parents use goPondr at home. If you do not find your answer
-          here, explore{" "}
-          <InternalLink href="/how-it-works">how it works</InternalLink> or
-          read more{" "}
-          <InternalLink href="/for-parents">for parents</InternalLink>.
-        </p>
+        <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "FAQ" },
+            ]}
+          />
+          <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            Frequently asked questions
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
+            Answers about ages, subjects, screen time, planning, pricing, and how
+            parents use goPondr at home. If you do not find your answer
+            here, explore{" "}
+            <InternalLink href="/how-it-works">how it works</InternalLink> or
+            read more{" "}
+            <InternalLink href="/for-parents">for parents</InternalLink>.
+          </p>
+        </div>
       </SectionShell>
 
       {/* FAQ accordion — grouped */}

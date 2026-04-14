@@ -47,23 +47,31 @@ export default function CurriculumCoveragePage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Curriculum & Coverage" },
-          ]}
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: "url('/images/page-river-delta.jpg')" }}
+          aria-hidden="true"
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          Coverage matters. Connected coverage matters more.
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
-          Most curricula give you a list of topics. goPondr gives you
-          a map: 6 stages, an{" "}
-          <InternalLink href="/subjects">8-subject curriculum</InternalLink>,
-          clear strands, concrete concepts, evidence of understanding, and
-          built-in revisit so nothing important falls away.
-        </p>
+        <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Curriculum & Coverage" },
+            ]}
+          />
+          <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            Coverage matters. Connected coverage matters more.
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
+            Most curricula give you a list of topics. goPondr gives you
+            a map: 6 stages, an{" "}
+            <InternalLink href="/subjects">8-subject curriculum</InternalLink>,
+            clear strands, concrete concepts, evidence of understanding, and
+            built-in revisit so nothing important falls away.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Why concept-first matters */}

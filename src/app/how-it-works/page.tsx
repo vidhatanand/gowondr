@@ -117,30 +117,38 @@ export default function HowItWorksPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "How It Works" },
-          ]}
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: "url('/images/page-sunset-path.jpg')" }}
+          aria-hidden="true"
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          How parent-led home learning works
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
-          No teaching degree needed. No complicated setup. Just you, your child,
-          and a clear plan built around how children actually learn. The Learning
-          Guide gives you a daily{" "}
-          <InternalLink href="/adaptive-planner">
-            adaptive learning plan
-          </InternalLink>{" "}
-          grounded in a{" "}
-          <InternalLink href="/curriculum-coverage">
-            concept-based curriculum
-          </InternalLink>{" "}
-          that spans an{" "}
-          <InternalLink href="/subjects">8-subject curriculum</InternalLink>.
-        </p>
+        <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "How It Works" },
+            ]}
+          />
+          <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            How parent-led home learning works
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
+            No teaching degree needed. No complicated setup. Just you, your child,
+            and a clear plan built around how children actually learn. The Learning
+            Guide gives you a daily{" "}
+            <InternalLink href="/adaptive-planner">
+              adaptive learning plan
+            </InternalLink>{" "}
+            grounded in a{" "}
+            <InternalLink href="/curriculum-coverage">
+              concept-based curriculum
+            </InternalLink>{" "}
+            that spans an{" "}
+            <InternalLink href="/subjects">8-subject curriculum</InternalLink>.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Five Steps */}

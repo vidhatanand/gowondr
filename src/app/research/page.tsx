@@ -127,31 +127,39 @@ export default function ResearchHubPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Research" },
-          ]}
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: "url('/images/page-soil-layers.jpg')" }}
+          aria-hidden="true"
         />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          Research that supports the approach — and keeps the claims honest
-        </h1>
-        <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
-          goPondr is built on a set of beliefs about how children
-          learn best. Those beliefs are shaped by research — not invented from
-          scratch, not cherry-picked to sell a product. This hub collects the
-          evidence that supports our approach, explains what the research
-          suggests (and what it does not), and shows how it shapes the product
-          decisions we make every day.
-        </p>
-        <p className="mt-4 text-[17px] leading-[28px] text-slate">
-          We think{" "}
-          <InternalLink href="/for-parents">parents</InternalLink> deserve to
-          know why something works before they trust it with their child's
-          time. So we keep the claims honest, the citations real, and the
-          limitations visible.
-        </p>
+        <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Research" },
+            ]}
+          />
+          <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            Research that supports the approach — and keeps the claims honest
+          </h1>
+          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
+            goPondr is built on a set of beliefs about how children
+            learn best. Those beliefs are shaped by research — not invented from
+            scratch, not cherry-picked to sell a product. This hub collects the
+            evidence that supports our approach, explains what the research
+            suggests (and what it does not), and shows how it shapes the product
+            decisions we make every day.
+          </p>
+          <p className="mt-4 text-[17px] leading-[28px] text-slate">
+            We think{" "}
+            <InternalLink href="/for-parents">parents</InternalLink> deserve to
+            know why something works before they trust it with their child's
+            time. So we keep the claims honest, the citations real, and the
+            limitations visible.
+          </p>
+        </div>
       </SectionShell>
 
       {/* How research topics connect */}
