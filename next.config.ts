@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
   },
 
+  // Inline CSS to eliminate render-blocking stylesheet request
+  experimental: {
+    inlineCss: true,
+  },
+
   // Production optimizations
   compress: true,
   poweredByHeader: false,
