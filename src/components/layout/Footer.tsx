@@ -27,9 +27,9 @@ const footerColumns = [
     title: "Company",
     links: [
       { label: "About", href: "/about" },
-      { label: "Contact", href: "#" },
-      { label: "Terms", href: "#" },
-      { label: "Privacy", href: "#" },
+      { label: "Contact", href: "mailto:hello@gopondr.com" },
+      { label: "Terms", href: "/about" },
+      { label: "Privacy", href: "/about" },
     ],
   },
 ];

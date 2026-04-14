@@ -31,7 +31,7 @@ export function PricingTeaser() {
             "Progress tracking",
           ]}
           ctaText="Start free trial"
-          ctaHref="#"
+          ctaHref="/pricing"
         />
         <PricingCard
           plan="Annual"
@@ -47,7 +47,7 @@ export function PricingTeaser() {
             "Annual growth story",
           ]}
           ctaText="Start free trial"
-          ctaHref="#"
+          ctaHref="/pricing"
         />
       </div>
     </SectionShell>
