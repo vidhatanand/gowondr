@@ -2,10 +2,34 @@ import type { Metadata } from "next";
 import { SectionShell } from "@/components/ui/SectionShell";
 import { Card } from "@/components/ui/Card";
 import { SVG_TEXT, SVG_COLORS, SVG_FIGURES, SVG_SHAPES, SVG_DEPTH, SVG_INVENTORY } from "@/lib/svg-design-system";
+import { ResearchHubSVG } from "@/components/svg/ResearchHubSVG";
+import { ParentChildSVG } from "@/components/svg/ParentChildSVG";
+import { ConceptFirstSVG } from "@/components/svg/ConceptFirstSVG";
+import { PlayfulScreenLightSVG } from "@/components/svg/PlayfulScreenLightSVG";
+import { ThinkingRoutinesSVG } from "@/components/svg/ThinkingRoutinesSVG";
+import { AdaptivePlanningSVG } from "@/components/svg/AdaptivePlanningSVG";
+import { BreadthBridgesSVG } from "@/components/svg/BreadthBridgesSVG";
+import { DigitalLiteracySVG } from "@/components/svg/DigitalLiteracySVG";
+import { ForParentsSVG } from "@/components/svg/ForParentsSVG";
+import { SubjectConnectionSVG } from "@/components/ui/SubjectConnectionSVG";
+import type { ComponentType } from "react";
 
 export const metadata: Metadata = {
   title: "SVG Design System",
   description: "goPondr SVG illustration guidelines, tokens, and inventory",
+};
+
+const componentMap: Record<string, ComponentType<{ className?: string }>> = {
+  "/research": ResearchHubSVG,
+  "/research/parent-child-connection-learning": ParentChildSVG,
+  "/research/concept-first-coverage": ConceptFirstSVG,
+  "/research/playful-screen-light-learning": PlayfulScreenLightSVG,
+  "/research/thinking-routines-visible-understanding": ThinkingRoutinesSVG,
+  "/research/adaptive-planning-spaced-revisit": AdaptivePlanningSVG,
+  "/research/breadth-future-ready-ai-world": BreadthBridgesSVG,
+  "/research/digital-literacy-with-judgment": DigitalLiteracySVG,
+  "/for-parents": ForParentsSVG,
+  "/subjects": SubjectConnectionSVG,
 };
 
 export default function SVGDesignSystemPage() {
@@ -164,23 +188,21 @@ export default function SVGDesignSystemPage() {
         <h2 className="font-display text-[32px] leading-[38px] text-ink mb-8">
           SVG Inventory
         </h2>
-        <div className="space-y-4">
-          {SVG_INVENTORY.map((svg) => (
-            <Card key={svg.path} variant="default">
-              <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-                <div className="flex-1">
-                  <p className="text-[12px] font-semibold uppercase tracking-wide text-teal">{svg.type}</p>
-                  <h3 className="font-body font-semibold text-[17px] text-ink mt-1">{svg.title}</h3>
-                  <p className="text-[14px] text-slate mt-1">{svg.concept}</p>
+        <div className="space-y-10">
+          {SVG_INVENTORY.map((svg) => {
+            const Component = componentMap[svg.path];
+            return (
+              <div key={svg.path}>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-[12px] font-semibold uppercase tracking-wide text-teal">{svg.type}</span>
+                  <h3 className="font-body font-semibold text-[17px] text-ink">{svg.title}</h3>
                 </div>
-                <div className="text-right shrink-0">
-                  <p className="text-[12px] text-slate font-mono">{svg.viewBox}</p>
-                  <p className="text-[12px] text-slate">{svg.page}</p>
-                  <p className="text-[12px] text-slate">{svg.hasFigures ? "Has figures" : "No figures"}</p>
-                </div>
+                <p className="text-[14px] text-slate mb-4">{svg.concept}</p>
+                {Component && <Component />}
+                <p className="text-[12px] text-slate font-mono mt-2">{svg.viewBox} · {svg.page} · {svg.hasFigures ? "Has figures" : "No figures"}</p>
               </div>
-            </Card>
-          ))}
+            );
+          })}
         </div>
       </SectionShell>
     </div>
