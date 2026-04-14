@@ -251,12 +251,12 @@ export function LearningArcVisual({
                     </span>
                     <div className="min-w-0">
                       <span className={`font-body font-semibold text-[14px] transition-colors ${
-                        isActive ? "text-ink" : "text-ink/80"
+                        isActive ? "text-ink" : "text-ink"
                       }`}>
                         {step.label}
                       </span>
                       <span className={`text-[13px] ml-1.5 transition-colors ${
-                        isActive ? "text-slate" : "text-slate/60"
+                        isActive ? "text-slate" : "text-slate"
                       }`}>
                         — {step.description}
                       </span>

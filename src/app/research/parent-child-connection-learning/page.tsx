@@ -364,7 +364,7 @@ export default function ParentChildConnectionPage() {
           ].map((claim) => (
             <div key={claim} className="flex items-start gap-3 rounded-xl border border-refresh-ink/15 bg-refresh-soft p-4">
               <span className="text-refresh-ink text-[16px] font-bold shrink-0 mt-0.5">✕</span>
-              <p className="text-[15px] text-ink/80 leading-relaxed">{claim}</p>
+              <p className="text-[15px] text-ink leading-relaxed">{claim}</p>
             </div>
           ))}
         </div>
@@ -377,7 +377,7 @@ export default function ParentChildConnectionPage() {
           ].map((claim) => (
             <div key={claim} className="flex items-start gap-3 rounded-xl border border-strong-ink/15 bg-strong-soft p-4">
               <span className="text-strong-ink text-[16px] font-bold shrink-0 mt-0.5">✓</span>
-              <p className="text-[15px] text-ink/80 leading-relaxed">{claim}</p>
+              <p className="text-[15px] text-ink leading-relaxed">{claim}</p>
             </div>
           ))}
         </div>

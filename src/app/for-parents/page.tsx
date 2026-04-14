@@ -95,7 +95,7 @@ export default function ForParentsPage() {
           ]).map((item) => (
             <div
               key={item.title}
-              className="flex items-start gap-3.5 rounded-xl border border-sand/60 p-4 hover:shadow-xs transition-shadow"
+              className="flex items-start gap-3.5 rounded-xl border border-sand/60 p-4 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
               style={{ backgroundColor: item.bg }}
             >
               <div
@@ -108,7 +108,7 @@ export default function ForParentsPage() {
                 <p className="font-body font-semibold text-[15px] leading-tight" style={{ color: item.color }}>
                   {item.title}
                 </p>
-                <p className="text-[13px] text-slate/80 leading-relaxed mt-1">
+                <p className="text-[13px] text-slate leading-relaxed mt-1">
                   {item.body}
                 </p>
               </div>

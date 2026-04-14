@@ -39,7 +39,7 @@ export function SubjectExamples({
                 <span
                   className={`w-1.5 h-1.5 rounded-full ${ex.colorClass.replace("text-", "bg-")} mt-2 shrink-0 opacity-60`}
                 />
-                <span className="text-[14px] text-ink/80 leading-relaxed">
+                <span className="text-[14px] text-ink leading-relaxed">
                   {item}
                 </span>
               </li>
