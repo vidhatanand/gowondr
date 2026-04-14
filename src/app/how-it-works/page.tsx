@@ -120,7 +120,7 @@ export default function HowItWorksPage() {
       <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{ backgroundImage: "url('/images/page-sunset-path.jpg')" }}
+          style={{ backgroundImage: "url('/images/page-sunset-path.webp')" }}
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />

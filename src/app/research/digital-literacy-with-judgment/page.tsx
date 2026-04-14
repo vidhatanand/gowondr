@@ -70,7 +70,7 @@ export default function DigitalLiteracyPage() {
 
       {/* Hero */}
       <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
-        <RandomHeroBg images={["/images/research-digital-1.jpg", "/images/research-digital-2.jpg"]} />
+        <RandomHeroBg images={["/images/research-digital-1.webp", "/images/research-digital-2.webp"]} />
         <div className="relative z-10">
           <Breadcrumb
             items={[

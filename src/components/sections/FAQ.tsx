@@ -49,7 +49,7 @@ export function FAQ() {
     <SectionShell bg="paper-alt" id="faq" className="relative overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: "url('/images/abstract-2.jpg')" }}
+        style={{ backgroundImage: "url('/images/abstract-2.webp')" }}
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-paper-alt/70" aria-hidden="true" />
