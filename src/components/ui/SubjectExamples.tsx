@@ -29,20 +29,16 @@ export function SubjectExamples({
           hover
           className="flex flex-col h-full"
         >
-          {/* Subject header — fixed height for alignment */}
-          <div className={`${ex.colorClass} mb-2`}>{ex.icon}</div>
-          <h3 className="font-body font-semibold text-[17px] md:text-[18px] leading-snug text-ink mb-3 min-h-[24px]">
+          <div className={`${ex.colorClass} mb-3`}>{ex.icon}</div>
+          <h3 className={`font-display text-[24px] leading-[30px] text-ink mb-3`}>
             {ex.subject}
           </h3>
 
-          {/* Bullet examples */}
-          <ul className="space-y-2 flex-1">
+          <ul className="space-y-2.5 flex-1">
             {ex.examples.map((item, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <span
-                  className={`w-1.5 h-1.5 rounded-full ${ex.colorClass.replace("text-", "bg-")} mt-1.5 shrink-0 opacity-60`}
-                />
-                <span className="text-[13px] text-slate leading-relaxed">
+              <li key={i} className="flex items-start gap-2.5">
+                <span className="text-[13px] text-slate mt-0.5 shrink-0">&#x2022;</span>
+                <span className="text-[14px] text-slate leading-relaxed">
                   {item}
                 </span>
               </li>
