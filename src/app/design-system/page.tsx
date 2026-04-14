@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -6,11 +7,11 @@ import { Chip } from "@/components/ui/Chip";
 import { Accordion } from "@/components/ui/Accordion";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { SectionShell } from "@/components/ui/SectionShell";
-import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { FlowDiagram, FlowComparison } from "@/components/ui/FlowDiagram";
 import { StepFlow } from "@/components/ui/StepFlow";
 import { ComparisonColumns } from "@/components/ui/ComparisonColumns";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
-import { StatStrip } from "@/components/ui/StatStrip";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { subjects } from "@/lib/subjects";
 import {
   BookOpen,
@@ -27,6 +28,7 @@ import {
   ArrowRight,
   RefreshCw,
   Search,
+  Image,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -104,6 +106,27 @@ export default function DesignSystemPage() {
           goPondr visual foundation. Tokens, components, and patterns
           for building a calm, warm, trustworthy learning brand.
         </p>
+
+        {/* Sub-page links */}
+        <div className="mt-8">
+          <Link
+            href="/design-system/svg"
+            className="group inline-flex items-center gap-4 rounded-xl border border-sand bg-paper px-6 py-4 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-soft">
+              <Image className="h-5 w-5 text-teal" />
+            </div>
+            <div>
+              <p className="font-display text-[17px] text-ink group-hover:text-teal transition-colors">
+                SVG Illustration Guidelines
+              </p>
+              <p className="text-[13px] text-slate">
+                Style rules, color usage, and component patterns for all SVG artwork.
+              </p>
+            </div>
+            <ArrowRight className="h-4 w-4 text-slate group-hover:text-teal transition-colors ml-2 shrink-0" />
+          </Link>
+        </div>
       </SectionShell>
 
       {/* Colors: Neutrals */}

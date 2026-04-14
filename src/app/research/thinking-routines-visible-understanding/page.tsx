@@ -193,11 +193,11 @@ export default function ThinkingRoutinesPage() {
             <path d="M401 150 Q372 142 318 135" fill="none" stroke="#235A5F" strokeWidth="0.8" strokeLinecap="round" opacity="0.15" strokeDasharray="4 3" />
 
             {/* Labels */}
-            <text x="90" y="228" fontFamily="var(--font-body)" fontSize="10" fontWeight="700" fill="#1E2A34" opacity="0.5" textAnchor="middle">Hidden thinking</text>
+            <text x="90" y="228" fontFamily="var(--font-body)" fontSize="10" fontWeight="700" fill="#1E2A34" opacity="0.7" textAnchor="middle">Hidden thinking</text>
 
-            <text x="255" y="198" fontFamily="var(--font-body)" fontSize="11" fontWeight="700" fill="#235A5F" opacity="0.65" textAnchor="middle">Thinking routine reveals</text>
+            <text x="255" y="198" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Thinking routine reveals</text>
 
-            <text x="410" y="228" fontFamily="var(--font-body)" fontSize="10" fontWeight="700" fill="#A4582E" opacity="0.55" textAnchor="middle">Parent can now support</text>
+            <text x="410" y="228" fontFamily="var(--font-body)" fontSize="10" fontWeight="700" fill="#A4582E" opacity="0.7" textAnchor="middle">Parent can now support</text>
 
             {/* Bottom process labels */}
             <text x="130" y="272" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.4" textAnchor="middle">&quot;What do you notice?&quot;</text>

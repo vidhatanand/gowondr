@@ -133,7 +133,7 @@ export default function PlayfulScreenLightPage() {
             {/* Floating tap/swipe labels */}
             <text x="80" y="160" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#52616D" opacity="0.2" textAnchor="middle">tap</text>
             <text x="195" y="148" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#52616D" opacity="0.2" textAnchor="middle">swipe</text>
-            <text x="88" y="130" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#52616D" opacity="0.15" textAnchor="middle">tap</text>
+            <text x="88" y="130" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#52616D" opacity="0.2" textAnchor="middle">tap</text>
 
             {/* === RIGHT WINDOW: Screen-light === */}
             {/* Window frame with sill */}
@@ -210,10 +210,10 @@ export default function PlayfulScreenLightPage() {
             <path d="M425 131 Q440 128 455 127" fill="none" stroke="#235A5F" strokeWidth="0.6" strokeLinecap="round" opacity="0.15" strokeDasharray="2 2" />
 
             {/* Labels */}
-            <text x="150" y="245" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.55" textAnchor="middle">Screen-heavy</text>
+            <text x="150" y="245" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.8" textAnchor="middle">Screen-heavy</text>
             <text x="150" y="260" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.4" textAnchor="middle">Single mode, alone, surface only</text>
 
-            <text x="450" y="245" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">Screen-light</text>
+            <text x="450" y="245" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Screen-light</text>
             <text x="450" y="260" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.45" textAnchor="middle">Multi-modal, together, durable</text>
           </svg>
         </div>

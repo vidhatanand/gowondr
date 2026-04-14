@@ -228,10 +228,10 @@ export default function BreadthFutureReadyPage() {
             <text x="570" y="148" fontFamily="var(--font-body)" fontSize="9" fontWeight="700" fill="#4B7A5B" opacity="0.5" textAnchor="middle">Future-ready</text>
 
             {/* Labels */}
-            <text x="150" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.55" textAnchor="middle">Narrow approach</text>
+            <text x="150" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.8" textAnchor="middle">Narrow approach</text>
             <text x="150" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.4" textAnchor="middle">Only two subjects, can&apos;t bridge the gap</text>
 
-            <text x="450" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">Breadth approach</text>
+            <text x="450" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Breadth approach</text>
             <text x="450" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.45" textAnchor="middle">Eight subjects span the full river</text>
 
             {/* Outcome labels */}

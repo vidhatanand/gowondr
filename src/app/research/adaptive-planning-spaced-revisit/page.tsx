@@ -147,8 +147,8 @@ export default function AdaptivePlanningPage() {
             <path d="M415 78 q6 -5 9 0" fill="none" stroke="#4B7A5B" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
 
             {/* Fading label */}
-            <text x="138" y="75" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#52616D" opacity="0.2" textAnchor="middle">fading...</text>
-            <text x="215" y="72" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#52616D" opacity="0.18" textAnchor="middle">fading...</text>
+            <text x="138" y="75" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#52616D" opacity="0.2" textAnchor="middle">fading...</text>
+            <text x="215" y="72" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#52616D" opacity="0.2" textAnchor="middle">fading...</text>
 
             {/* Walker figure — looking back with concern */}
             <circle cx="490" cy="85" r="7" fill="#A4582E" />
@@ -230,10 +230,10 @@ export default function AdaptivePlanningPage() {
             ))}
 
             {/* Labels */}
-            <text x="150" y="30" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.55" textAnchor="middle">Without revisit</text>
+            <text x="150" y="30" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.8" textAnchor="middle">Without revisit</text>
             <text x="150" y="45" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.4" textAnchor="middle">Straight through, never looking back</text>
 
-            <text x="150" y="158" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">With spaced revisit</text>
+            <text x="150" y="158" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">With spaced revisit</text>
             <text x="150" y="173" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.45" textAnchor="middle">Looping back keeps knowledge alive</text>
 
             {/* Outcome labels */}

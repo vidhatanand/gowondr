@@ -120,7 +120,7 @@ export default function DigitalLiteracyPage() {
             {/* Different-shaped holes (problems child can't solve with hammer) */}
             {/* Circle hole */}
             <circle cx="70" cy="160" r="10" fill="none" stroke="#52616D" strokeWidth="1.5" opacity="0.2" />
-            <text x="70" y="164" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#52616D" opacity="0.2" textAnchor="middle">O</text>
+            <text x="70" y="164" fontFamily="var(--font-body)" fontSize="8" fontWeight="600" fill="#52616D" opacity="0.2" textAnchor="middle">O</text>
             {/* Square hole */}
             <rect x="65" y="185" width="18" height="18" rx="2" fill="none" stroke="#52616D" strokeWidth="1.5" opacity="0.2" />
             {/* Triangle hole */}
@@ -206,10 +206,10 @@ export default function DigitalLiteracyPage() {
             <rect x="373" y="158" width="10" height="4" rx="1" fill="#4966A8" opacity="0.15" />
 
             {/* Labels */}
-            <text x="130" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.55" textAnchor="middle">Device fluency alone</text>
+            <text x="130" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.8" textAnchor="middle">Device fluency alone</text>
             <text x="130" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.4" textAnchor="middle">One skill, limited capability</text>
 
-            <text x="450" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">Digital literacy with judgment</text>
+            <text x="450" y="50" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Digital literacy with judgment</text>
             <text x="450" y="65" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.45" textAnchor="middle">Understanding, safety, logic, creation, judgment</text>
 
             {/* Outcome labels */}

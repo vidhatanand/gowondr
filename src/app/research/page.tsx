@@ -230,9 +230,9 @@ export default function ResearchHubPage() {
             <path d="M30 215 Q80 205 130 212 Q180 220 230 210 Q290 198 340 208 Q400 218 450 205 Q510 192 560 200 Q610 210 660 198" fill="none" stroke="#A4582E" strokeWidth="6" strokeLinecap="round" strokeDasharray="6 4" opacity="0.06" />
 
             {/* === GROUP LABELS above the path === */}
-            <text x="110" y="168" fontFamily="var(--font-body)" fontSize="10" fontWeight="700" fill="#235A5F" opacity="0.7" textAnchor="middle">FOUNDATION</text>
-            <text x="340" y="168" fontFamily="var(--font-body)" fontSize="10" fontWeight="700" fill="#A4582E" opacity="0.65" textAnchor="middle">DESIGN</text>
-            <text x="580" y="168" fontFamily="var(--font-body)" fontSize="10" fontWeight="700" fill="#52616D" opacity="0.65" textAnchor="middle">FUTURE</text>
+            <text x="110" y="168" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">FOUNDATION</text>
+            <text x="340" y="168" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#A4582E" opacity="0.8" textAnchor="middle">DESIGN</text>
+            <text x="580" y="168" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#52616D" opacity="0.8" textAnchor="middle">FUTURE</text>
 
             {/* === LANDMARK 1: Connection (teal) === */}
             <circle cx="70" cy="213" r="6" fill="#235A5F" opacity="0.15" />
@@ -240,7 +240,7 @@ export default function ResearchHubPage() {
             {/* Icon: two overlapping circles */}
             <circle cx="67" cy="213" r="2.5" fill="none" stroke="#235A5F" strokeWidth="0.8" />
             <circle cx="73" cy="213" r="2.5" fill="none" stroke="#235A5F" strokeWidth="0.8" />
-            <text x="70" y="228" fontFamily="var(--font-body)" fontSize="9" fill="#235A5F" textAnchor="middle">Connection</text>
+            <text x="70" y="228" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.5" textAnchor="middle">Connection</text>
 
             {/* === LANDMARK 2: Play (teal) === */}
             <circle cx="155" cy="210" r="6" fill="#235A5F" opacity="0.15" />
@@ -248,7 +248,7 @@ export default function ResearchHubPage() {
             {/* Icon: leaf shape */}
             <path d="M153 212 Q155 207 157 212 Q155 211 153 212Z" fill="#235A5F" />
             <line x1="155" y1="212" x2="155" y2="214" stroke="#235A5F" strokeWidth="0.6" strokeLinecap="round" opacity="0.4" />
-            <text x="155" y="225" fontFamily="var(--font-body)" fontSize="9" fill="#235A5F" textAnchor="middle">Play</text>
+            <text x="155" y="225" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#235A5F" opacity="0.5" textAnchor="middle">Play</text>
 
             {/* === LANDMARK 3: Concepts (terracotta) === */}
             <circle cx="260" cy="206" r="6" fill="#A4582E" opacity="0.15" />
@@ -256,7 +256,7 @@ export default function ResearchHubPage() {
             {/* Icon: small book */}
             <rect x="257" y="204" width="6" height="5" rx="0.5" fill="none" stroke="#A4582E" strokeWidth="0.7" />
             <line x1="260" y1="204" x2="260" y2="209" stroke="#A4582E" strokeWidth="0.5" opacity="0.4" />
-            <text x="260" y="221" fontFamily="var(--font-body)" fontSize="9" fill="#A4582E" textAnchor="middle">Concepts</text>
+            <text x="260" y="221" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.5" textAnchor="middle">Concepts</text>
 
             {/* === LANDMARK 4: Thinking (green) === */}
             <circle cx="355" cy="210" r="6" fill="#4B7A5B" opacity="0.15" />
@@ -264,14 +264,14 @@ export default function ResearchHubPage() {
             {/* Icon: magnifying glass */}
             <circle cx="354" cy="209" r="2" fill="none" stroke="#4B7A5B" strokeWidth="0.7" />
             <line x1="355.5" y1="210.5" x2="357.5" y2="212.5" stroke="#4B7A5B" strokeWidth="0.7" strokeLinecap="round" />
-            <text x="355" y="225" fontFamily="var(--font-body)" fontSize="9" fill="#4B7A5B" textAnchor="middle">Thinking</text>
+            <text x="355" y="225" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4B7A5B" opacity="0.5" textAnchor="middle">Thinking</text>
 
             {/* === LANDMARK 5: Revisit (terracotta) === */}
             <circle cx="445" cy="208" r="6" fill="#A4582E" opacity="0.15" />
             <circle cx="445" cy="208" r="3.5" fill="#A4582E" opacity="0.4" />
             {/* Icon: spiral */}
             <path d="M445 206 Q448 206 448 208 Q448 210 445 210 Q443 210 443 208.5 Q443 207 444.5 207" fill="none" stroke="#A4582E" strokeWidth="0.7" strokeLinecap="round" />
-            <text x="445" y="223" fontFamily="var(--font-body)" fontSize="9" fill="#A4582E" textAnchor="middle">Revisit</text>
+            <text x="445" y="223" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.5" textAnchor="middle">Revisit</text>
 
             {/* === LANDMARK 6: Breadth (slate) === */}
             <circle cx="535" cy="198" r="6" fill="#52616D" opacity="0.15" />
@@ -284,7 +284,7 @@ export default function ResearchHubPage() {
               const py = 198 + Math.sin(rad) * 2.8;
               return <circle key={`petal-${i}`} cx={px} cy={py} r="0.8" fill="#52616D" opacity="0.35" />;
             })}
-            <text x="535" y="213" fontFamily="var(--font-body)" fontSize="9" fill="#52616D" textAnchor="middle">Breadth</text>
+            <text x="535" y="213" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.5" textAnchor="middle">Breadth</text>
 
             {/* === LANDMARK 7: Digital (slate) === */}
             <circle cx="620" cy="202" r="6" fill="#52616D" opacity="0.15" />
@@ -293,7 +293,7 @@ export default function ResearchHubPage() {
             <circle cx="620" cy="202" r="2.5" fill="none" stroke="#52616D" strokeWidth="0.7" opacity="0.45" />
             <line x1="620" y1="199" x2="620" y2="205" stroke="#52616D" strokeWidth="0.5" strokeLinecap="round" opacity="0.4" />
             <line x1="617.5" y1="202" x2="622.5" y2="202" stroke="#52616D" strokeWidth="0.5" strokeLinecap="round" opacity="0.4" />
-            <text x="620" y="217" fontFamily="var(--font-body)" fontSize="9" fill="#52616D" textAnchor="middle">Digital</text>
+            <text x="620" y="217" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#52616D" opacity="0.5" textAnchor="middle">Digital</text>
 
             {/* === TREES along the upper bank === */}
             <line x1="45" y1="185" x2="45" y2="170" stroke="#4B7A5B" strokeWidth="1.5" strokeLinecap="round" opacity="0.25" />
