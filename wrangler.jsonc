@@ -9,7 +9,6 @@
     "binding": "ASSETS"
   },
 
-  // Staging environment — deployed via `wrangler deploy --env staging`
   "env": {
     "staging": {
       "name": "gopondr-stage",
