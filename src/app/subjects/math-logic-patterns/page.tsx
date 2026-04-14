@@ -77,7 +77,7 @@ export default function MathPage() {
 
       {/* Hero */}
       <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
-        <RandomHeroBg images={["/images/subject-math-1.jpg", "/images/subject-math-2.jpg"]} />
+        <RandomHeroBg images={["/images/subject-math-1.webp", "/images/subject-math-2.webp"]} />
         <div className="relative z-10">
           <Breadcrumb
             items={[

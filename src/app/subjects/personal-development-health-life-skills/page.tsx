@@ -82,7 +82,7 @@ export default function PersonalPage() {
 
       {/* Hero */}
       <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
-        <RandomHeroBg images={["/images/subject-personal-1.jpg", "/images/subject-personal-2.jpg"]} />
+        <RandomHeroBg images={["/images/subject-personal-1.webp", "/images/subject-personal-2.webp"]} />
         <div className="relative z-10">
           <Breadcrumb
             items={[

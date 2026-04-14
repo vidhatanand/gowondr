@@ -47,7 +47,7 @@ export function Footer() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: "url('/footer-bg.jpg')" }}
+        style={{ backgroundImage: "url('/footer-bg.webp')" }}
         aria-hidden="true"
       />
       {/* Overlay for readability */}

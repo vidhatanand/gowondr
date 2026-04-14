@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       "A calm, concept-first learning guide for parents. Full curriculum across 8 subjects, adaptive daily plans, screen-light activities, printables, and progress you can actually understand.",
     images: [
       {
-        url: "/images/hero-1.jpg",
+        url: "/images/hero-1.webp",
         width: 2534,
         height: 1351,
         alt: "goPondr — calm, concept-first learning for parents and children",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "Parent-led home learning for ages 4 to Grade 4 | goPondr",
     description:
       "A calm, concept-first learning guide for parents. Full curriculum across 8 subjects.",
-    images: ["/images/hero-1.jpg"],
+    images: ["/images/hero-1.webp"],
   },
 };
 
@@ -82,8 +82,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${newsreader.variable} ${atkinson.variable} antialiased`}
     >
+      <head>
+        <link
+          rel="preload"
+          href="/images/hero-1.webp"
+          as="image"
+          type="image/webp"
+          fetchPriority="high"
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-paper text-ink">
         <Navbar />
         <main className="flex-1">{children}</main>
