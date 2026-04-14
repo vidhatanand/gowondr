@@ -6,6 +6,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { ThinkingRoutines } from "@/components/ui/ThinkingRoutines";
 
 export const metadata: Metadata = {
@@ -69,21 +70,24 @@ export default function ThinkingRoutinesPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Research", href: "/research" },
-            { label: "Thinking Routines" },
-          ]}
-        />
-        <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
-          Why thinking routines and visible understanding matter
-        </h1>
-        <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
-          Understanding is invisible until a child finds a way to show it.
-          Thinking routines give them that way.
-        </p>
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/research-thinking-1.jpg", "/images/research-thinking-2.jpg"]} />
+        <div className="relative z-10">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Research", href: "/research" },
+              { label: "Thinking Routines" },
+            ]}
+          />
+          <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
+            Why thinking routines and visible understanding matter
+          </h1>
+          <p className="mt-6 text-[21px] leading-[32px] text-slate font-display max-w-2xl">
+            Understanding is invisible until a child finds a way to show it.
+            Thinking routines give them that way.
+          </p>
+        </div>
       </SectionShell>
 
       {/* Diagram */}
