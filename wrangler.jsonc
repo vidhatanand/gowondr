@@ -8,10 +8,6 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "routes": [
-    { "pattern": "gopondr.com", "custom_domain": true },
-    { "pattern": "www.gopondr.com", "custom_domain": true }
-  ],
 
   "env": {
     "staging": {
