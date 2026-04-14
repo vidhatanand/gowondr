@@ -46,7 +46,7 @@ export function Footer() {
     <footer className="relative border-t border-sand overflow-hidden">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-30"
+        className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{ backgroundImage: "url('/footer-bg.jpg')" }}
         aria-hidden="true"
       />
