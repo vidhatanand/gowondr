@@ -7,6 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Monitor, Keyboard, Globe, Wand2, ShieldCheck, Code } from "lucide-react";
@@ -85,7 +86,9 @@ export default function DigitalPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/subject-digital-1.jpg", "/images/subject-digital-2.jpg"]} />
+        <div className="relative z-10">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -116,6 +119,7 @@ export default function DigitalPage() {
           </InternalLink>{" "}
           so digital understanding grows alongside everything else.
         </p>
+        </div>
       </SectionShell>
 
       {/* Strand structure */}

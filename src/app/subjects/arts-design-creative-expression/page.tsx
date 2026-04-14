@@ -7,6 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Paintbrush, Hammer, Music, Drama, Sparkles } from "lucide-react";
@@ -85,7 +86,9 @@ export default function ArtsPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/subject-arts-1.jpg", "/images/subject-arts-2.jpg"]} />
+        <div className="relative z-10">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -115,6 +118,7 @@ export default function ArtsPage() {
           </InternalLink>{" "}
           so creativity develops with intention.
         </p>
+        </div>
       </SectionShell>
 
       {/* Strand structure */}

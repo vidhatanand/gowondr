@@ -7,6 +7,7 @@ import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Chip } from "@/components/ui/Chip";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { StrandMapSVG } from "@/components/ui/StrandMapSVG";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { Lightbulb, MessageSquare, Users, Compass, RotateCcw } from "lucide-react";
@@ -80,7 +81,9 @@ export default function InquiryPage() {
       />
 
       {/* Hero */}
-      <SectionShell bg="paper">
+      <SectionShell bg="paper" className="relative overflow-hidden">
+        <RandomHeroBg images={["/images/subject-inquiry-1.jpg", "/images/subject-inquiry-2.jpg"]} />
+        <div className="relative z-10">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -110,6 +113,7 @@ export default function InquiryPage() {
           </InternalLink>{" "}
           so these dispositions are developed deliberately, not left to chance.
         </p>
+        </div>
       </SectionShell>
 
       {/* Strand structure */}
