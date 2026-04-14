@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SectionShell } from "@/components/ui/SectionShell";
 import { Button } from "@/components/ui/Button";
 import { StatStrip } from "@/components/ui/StatStrip";
@@ -21,7 +21,11 @@ const heroStats = [
 ];
 
 export function Hero() {
-  const [heroImage] = useState(() => heroImages[Math.floor(Math.random() * heroImages.length)]);
+  const [heroImage, setHeroImage] = useState(heroImages[0]);
+
+  useEffect(() => {
+    setHeroImage(heroImages[Math.floor(Math.random() * heroImages.length)]);
+  }, []);
 
   return (
     <SectionShell bg="linen" className="!pt-20 !pb-16 md:!pt-28 md:!pb-20 relative overflow-hidden">
