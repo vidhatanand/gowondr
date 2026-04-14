@@ -14,14 +14,7 @@ const researchTopics = [
 
 export function ResearchBridge() {
   return (
-    <SectionShell bg="paper-alt" id="research" className="relative overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-30"
-        style={{ backgroundImage: "url('/images/abstract-5.jpg')" }}
-        aria-hidden="true"
-      />
-      <div className="absolute inset-0 bg-paper-alt/70" aria-hidden="true" />
-      <div className="relative z-10">
+    <SectionShell bg="paper-alt" id="research">
       <div className="max-w-[760px] mx-auto text-center">
         <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
           This approach is rooted in how children actually learn.
@@ -50,7 +43,6 @@ export function ResearchBridge() {
             Read the research
           </Button>
         </div>
-      </div>
       </div>
     </SectionShell>
   );
