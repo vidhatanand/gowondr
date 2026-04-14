@@ -92,7 +92,7 @@ export default function DigitalLiteracyPage() {
 
       {/* Diagram */}
       <SectionShell bg="paper">
-        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-2">
+        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-4 text-center">
           DEVICE FLUENCY VS DIGITAL JUDGMENT
         </h3>
         <div className="rounded-2xl border border-sand bg-paper p-4 md:p-6">
@@ -177,7 +177,7 @@ export default function DigitalLiteracyPage() {
             <path d="M470.5 110 L472 104 L473.5 110" fill="#A4582E" opacity="0.35" />
             {/* Pencil body stripe */}
             <line x1="472" y1="115" x2="472" y2="148" stroke="#4966A8" strokeWidth="1" strokeLinecap="round" opacity="0.15" />
-            <text x="472" y="170" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#4966A8" opacity="0.45" textAnchor="middle">Creation</text>
+            <text x="472" y="172" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#4966A8" opacity="0.5" textAnchor="end">Creation</text>
 
             {/* Tool 5: Judgment — gold compass */}
             <circle cx="497" cy="130" r="8" fill="none" stroke="#886328" strokeWidth="1.5" opacity="0.35" />
@@ -187,7 +187,7 @@ export default function DigitalLiteracyPage() {
             <line x1="491" y1="130" x2="503" y2="130" stroke="#886328" strokeWidth="0.8" strokeLinecap="round" opacity="0.2" />
             {/* Compass cardinal marks */}
             <circle cx="497" cy="123" r="1" fill="#886328" opacity="0.3" />
-            <text x="497" y="170" fontFamily="var(--font-body)" fontSize="6" fontWeight="600" fill="#886328" opacity="0.45" textAnchor="middle">Judgment</text>
+            <text x="497" y="172" fontFamily="var(--font-body)" fontSize="7" fontWeight="600" fill="#886328" opacity="0.5" textAnchor="start">Judgment</text>
 
             {/* Child figure building a small structure */}
             <circle cx="355" cy="145" r="7" fill="#4B7A5B" />

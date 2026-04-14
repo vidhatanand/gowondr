@@ -88,7 +88,7 @@ export default function ConceptFirstCoveragePage() {
 
       {/* Diagram */}
       <SectionShell bg="paper">
-        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-2">
+        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-4 text-center">
           RANDOM ACTIVITIES VS CONCEPT-FIRST DESIGN
         </h3>
         <div className="rounded-2xl border border-sand bg-paper p-4 md:p-6">

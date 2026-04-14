@@ -90,7 +90,7 @@ export default function BreadthFutureReadyPage() {
 
       {/* Diagram */}
       <SectionShell bg="paper">
-        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-2">
+        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-4 text-center">
           NARROW VS BROAD FOUNDATIONS
         </h3>
         <div className="rounded-2xl border border-sand bg-paper p-4 md:p-6">

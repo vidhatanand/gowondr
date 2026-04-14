@@ -87,7 +87,7 @@ export default function ParentChildConnectionPage() {
 
       {/* Diagram */}
       <SectionShell bg="paper">
-        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-2">
+        <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-4 text-center">
           FROM RESPONSIVE INTERACTION TO LEARNING
         </h3>
         <div className="rounded-2xl border border-sand bg-paper p-4 md:p-6 max-w-md mx-auto">
@@ -242,20 +242,20 @@ export default function ParentChildConnectionPage() {
 
             {/* Labels */}
             {/* Soil label */}
-            <text x="200" y="465" fontFamily="var(--font-body)" fontSize="11" fontWeight="700" fill="#A4582E" opacity="0.7" textAnchor="middle">Responsive interaction</text>
-            <text x="200" y="479" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.45" textAnchor="middle">Notice, respond, talk</text>
+            <text x="200" y="465" fontFamily="var(--font-body)" fontSize="14" fontWeight="700" fill="#A4582E" opacity="0.8" textAnchor="middle">Responsive interaction</text>
+            <text x="200" y="479" fontFamily="var(--font-body)" fontSize="11" fontWeight="600" fill="#A4582E" opacity="0.55" textAnchor="middle">Notice, respond, talk</text>
 
-            {/* Branch labels */}
-            <text x="100" y="290" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#235A5F" opacity="0.65" textAnchor="middle" transform="rotate(-35, 100, 290)">Language</text>
-            <text x="220" y="248" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#235A5F" opacity="0.65" textAnchor="start" transform="rotate(-90, 220, 248)">Safety</text>
-            <text x="300" y="290" fontFamily="var(--font-body)" fontSize="10" fontWeight="600" fill="#235A5F" opacity="0.65" textAnchor="middle" transform="rotate(35, 300, 290)">Attention</text>
+            {/* Branch labels — positioned outside branches, horizontal */}
+            <text x="55" y="200" fontFamily="var(--font-body)" fontSize="13" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Language</text>
+            <text x="200" y="175" fontFamily="var(--font-body)" fontSize="13" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Safety</text>
+            <text x="345" y="200" fontFamily="var(--font-body)" fontSize="13" fontWeight="700" fill="#235A5F" opacity="0.8" textAnchor="middle">Attention</text>
 
-            {/* Canopy / outcome label */}
-            <text x="200" y="135" fontFamily="var(--font-body)" fontSize="12" fontWeight="700" fill="#4B7A5B" opacity="0.75" textAnchor="middle">Stronger learning</text>
-            <text x="200" y="149" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#4B7A5B" opacity="0.5" textAnchor="middle">Willingness to try, ability to explain</text>
+            {/* Canopy / outcome label — above the canopy */}
+            <text x="200" y="55" fontFamily="var(--font-body)" fontSize="15" fontWeight="700" fill="#4B7A5B" opacity="0.85" textAnchor="middle">Stronger learning</text>
+            <text x="200" y="72" fontFamily="var(--font-body)" fontSize="11" fontWeight="600" fill="#4B7A5B" opacity="0.6" textAnchor="middle">Willingness to try, ability to explain</text>
 
             {/* Soil label */}
-            <text x="200" y="505" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" fill="#A4582E" opacity="0.4" textAnchor="middle">Good soil: trust, warmth, presence</text>
+            <text x="200" y="505" fontFamily="var(--font-body)" fontSize="11" fontWeight="600" fill="#A4582E" opacity="0.5" textAnchor="middle">Good soil: trust, warmth, presence</text>
           </svg>
         </div>
         <p className="mt-3 text-[14px] leading-[22px] text-slate/70 text-center max-w-lg mx-auto">
