@@ -1,4 +1,6 @@
-import { randomBytes } from "crypto";
+"use client";
+
+import { useEffect, useRef } from "react";
 
 interface RandomHeroBgProps {
   /**
@@ -16,49 +18,62 @@ function toMobileSrc(src: string): string {
 }
 
 /**
- * Picks a random image from `images` and renders it as the hero background
- * using a responsive `<img srcset>`. Mobile fetches the 800w variant (~15-90
- * KB), desktop/retina the 1600w variant, instead of the 2534w source that
- * was previously sent to every viewport.
+ * Picks a random hero background and renders it as a responsive `<img>`.
  *
- * How it stays flicker-free on refresh: the inline `<script>` runs
- * synchronously during HTML parsing (before first paint), injects a
- * `<link rel="preload" imagesrcset imagesizes fetchpriority="high">` so the
- * browser starts the LCP fetch immediately, then sets
- * `srcset`/`sizes`/`src` on the `<img>`. No state, no hydration, no
- * render-then-swap.
+ * Runs on mount via `useEffect`, so it picks on BOTH:
+ *   - full page loads / refresh
+ *   - client-side Next router navigations
  *
- * Intentional side-effect: on client-side Next router navigations (Link
- * clicks), React inserts this component's markup via innerHTML, which
- * does NOT execute script tags. So the `<img>` is rendered with no src
- * and nothing loads — the hero image only appears on full page loads
- * (direct navigation, bookmark, reload). This is desired: no bandwidth
- * spent re-fetching a decorative image on every in-app nav.
+ * That's a deliberate reversal from the previous inline-script approach,
+ * which only fired on full loads — on app-internal nav the hero stayed
+ * blank, which felt broken. With useEffect the image is consistent
+ * everywhere at the cost of LCP preload (the preload link is injected
+ * after hydration instead of during HTML parse).
+ *
+ * The `<img>` renders server-side with no `src`, so there's no SSR pick
+ * to mismatch the client pick — no hydration warning, no flash of one
+ * image being swapped for another.
  */
 export function RandomHeroBg({ images }: RandomHeroBgProps) {
-  const id = `hero-bg-${randomBytes(4).toString("hex")}`;
-  // Pass an array of [mobile, desktop] pairs to the client script so it
-  // doesn't need to do string mangling at runtime.
-  const pairs = images.map((src) => [toMobileSrc(src), src]);
-  const pairsJson = JSON.stringify(pairs);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const img = imgRef.current;
+    if (!img) return;
+    const desktopSrc = images[Math.floor(Math.random() * images.length)];
+    const mobileSrc = toMobileSrc(desktopSrc);
+    const srcset = `${mobileSrc} 800w, ${desktopSrc} 1600w`;
+    const sizes = "100vw";
+
+    // Preload hint so the browser knows this is high-priority LCP content.
+    // Injected at mount — too late for the preload scanner but still helps
+    // prioritization against other network work.
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.setAttribute("imagesrcset", srcset);
+    link.setAttribute("imagesizes", sizes);
+    link.fetchPriority = "high";
+    document.head.appendChild(link);
+
+    img.srcset = srcset;
+    img.sizes = sizes;
+    img.src = desktopSrc;
+
+    return () => {
+      link.remove();
+    };
+  }, [images]);
 
   return (
     <>
       <img
-        id={id}
+        ref={imgRef}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover opacity-50"
-        suppressHydrationWarning
       />
       <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `(function(){var a=${pairsJson},p=a[Math.floor(Math.random()*a.length)],s=p[0]+" 800w, "+p[1]+" 1600w",z="100vw",l=document.createElement("link");l.rel="preload";l.as="image";l.setAttribute("imagesrcset",s);l.setAttribute("imagesizes",z);l.fetchPriority="high";document.head.appendChild(l);var e=document.getElementById(${JSON.stringify(
-            id,
-          )});if(e){e.srcset=s;e.sizes=z;e.src=p[1];}})();`,
-        }}
-      />
     </>
   );
 }
