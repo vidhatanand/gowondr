@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Reading and language curriculum for kids at home",
   description:
     "Build oral language, phonics, comprehension, vocabulary, writing, and expression with a parent-led reading curriculum for kids learning at home.",
+  alternates: { canonical: "/subjects/reading-language-expression" }
 };
 
 const strands = [

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Arts and creative expression for kids at home",
   description:
     "Help children draw, make, sing, move, act, and create with an arts and creative expression curriculum that supports learning across the whole child.",
+  alternates: { canonical: "/subjects/arts-design-creative-expression" }
 };
 
 const strands = [

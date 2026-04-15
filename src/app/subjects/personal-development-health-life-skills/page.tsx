@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Life skills and personal development for kids",
   description:
     "Build emotional awareness, relationships, health, safety, movement, responsibility, and self-management with a calm, parent-led life skills curriculum for kids.",
+  alternates: { canonical: "/subjects/personal-development-health-life-skills" }
 };
 
 const strands = [

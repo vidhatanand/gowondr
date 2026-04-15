@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "World learning and social studies for kids at home",
   description:
     "Help children understand people, places, community, money, culture, fairness, routines, and everyday systems with world learning at home.",
+  alternates: { canonical: "/subjects/world-learning-society-life" }
 };
 
 const strands = [

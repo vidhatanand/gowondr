@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Science curriculum and activities for kids at home",
   description:
     "Build observation, prediction, testing, explanation, and wonder with a science curriculum for kids at home using real-world materials and parent guidance.",
+  alternates: { canonical: "/subjects/science-nature-inquiry" }
 };
 
 const strands = [

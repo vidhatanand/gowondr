@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Digital literacy and computational thinking for kids",
   description:
     "Teach children how digital systems work, how to think logically, and how to stay safe online with age-appropriate, screen-light digital literacy for kids.",
+  alternates: { canonical: "/subjects/digital-literacy-computational-thinking" }
 };
 
 const strands = [

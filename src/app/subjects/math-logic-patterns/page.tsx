@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Parent-led math curriculum for kids at home",
   description:
     "Build number sense, operations, geometry, measurement, data, pattern recognition, and reasoning with a parent-led math curriculum for kids at home.",
+  alternates: { canonical: "/subjects/math-logic-patterns" }
 };
 
 const strands = [
