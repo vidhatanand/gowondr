@@ -5,18 +5,10 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
-import { LearningArcVisual } from "@/components/ui/LearningArcVisual";
+import { LearningArcVisualLazy as LearningArcVisual } from "@/components/ui/LearningArcVisualLazy";
 import { SubjectExamples } from "@/components/ui/SubjectExamples";
 import {
-  Eye,
-  FlaskConical,
-  MessageCircle,
-  Pencil,
-  Link2,
   RefreshCw,
-  Megaphone,
-  Home,
-  RotateCcw,
   BookOpen,
   Calculator,
   Leaf,
@@ -204,17 +196,17 @@ export default function HowItWorksPage() {
             and exploring the real world. The screen is a guide, not a babysitter.
           </p>
           <div className="mt-4 flex justify-center gap-3 flex-wrap">
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Talk</span>
-            <span className="text-paper/30">·</span>
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Draw</span>
-            <span className="text-paper/30">·</span>
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Sort</span>
-            <span className="text-paper/30">·</span>
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Build</span>
-            <span className="text-paper/30">·</span>
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Move</span>
-            <span className="text-paper/30">·</span>
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Explore</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Talk</span>
+            <span className="text-paper/60">·</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Draw</span>
+            <span className="text-paper/60">·</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Sort</span>
+            <span className="text-paper/60">·</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Build</span>
+            <span className="text-paper/60">·</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Move</span>
+            <span className="text-paper/60">·</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Explore</span>
           </div>
         </div>
       </SectionShell>
@@ -233,15 +225,15 @@ export default function HowItWorksPage() {
             title="NOTICE TO REVISIT"
             caption="Children move through four phases — experiencing, understanding, mastering, and transferring — before the cycle begins again."
             steps={[
-              { number: 1, label: "Notice", description: "Observe something real or surprising in the world", icon: <Eye className="h-4 w-4" />, phase: "Experience" },
-              { number: 2, label: "Explore", description: "Touch, sort, test, compare, play with it", icon: <FlaskConical className="h-4 w-4" />, phase: "Experience" },
-              { number: 3, label: "Talk", description: "Describe, retell, question, explain aloud", icon: <MessageCircle className="h-4 w-4" />, phase: "Experience" },
-              { number: 4, label: "Represent", description: "Draw, build, map, act out, model it", icon: <Pencil className="h-4 w-4" />, phase: "Understanding" },
-              { number: 5, label: "Connect", description: "Link to real life and earlier learning", icon: <Link2 className="h-4 w-4" />, phase: "Understanding" },
-              { number: 6, label: "Practice", description: "Purposeful repetition and retrieval", icon: <RefreshCw className="h-4 w-4" />, phase: "Mastery" },
-              { number: 7, label: "Explain", description: "Teach it back in your own words", icon: <Megaphone className="h-4 w-4" />, phase: "Mastery" },
-              { number: 8, label: "Use", description: "Apply the idea in everyday life", icon: <Home className="h-4 w-4" />, phase: "Transfer" },
-              { number: 9, label: "Revisit", description: "Return later to deepen and secure", icon: <RotateCcw className="h-4 w-4" />, phase: "Transfer" },
+              { number: 1, label: "Notice", description: "Observe something real or surprising in the world", phase: "Experience" },
+              { number: 2, label: "Explore", description: "Touch, sort, test, compare, play with it", phase: "Experience" },
+              { number: 3, label: "Talk", description: "Describe, retell, question, explain aloud", phase: "Experience" },
+              { number: 4, label: "Represent", description: "Draw, build, map, act out, model it", phase: "Understanding" },
+              { number: 5, label: "Connect", description: "Link to real life and earlier learning", phase: "Understanding" },
+              { number: 6, label: "Practice", description: "Purposeful repetition and retrieval", phase: "Mastery" },
+              { number: 7, label: "Explain", description: "Teach it back in your own words", phase: "Mastery" },
+              { number: 8, label: "Use", description: "Apply the idea in everyday life", phase: "Transfer" },
+              { number: 9, label: "Revisit", description: "Return later to deepen and secure", phase: "Transfer" },
             ]}
           />
         </div>

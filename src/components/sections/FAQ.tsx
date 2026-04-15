@@ -1,5 +1,5 @@
 import { SectionShell } from "@/components/ui/SectionShell";
-import { Accordion } from "@/components/ui/Accordion";
+import { AccordionLazy as Accordion } from "@/components/ui/AccordionLazy";
 
 const faqItems = [
   {
