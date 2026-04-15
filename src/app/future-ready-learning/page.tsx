@@ -6,7 +6,6 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
 import { breadcrumbJsonLd } from "@/lib/seo";
-import { StatStrip } from "@/components/ui/StatStrip";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { ThinkingRoutines } from "@/components/ui/ThinkingRoutines";
 import { FlowDiagram } from "@/components/ui/FlowDiagram";
@@ -85,15 +84,6 @@ export default function FutureReadyLearningPage() {
           </p>
         </div>
       </SectionShell>
-
-      {/* Stats */}
-      <StatStrip
-        stats={[
-          { value: "8", label: "Subjects" },
-          { value: "6", label: "Stages" },
-          { value: "9", label: "Step Arc" },
-        ]}
-      />
 
       {/* What future-ready does NOT mean */}
       <SectionShell bg="paper-alt">
