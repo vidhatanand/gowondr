@@ -24,13 +24,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build with OpenNext
-        run: npx opennextjs-cloudflare build
+      - name: Build static export
+        run: npm run build
 
-      - name: Deploy to Cloudflare Workers (Staging)
+      # Deploy to Pages on the `stage` branch, which becomes the preview URL
+      # (e.g. https://stage.gopondr.pages.dev). Gate this URL behind a
+      # Cloudflare Access policy in the dashboard so only authorized users
+      # can reach it — that replaces the old middleware basic-auth.
+      - name: Deploy to Cloudflare Pages (Staging)
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy --env staging
+          command: pages deploy out --project-name=gopondr --branch=stage
           workingDirectory: .

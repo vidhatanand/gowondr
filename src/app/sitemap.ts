@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
 
+// Required by `output: 'export'` — tells Next to prerender this handler.
+export const dynamic = "force-static";
+
 const BASE_URL = "https://gopondr.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
