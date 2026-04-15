@@ -30,7 +30,7 @@ export function Hero() {
 
         {/* H1 */}
         <h1 className="font-display text-[36px] leading-[42px] md:text-[52px] md:leading-[58px] lg:text-[64px] lg:leading-[68px] text-ink tracking-tight">
-          The calm, concept-first learning guide for parents who want to
+          The calm, concept-first teaching system for parents who want to
           help&nbsp;&mdash; without turning home into school.
         </h1>
 

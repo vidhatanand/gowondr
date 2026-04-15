@@ -27,6 +27,13 @@ function toMobileSrc(src: string): string {
  * browser starts the LCP fetch immediately, then sets
  * `srcset`/`sizes`/`src` on the `<img>`. No state, no hydration, no
  * render-then-swap.
+ *
+ * Intentional side-effect: on client-side Next router navigations (Link
+ * clicks), React inserts this component's markup via innerHTML, which
+ * does NOT execute script tags. So the `<img>` is rendered with no src
+ * and nothing loads — the hero image only appears on full page loads
+ * (direct navigation, bookmark, reload). This is desired: no bandwidth
+ * spent re-fetching a decorative image on every in-app nav.
  */
 export function RandomHeroBg({ images }: RandomHeroBgProps) {
   const id = `hero-bg-${randomBytes(4).toString("hex")}`;
