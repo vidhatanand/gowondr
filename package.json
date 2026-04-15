@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --webpack",
+    "build": "next build --webpack && rm -rf out/design-system out/design-system.html out/design-system.txt",
     "preview": "npx wrangler pages dev out",
     "lint": "eslint"
   },
