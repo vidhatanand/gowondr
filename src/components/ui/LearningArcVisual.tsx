@@ -1,12 +1,11 @@
 "use client";
 
-import { type ReactNode, useState } from "react";
+import { useState } from "react";
 
 interface ArcStep {
   number: number;
   label: string;
   description: string;
-  icon: ReactNode;
   phase: string;
 }
 
