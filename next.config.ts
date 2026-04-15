@@ -7,10 +7,8 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
   },
 
-  // Inline CSS to eliminate render-blocking stylesheet request
-  experimental: {
-    inlineCss: true,
-  },
+  // Note: inlineCss disabled — exceeds Cloudflare Workers free 3MB limit
+  // Enable when on paid plan ($5/mo) for ~120ms FCP improvement
 
   // Production optimizations
   compress: true,
