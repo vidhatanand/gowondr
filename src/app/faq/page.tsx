@@ -182,7 +182,7 @@ export default function FAQPage() {
 
       {/* FAQ accordion — grouped */}
       <SectionShell bg="paper-alt">
-        <div className="max-w-2xl mx-auto space-y-10">
+        <div className="max-w-[760px] mx-auto space-y-10">
           <div>
             <h3 className="font-display text-[24px] leading-[30px] text-ink tracking-tight mb-4">
               About the product

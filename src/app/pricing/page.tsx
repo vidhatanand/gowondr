@@ -178,7 +178,7 @@ export default function PricingPage() {
 
       {/* Why annual */}
       <SectionShell bg="paper">
-        <div className="max-w-2xl">
+        <div className="max-w-[760px] mx-auto">
           <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
             Why families choose annual
           </h2>
@@ -194,7 +194,7 @@ export default function PricingPage() {
 
       {/* What is included */}
       <SectionShell bg="linen">
-        <div className="max-w-2xl">
+        <div className="max-w-[760px] mx-auto">
           <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
             What is included in every plan
           </h2>
@@ -239,7 +239,7 @@ export default function PricingPage() {
 
       {/* Pricing FAQ */}
       <SectionShell bg="paper">
-        <div className="max-w-2xl">
+        <div className="max-w-[760px] mx-auto">
           <h2 className="font-display text-[32px] leading-[38px] md:text-[40px] md:leading-[46px] text-ink tracking-tight">
             Pricing questions
           </h2>
