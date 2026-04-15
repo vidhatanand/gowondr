@@ -25,11 +25,15 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
   },
 
-  // inlineCss intentionally OFF. Although it eliminates the render-blocking
-  // CSS request (~680 ms Lighthouse benefit), on the Cloudflare Workers Free
-  // plan (10 ms CPU/request) the extra per-response streaming was pushing
-  // some cold-start requests past the CPU limit (error 1102). Re-enable once
-  // on the Paid plan ($5/mo, 50 ms CPU).
+  // Inline CSS into the prerendered HTML to eliminate the render-blocking
+  // CSS request (~680 ms mobile LCP benefit per Lighthouse). Safe to enable
+  // now that the prod Worker has been stripped (see deploy-prod.yml) —
+  // inlined HTML is served from Cloudflare's asset cache with zero Worker
+  // CPU, so the streaming cost that previously triggered 1102 no longer
+  // applies on prod.
+  experimental: {
+    inlineCss: true,
+  },
 
   // Production optimizations
   compress: true,
