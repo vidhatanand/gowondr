@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects. Evaluated at the edge before serving static
+# assets. Return real HTTP 404 for design-system paths. With
+# `output: 'export'` the HTML body is already the 404 page (via the route's
+# layout calling notFound()), but static hosting returns 200 unless we force
+# the status code here.
+/design-system/* /404 404
+/design-system /404 404
