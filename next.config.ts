@@ -2,12 +2,30 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
+  // Fully static export. All 34 routes are prerendered, so we ship pure
+  // HTML/CSS/JS out of `out/` and host it on Cloudflare Pages — no Next
+  // runtime, no Worker, no opennext adapter, no 1102 CPU-limit errors.
+  output: "export",
+
+  // `next/image` optimization isn't available in export mode. We use plain
+  // <img> throughout, but this flag silences the build error if anyone ever
+  // imports next/image by mistake and keeps it working (served unoptimized).
+  images: {
+    unoptimized: true,
+  },
+
+  // Inline CSS into prerendered HTML — eliminates the render-blocking CSS
+  // request (~680 ms mobile Lighthouse benefit). Safe on Pages since pages
+  // are static files, no runtime cost.
+  experimental: {
+    inlineCss: true,
+  },
+
   // Skip Next's polyfill-module.js — our browserslist targets only modern
   // browsers (Chrome/Edge 91+, Firefox 90+, Safari/iOS 15+) that already
   // implement Array.at/flat/flatMap, Object.fromEntries/hasOwn,
   // String.prototype.trimStart/trimEnd, URL.canParse, Symbol.description, and
-  // Promise.finally. Dropping this saves ~11 KiB of legacy JS from the main
-  // client bundle (Lighthouse "Avoid legacy JavaScript" audit).
+  // Promise.finally. Saves ~11 KiB of legacy JS from the client bundle.
   webpack: (config) => {
     config.resolve = config.resolve || {};
     config.resolve.alias = {
@@ -19,21 +37,6 @@ const nextConfig: NextConfig = {
     };
     return config;
   },
-  // Image optimization
-  images: {
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
-  },
-
-  // Inline CSS into the prerendered HTML to eliminate the render-blocking
-  // CSS request (~680 ms mobile LCP benefit per Lighthouse). Safe to enable
-  // now that the prod Worker has been stripped (see deploy-prod.yml) —
-  // inlined HTML is served from Cloudflare's asset cache with zero Worker
-  // CPU, so the streaming cost that previously triggered 1102 no longer
-  // applies on prod.
-  experimental: {
-    inlineCss: true,
-  },
 
   // Production optimizations
   compress: true,
@@ -42,50 +45,9 @@ const nextConfig: NextConfig = {
   // Strict mode for catching issues early
   reactStrictMode: true,
 
-  // Headers for caching and security
-  async headers() {
-    return [
-      {
-        source: "/images/:path*",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/footer-bg.jpg",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/(.*)",
-        headers: [
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-          {
-            key: "X-Frame-Options",
-            value: "DENY",
-          },
-          {
-            key: "X-XSS-Protection",
-            value: "1; mode=block",
-          },
-          {
-            key: "Referrer-Policy",
-            value: "strict-origin-when-cross-origin",
-          },
-        ],
-      },
-    ];
-  },
+  // Note: headers() doesn't apply to `output: 'export'`. Cache-Control and
+  // security headers live in `public/_headers` instead (Cloudflare Pages
+  // format, copied into the export output at build).
 };
 
 export default nextConfig;
