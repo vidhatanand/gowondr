@@ -85,15 +85,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${newsreader.variable} ${atkinson.variable} antialiased`}
     >
-      <head>
-        <link
-          rel="preload"
-          href="/images/hero-1.webp"
-          as="image"
-          type="image/webp"
-          fetchPriority="high"
-        />
-      </head>
+      <head />
+      {/* Hero image preload is injected per-page by <RandomHeroBg> so the
+          specific image the inline script picks gets fetchpriority=high
+          during HTML parsing, not a wrong one. */}
       <body className="min-h-screen flex flex-col bg-paper text-ink">
         <Navbar />
         <main className="flex-1">{children}</main>
