@@ -4,18 +4,27 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
+// Newsreader is used for headings (LCP element on the home hero), so preload
+// is on by default — but we only need the normal style. No heading uses italic
+// Newsreader anywhere; the `italic` utility on body paragraphs applies to the
+// Atkinson family, which has no italic variant so the browser synthesizes one.
 const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
   display: "swap",
-  style: ["normal", "italic"],
 });
 
+// Atkinson Hyperlegible is the body font. Skipping preload keeps it off the
+// critical request path — with font-display: swap the browser renders body
+// copy in the system fallback first, then swaps once the font arrives. This
+// is the standard perf trade-off: a brief FOUT on body text in exchange for
+// ~300 ms off the LCP critical path (fonts were the terminal nodes).
 const atkinson = Atkinson_Hyperlegible({
   variable: "--font-atkinson",
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "700"],
+  preload: false,
 });
 
 export const metadata: Metadata = {
