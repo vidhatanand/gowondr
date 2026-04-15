@@ -121,17 +121,17 @@ export function HowItWorks() {
             and exploring the real world. The screen is a guide, not a babysitter.
           </p>
           <div className="mt-4 flex justify-center gap-3 flex-wrap">
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Talk</span>
-            <span className="text-paper/30">·</span>
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Draw</span>
-            <span className="text-paper/30">·</span>
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Sort</span>
-            <span className="text-paper/30">·</span>
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Build</span>
-            <span className="text-paper/30">·</span>
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Move</span>
-            <span className="text-paper/30">·</span>
-            <span className="text-[12px] font-semibold text-paper/60 uppercase tracking-wide">Explore</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Talk</span>
+            <span className="text-paper/60">·</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Draw</span>
+            <span className="text-paper/60">·</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Sort</span>
+            <span className="text-paper/60">·</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Build</span>
+            <span className="text-paper/60">·</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Move</span>
+            <span className="text-paper/60">·</span>
+            <span className="text-[12px] font-semibold text-paper/90 uppercase tracking-wide">Explore</span>
           </div>
         </div>
 
