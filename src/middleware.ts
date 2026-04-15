@@ -10,9 +10,11 @@ export function middleware(request: NextRequest) {
   const isLocalhost = hostname.includes("localhost") || hostname.includes("127.0.0.1");
   const isStaging = hostname.includes("stage");
 
-  // Block /design-system routes on anything that isn't localhost
+  // Block /design-system routes on anything that isn't localhost — show 404
   if (pathname.startsWith("/design-system") && !isLocalhost) {
-    return new NextResponse("Not found", { status: 404 });
+    const url = request.nextUrl.clone();
+    url.pathname = "/_not-found";
+    return NextResponse.rewrite(url, { status: 404 });
   }
 
   // Staging basic auth
