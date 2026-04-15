@@ -24,6 +24,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Drop middleware so the prod Worker has no request handler —
+      # Cloudflare serves prerendered HTML directly from assets, zero Worker
+      # CPU. This avoids the intermittent error 1102 ("Worker exceeded
+      # resource limits") we hit on the free plan's 10 ms CPU/request
+      # budget. Staging deploy keeps middleware.ts intact for basic auth.
+      - name: Strip middleware for prod build
+        run: rm -f src/middleware.ts
+
       - name: Build with OpenNext
         run: npx opennextjs-cloudflare build
 
