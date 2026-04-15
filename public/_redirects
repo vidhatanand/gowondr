@@ -1,7 +1,11 @@
-# Cloudflare Pages redirects. Evaluated at the edge before serving static
-# assets. Return real HTTP 404 for design-system paths. With
-# `output: 'export'` the HTML body is already the 404 page (via the route's
-# layout calling notFound()), but static hosting returns 200 unless we force
-# the status code here.
+# Cloudflare Pages redirects. Evaluated at the edge.
+
+# www -> apex. Force (`!`) so the rule wins over any deployment URL match.
+https://www.gopondr.com/* https://gopondr.com/:splat 301!
+
+# Return a real HTTP 404 for design-system paths. The files are deleted
+# from the build output (see `build` script in package.json), so Pages
+# falls through to this rule and returns 404 status instead of the default
+# 200-for-any-html behavior.
 /design-system/* /404 404
 /design-system /404 404
