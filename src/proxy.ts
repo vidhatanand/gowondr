@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 const STAGING_USER = "gopondr";
 const STAGING_PASS = "stage2026";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const hostname = request.headers.get("host") || "";
   const pathname = request.nextUrl.pathname;
   const isLocalhost = hostname.includes("localhost") || hostname.includes("127.0.0.1");
