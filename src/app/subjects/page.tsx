@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: "8-subject home learning curriculum for ages 4 to Grade 4",
   description:
     "Explore the full home learning curriculum: reading, math, science, world learning, personal development, arts, digital literacy, and inquiry for ages 4 to Grade 4.",
+  alternates: { canonical: "/subjects" },
 };
 
 const subjectSlugs = [

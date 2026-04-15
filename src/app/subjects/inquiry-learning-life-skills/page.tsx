@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Inquiry-based learning and learning skills for kids",
   description:
     "Build thinking, communication, collaboration, reflection, and inquiry-based learning skills that help children learn across the full curriculum.",
+  alternates: { canonical: "/subjects/inquiry-learning-life-skills" }
 };
 
 const strands = [
