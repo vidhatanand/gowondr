@@ -1,14 +1,36 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
+  // Skip Next's polyfill-module.js — our browserslist targets only modern
+  // browsers (Chrome/Edge 91+, Firefox 90+, Safari/iOS 15+) that already
+  // implement Array.at/flat/flatMap, Object.fromEntries/hasOwn,
+  // String.prototype.trimStart/trimEnd, URL.canParse, Symbol.description, and
+  // Promise.finally. Dropping this saves ~11 KiB of legacy JS from the main
+  // client bundle (Lighthouse "Avoid legacy JavaScript" audit).
+  webpack: (config) => {
+    config.resolve = config.resolve || {};
+    config.resolve.alias = {
+      ...(config.resolve.alias as Record<string, string | false>),
+      [path.resolve(
+        process.cwd(),
+        "node_modules/next/dist/build/polyfills/polyfill-module.js",
+      )]: false,
+    };
+    return config;
+  },
   // Image optimization
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
   },
 
-  // Note: inlineCss disabled — exceeds Cloudflare Workers free 3MB limit
-  // Enable when on paid plan ($5/mo) for ~120ms FCP improvement
+  // Inline CSS into the SSR HTML to eliminate the render-blocking CSS request.
+  // Previously disabled due to the Workers 3MB compressed limit, but the webpack
+  // build now produces smaller chunks so we're well under.
+  experimental: {
+    inlineCss: true,
+  },
 
   // Production optimizations
   compress: true,

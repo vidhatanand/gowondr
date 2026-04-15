@@ -10,9 +10,11 @@ interface RandomHeroBgProps {
  * then swap. Works with static prerendering (RSC + inline script).
  *
  * How: we render an empty backdrop `<div>` and a tiny inline `<script>` that
- * runs synchronously during HTML parsing, picks the image, and writes the
- * background-image style on the div in-place. No client component, no
- * hydration, no useEffect — so there's no "render then swap" sequence.
+ * runs synchronously during HTML parsing. It (1) injects a
+ * `<link rel="preload" as="image" fetchpriority="high">` for the chosen image
+ * so it starts downloading immediately (helps LCP), then (2) writes the
+ * `background-image` style on the div. No client component, no hydration, no
+ * useEffect — so there's no "render then swap" sequence.
  */
 export function RandomHeroBg({ images }: RandomHeroBgProps) {
   // Unique id so pages with multiple heroes (or nested server renders) don't
@@ -31,7 +33,7 @@ export function RandomHeroBg({ images }: RandomHeroBgProps) {
       <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
       <script
         dangerouslySetInnerHTML={{
-          __html: `(function(){var i=${imagesJson},p=i[Math.floor(Math.random()*i.length)],e=document.getElementById(${JSON.stringify(
+          __html: `(function(){var i=${imagesJson},p=i[Math.floor(Math.random()*i.length)],l=document.createElement("link");l.rel="preload";l.as="image";l.href=p;l.fetchPriority="high";document.head.appendChild(l);var e=document.getElementById(${JSON.stringify(
             id,
           )});if(e)e.style.backgroundImage="url('"+p+"')";})();`,
         }}
