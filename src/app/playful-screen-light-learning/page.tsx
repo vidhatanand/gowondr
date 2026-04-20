@@ -5,9 +5,10 @@ import { Card } from "@/components/ui/Card";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
-import { breadcrumbJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { FlowComparison } from "@/components/ui/FlowDiagram";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { MessageCircle, Box, BookOpen, Pencil, Move, Theater, Eye, Hammer } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -41,6 +42,17 @@ export default function PlayfulScreenLightLearningPage() {
           ]),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: articleJsonLd({
+            title: "Playful, screen-light learning for kids at home",
+            description:
+              "A calmer alternative to noisy apps and worksheet-heavy routines — playful, screen-light learning that happens mostly in the real world.",
+            path: "/playful-screen-light-learning",
+          }),
+        }}
+      />
       <EntityGraph
         mainEntity={{
           name: "Screen-light learning approach",
@@ -52,12 +64,7 @@ export default function PlayfulScreenLightLearningPage() {
 
       {/* Hero */}
       <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{ backgroundImage: "url('/images/page-child-drawing.webp')" }}
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+        <RandomHeroBg images={["/images/page-child-drawing.webp", "/images/page-hands-seeds.webp", "/images/page-child-window.webp"]} />
         <div className="relative z-10">
           <Breadcrumb
             items={[
@@ -68,7 +75,7 @@ export default function PlayfulScreenLightLearningPage() {
           <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
             Less screen noise. More real understanding.
           </h1>
-          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
+          <p className="mt-5 text-[19px] md:text-[21px] leading-[30px] md:leading-[32px] text-slate font-display max-w-2xl">
             Children learn through conversation, objects, stories, drawing,
             movement, building, and play. goPondr keeps the screen
             where it belongs: as a planning tool for the parent, not a teaching
@@ -204,6 +211,9 @@ export default function PlayfulScreenLightLearningPage() {
             child afterward.
           </p>
           <div className="mt-8">
+            <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-4 text-center">
+              TWO PATHS COMPARED
+            </h3>
             <FlowComparison
               title="SCREEN-HEAVY VS SCREEN-LIGHT"
               caption="Screen-light learning keeps the child in the real world — talking, touching, moving — while the parent stays meaningfully involved."
@@ -228,6 +238,9 @@ export default function PlayfulScreenLightLearningPage() {
                 outcome: { label: "Understanding that lasts", description: "Transfers to new contexts, retained over time" },
               }}
             />
+            <p className="mt-3 text-[14px] leading-[22px] text-slate/70 text-center max-w-xl mx-auto">
+              Screen-heavy learning fades quickly; screen-light learning builds durable understanding grounded in real-world experience.
+            </p>
           </div>
         </div>
       </SectionShell>
@@ -265,6 +278,23 @@ export default function PlayfulScreenLightLearningPage() {
             is just the planning layer. The learning itself belongs to you and
             your child, in your home, at your pace.
           </p>
+        </div>
+      </SectionShell>
+
+      {/* Related reading */}
+      <SectionShell bg="paper-alt" narrow={false}>
+        <h2 className="font-display text-[24px] text-ink mb-6">Related reading</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Card hover>
+            <h3 className="font-body font-semibold text-[16px] text-ink mb-1">Why playful, screen-light learning works</h3>
+            <p className="text-[14px] text-slate mb-3">Evidence for playful, guided, multi-modal learning that uses conversation, movement, and real materials.</p>
+            <InternalLink href="/research/playful-screen-light-learning">Read the research &rarr;</InternalLink>
+          </Card>
+          <Card hover>
+            <h3 className="font-body font-semibold text-[16px] text-ink mb-1">What this means for parents</h3>
+            <p className="text-[14px] text-slate mb-3">A calmer, more connected way to learn at home — with simple materials and real conversation.</p>
+            <InternalLink href="/for-parents">Read for parents &rarr;</InternalLink>
+          </Card>
         </div>
       </SectionShell>
 
