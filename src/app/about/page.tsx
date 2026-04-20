@@ -5,9 +5,10 @@ import { Card } from "@/components/ui/Card";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
-import { breadcrumbJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { Users, Brain, Layers, MonitorOff, RefreshCw, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -37,6 +38,17 @@ export default function AboutPage() {
           ]),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: articleJsonLd({
+            title: "About goPondr",
+            description:
+              "Mission, ethos, and design philosophy behind goPondr — a calmer, parent-led way for families to learn deeply together.",
+            path: "/about",
+          }),
+        }}
+      />
       <EntityGraph
         mainEntity={{
           name: "goPondr",
@@ -48,12 +60,7 @@ export default function AboutPage() {
 
       {/* Hero */}
       <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{ backgroundImage: "url('/images/page-hands-seeds.webp')" }}
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+        <RandomHeroBg images={["/images/abstract-1.webp", "/images/abstract-4.webp", "/images/abstract-5.webp"]} />
         <div className="relative z-10">
           <Breadcrumb
             items={[
@@ -64,7 +71,7 @@ export default function AboutPage() {
           <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
             We are building a calmer way for families to learn deeply together.
           </h1>
-          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
+          <p className="mt-5 text-[19px] md:text-[21px] leading-[30px] md:leading-[32px] text-slate font-display max-w-2xl">
             goPondr exists because we believe every parent can help
             their child learn, and that the relationship between parent and child
             is the most powerful learning tool there is.
@@ -194,6 +201,9 @@ export default function AboutPage() {
             The virtuous cycle
           </h2>
           <div className="mt-8">
+            <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-4 text-center">
+              HOW THE PIECES FIT
+            </h3>
             <FlowDiagram
               title="THE VIRTUOUS CYCLE"
               caption="When the product carries the cognitive load, the parent can stay emotionally present — and the child grows in ways that feel natural."
@@ -211,6 +221,9 @@ export default function AboutPage() {
                 { from: "child", to: "product", label: "growth feeds back", dashed: true },
               ]}
             />
+            <p className="mt-3 text-[14px] leading-[22px] text-slate/70 text-center max-w-xl mx-auto">
+              The product carries the structure so parents can stay warm, children grow deeply, and home becomes a place of curiosity.
+            </p>
           </div>
         </div>
       </SectionShell>
@@ -230,6 +243,23 @@ export default function AboutPage() {
             <InternalLink href="/subjects">8-subject curriculum</InternalLink>{" "}
             to see this philosophy in action.
           </p>
+        </div>
+      </SectionShell>
+
+      {/* Related reading */}
+      <SectionShell bg="paper-alt" narrow={false}>
+        <h2 className="font-display text-[24px] text-ink mb-6">Related reading</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Card hover>
+            <h3 className="font-body font-semibold text-[16px] text-ink mb-1">The research behind goPondr</h3>
+            <p className="text-[14px] text-slate mb-3">Evidence from learning science and curriculum design that informs how the guide is built.</p>
+            <InternalLink href="/research">Explore the research &rarr;</InternalLink>
+          </Card>
+          <Card hover>
+            <h3 className="font-body font-semibold text-[16px] text-ink mb-1">What this means for parents</h3>
+            <p className="text-[14px] text-slate mb-3">How the philosophy translates into what you actually do each day with your child.</p>
+            <InternalLink href="/for-parents">Read for parents &rarr;</InternalLink>
+          </Card>
         </div>
       </SectionShell>
 

@@ -5,10 +5,11 @@ import { Card } from "@/components/ui/Card";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
-import { breadcrumbJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { FlowDiagram } from "@/components/ui/FlowDiagram";
 import { ComparisonColumns } from "@/components/ui/ComparisonColumns";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { Eye, TrendingUp, Clock, BarChart3, GitBranch, History } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -39,6 +40,17 @@ export default function AdaptivePlannerPage() {
           ]),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: articleJsonLd({
+            title: "Adaptive learning plan and progress tracking for kids",
+            description:
+              "How the adaptive planner uses parent observations, review timing, and concept progress to create a clearer daily learning plan for each child.",
+            path: "/adaptive-planner",
+          }),
+        }}
+      />
       <EntityGraph
         mainEntity={{
           name: "Adaptive learning planner",
@@ -50,12 +62,7 @@ export default function AdaptivePlannerPage() {
 
       {/* Hero */}
       <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{ backgroundImage: "url('/images/page-stacked-stones.webp')" }}
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+        <RandomHeroBg images={["/images/page-layered-paper.webp", "/images/page-river-delta.webp", "/images/page-threads-center.webp"]} />
         <div className="relative z-10">
           <Breadcrumb
             items={[
@@ -66,7 +73,7 @@ export default function AdaptivePlannerPage() {
           <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
             The planner adapts, so you do not have to guess.
           </h1>
-          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
+          <p className="mt-5 text-[19px] md:text-[21px] leading-[30px] md:leading-[32px] text-slate font-display max-w-2xl">
             Every child learns at a different pace. The adaptive planner watches
             how your child is progressing and adjusts the daily plan accordingly.
             You never have to decide what to teach next. See{" "}
@@ -143,6 +150,9 @@ export default function AdaptivePlannerPage() {
             your child today.
           </p>
           <div className="mt-8">
+            <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-4 text-center">
+              INPUTS TO DAILY PLAN
+            </h3>
             <FlowDiagram
               title="HOW THE ADAPTIVE PLANNER WORKS"
               caption="The planner weighs parent observations, concept readiness, and review timing to create a calm, clear daily plan."
@@ -165,6 +175,9 @@ export default function AdaptivePlannerPage() {
                 { label: "Outputs", nodeIds: ["plan", "review", "next"] },
               ]}
             />
+            <p className="mt-3 text-[14px] leading-[22px] text-slate/70 text-center max-w-xl mx-auto">
+              Observations, concept readiness, and review timing feed a single daily plan that balances new learning with revisit.
+            </p>
           </div>
         </div>
       </SectionShell>
@@ -202,6 +215,9 @@ export default function AdaptivePlannerPage() {
             planner sits between these extremes.
           </p>
           <div className="mt-8">
+            <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-4 text-center">
+              WITHOUT VS WITH A PLANNER
+            </h3>
             <ComparisonColumns
               left={{
                 title: "Vague reassurance",
@@ -224,6 +240,9 @@ export default function AdaptivePlannerPage() {
                 ],
               }}
             />
+            <p className="mt-3 text-[14px] leading-[22px] text-slate/70 text-center max-w-xl mx-auto">
+              A planner replaces guesswork with a structured sequence — rigorous underneath, simple on the surface.
+            </p>
           </div>
           <p className="mt-6 text-[17px] leading-[28px] text-slate">
             The adaptive planner is rigorous underneath and simple on the
@@ -282,6 +301,23 @@ export default function AdaptivePlannerPage() {
             more questions? Check the{" "}
             <InternalLink href="/faq">FAQ</InternalLink>.
           </p>
+        </div>
+      </SectionShell>
+
+      {/* Related reading */}
+      <SectionShell bg="paper-alt" narrow={false}>
+        <h2 className="font-display text-[24px] text-ink mb-6">Related reading</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Card hover>
+            <h3 className="font-body font-semibold text-[16px] text-ink mb-1">Adaptive planning and spaced revisit</h3>
+            <p className="text-[14px] text-slate mb-3">Research on why spaced, adaptive review is more durable than linear progression.</p>
+            <InternalLink href="/research/adaptive-planning-spaced-revisit">Read the research &rarr;</InternalLink>
+          </Card>
+          <Card hover>
+            <h3 className="font-body font-semibold text-[16px] text-ink mb-1">How the full flow works</h3>
+            <p className="text-[14px] text-slate mb-3">See how daily plans, observations, and reviews connect across a week of learning.</p>
+            <InternalLink href="/how-it-works">See how it works &rarr;</InternalLink>
+          </Card>
         </div>
       </SectionShell>
 
