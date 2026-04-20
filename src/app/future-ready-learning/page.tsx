@@ -5,10 +5,11 @@ import { Card } from "@/components/ui/Card";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { InternalLink } from "@/components/ui/InternalLink";
 import { EntityGraph } from "@/components/ui/EntityGraph";
-import { breadcrumbJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, articleJsonLd } from "@/lib/seo";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
 import { ThinkingRoutines } from "@/components/ui/ThinkingRoutines";
 import { FlowDiagram } from "@/components/ui/FlowDiagram";
+import { RandomHeroBg } from "@/components/ui/RandomHeroBg";
 import { Brain, MessageSquare, Link2, HelpCircle, Lightbulb, Monitor, Compass } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -42,6 +43,17 @@ export default function FutureReadyLearningPage() {
           ]),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: articleJsonLd({
+            title: "Future-ready learning for kids in an AI world",
+            description:
+              "Preparing children for an AI-shaped future through strong foundations, broader knowledge, digital judgment, and adaptable thinking.",
+            path: "/future-ready-learning",
+          }),
+        }}
+      />
       <EntityGraph
         mainEntity={{
           name: "Future-ready education philosophy",
@@ -59,12 +71,7 @@ export default function FutureReadyLearningPage() {
 
       {/* Hero */}
       <SectionShell bg="paper" className="relative overflow-hidden min-h-[280px] md:min-h-[340px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{ backgroundImage: "url('/images/page-new-leaf.webp')" }}
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-paper/60" aria-hidden="true" />
+        <RandomHeroBg images={["/images/page-new-leaf.webp", "/images/page-stacked-stones.webp", "/images/page-sunset-path.webp"]} />
         <div className="relative z-10">
           <Breadcrumb
             items={[
@@ -75,7 +82,7 @@ export default function FutureReadyLearningPage() {
           <h1 className="font-display text-[40px] leading-[46px] md:text-[52px] md:leading-[58px] text-ink tracking-tight max-w-3xl">
             In an AI world, answers get cheaper. Thinking gets more valuable.
           </h1>
-          <p className="mt-6 text-[17px] leading-[28px] text-slate max-w-2xl">
+          <p className="mt-5 text-[19px] md:text-[21px] leading-[30px] md:leading-[32px] text-slate font-display max-w-2xl">
             The future belongs to children who can understand, explain, connect,
             question, create, adapt, and use judgment. These are not skills you
             learn from an app. They grow through real relationships, real
@@ -219,6 +226,9 @@ export default function FutureReadyLearningPage() {
             How foundations lead to future readiness
           </h2>
           <div className="mt-8">
+            <h3 className="font-body text-[11px] tracking-[0.15em] uppercase text-slate/60 font-semibold mb-4 text-center">
+              FOUNDATIONS TO FUTURE READINESS
+            </h3>
             <FlowDiagram
               title="BUILDING FUTURE-READY LEARNERS"
               caption="Strong foundations across multiple domains converge into a child who can understand, explain, connect, and adapt."
@@ -247,6 +257,9 @@ export default function FutureReadyLearningPage() {
                 { label: "The Outcome", nodeIds: ["child"] },
               ]}
             />
+            <p className="mt-3 text-[14px] leading-[22px] text-slate/70 text-center max-w-xl mx-auto">
+              Seven broad foundations converge into a child who can understand, explain, connect, and adapt to any future.
+            </p>
           </div>
         </div>
       </SectionShell>
@@ -270,6 +283,23 @@ export default function FutureReadyLearningPage() {
       <SectionShell bg="linen">
         <div className="max-w-[700px] mx-auto">
           <ThinkingRoutines variant="compact" context="future-ready" />
+        </div>
+      </SectionShell>
+
+      {/* Related reading */}
+      <SectionShell bg="paper-alt" narrow={false}>
+        <h2 className="font-display text-[24px] text-ink mb-6">Related reading</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Card hover>
+            <h3 className="font-body font-semibold text-[16px] text-ink mb-1">Why breadth matters in an AI world</h3>
+            <p className="text-[14px] text-slate mb-3">Research on why broad foundations across subjects matter more in a future shaped by AI and rapid change.</p>
+            <InternalLink href="/research/breadth-future-ready-ai-world">Read the research &rarr;</InternalLink>
+          </Card>
+          <Card hover>
+            <h3 className="font-body font-semibold text-[16px] text-ink mb-1">Explore all 8 subjects</h3>
+            <p className="text-[14px] text-slate mb-3">See how the full curriculum builds broad foundations across language, math, science, arts, and more.</p>
+            <InternalLink href="/subjects">See all subjects &rarr;</InternalLink>
+          </Card>
         </div>
       </SectionShell>
 
